@@ -1,4 +1,4 @@
-export default function jsonRootType(json) {
+function jsonRootType(json) {
   if (json && Array === json.constructor) {
     return 'array';
   } else {
@@ -6,16 +6,12 @@ export default function jsonRootType(json) {
   }
 }
 
-
-
-
-
-export default function ArgumentNullException(message) {
+function ArgumentNullException(message) {
    this.message = message;
    this.name = "ArgumentNullException";
 }
 
-export default function ArgumentException(message) {
+function ArgumentException(message) {
    this.message = message;
    this.name = "ArgumentException";
 }

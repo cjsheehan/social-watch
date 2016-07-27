@@ -1,7 +1,3 @@
-// Imports
-import ArgumentException from './util.js';
-
-
 // Twitter field consts
 const ENTITIES = "entities";
 const USER = "user";
@@ -47,21 +43,21 @@ function getData() {
 	}
 }
 
-export function centreOf(bbox) {
+export function centerOf(bbox) {
 	if (!bbox) {
 		throw new ArgumentException("bbox is invalid");
 	}
-	console.log("centreOf", bbox[COORDS][0][0]); 
+	console.log("centreOf", bbox[COORDS][0][0]);
 	let long = "";
-	let lat = "";	
+	let lat = "";
 	if (bbox[COORDS] && bbox[TYPE] === POLYGON) {
 		let se = bbox[COORDS][0][0];
 		let sw = bbox[COORDS][0][1];
 		let nw = bbox[COORDS][0][2];
 		let ne = bbox[COORDS][0][3];
-		console.log(se[0], ne[0]);
-		long = average(se[0], ne[0]);
-		lat = average(se[1], sw[1]);
+		
+		long = avg(se[0], ne[0]);
+		lat = avg(se[1], sw[1]);
 		centre = [long, lat];
 
 	} else {

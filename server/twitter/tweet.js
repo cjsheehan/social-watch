@@ -15,6 +15,14 @@ const POINT = "Point";
 const ATTR = "attributes";
 const BBOX = "bounding_box";
 
+export function Tweet(userName, text, hashTags, createdAt, location){
+   this.userName = userName;
+   this.text  = text;
+   this.hashTags = hashTags;
+   this.createdAt = createdAt;
+   this.location = location;
+}
+
 function getData() {
 	let jsonTweet = Assets.getText('twitter.json');
 	let data = JSON.parse(jsonTweet);
@@ -25,13 +33,13 @@ function getData() {
 		let createdAt = getCreatedAt(tweet);
 		let location = getLocation(tweet);
 		let text = getText(tweet);
-		let centre = "";
+		let center = "";
 
 		try {
 			if (location[TYPE] !== POLYGON) {
-				centre = centreOf(location);
+				center = centerOf(location);
 			} else {
-				centre = [location[COORDS][0][0], location[COORDS][0][1]];
+				center = [location[COORDS][0][0], location[COORDS][0][1]];
 			}
 		} catch (e) {
 			if (e instanceof ArgumentException) {
@@ -39,7 +47,7 @@ function getData() {
 			}
 		}
 
-		console.log(userName, createdAt, text, centre);
+		console.log(userName, createdAt, text, center);
 	}
 }
 
@@ -47,7 +55,7 @@ export function centerOf(bbox) {
 	if (!bbox) {
 		throw new ArgumentException("bbox is invalid");
 	}
-	console.log("centreOf", bbox[COORDS][0][0]);
+
 	let long = "";
 	let lat = "";
 	if (bbox[COORDS] && bbox[TYPE] === POLYGON) {
@@ -58,7 +66,7 @@ export function centerOf(bbox) {
 		
 		long = avg(se[0], ne[0]);
 		lat = avg(se[1], sw[1]);
-		centre = [long, lat];
+		center = [long, lat];
 
 	} else {
 		throw new ArgumentException("bbox doesn't contain a valid polygon");
@@ -131,8 +139,9 @@ function getBBox(data) {
 	}
 }
 
-function getPoint(data) {
-	if (data[COORDS] && data[COORDS][COORDS]) {
+export function getPoint(data) {
+	console.log(data);
+	if (data[COORDS] && data[TYPE] === POINT) {
 		return data[COORDS];
 	} else {
 		return null;

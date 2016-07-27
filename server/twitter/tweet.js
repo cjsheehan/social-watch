@@ -81,7 +81,7 @@ export function avg(a, b) {
 	return ((a + b) / 2).toFixed(6);
 }
 
-function getText(data) {
+export function getText(data) {
 	if (data === undefined) {
 		console.log("data is undefined in getCreatedAt()");
 		return "";
@@ -90,7 +90,8 @@ function getText(data) {
 	return data[TEXT];
 }
 
-function getCreatedAt(data) {
+export function getCreatedAt(data) {
+	console.log(data);
 	if (data === undefined) {
 		console.log("data is undefined in getCreatedAt()");
 		return "";
@@ -99,7 +100,7 @@ function getCreatedAt(data) {
 	return data[CREATED_AT];
 }
 
-function getUserName(data) {
+export function getUserName(data) {
 	if (data === undefined) {
 		console.log("data is undefined in getUser()");
 		return "";
@@ -108,7 +109,7 @@ function getUserName(data) {
 	return data[USER][NAME];
 }
 
-function getHashTags(data) {
+export function getHashTags(data) {
 	if (data === undefined) {
 		console.log("data is undefined in getHashTags()");
 		return [];
@@ -122,7 +123,7 @@ function getHashTags(data) {
 	}
 }
 
-function getLocation(data) {
+export function getLocation(data) {
 	let location = getPoint(data);
 	if (location === null) {
 		location = getBBox(data);
@@ -140,7 +141,6 @@ function getBBox(data) {
 }
 
 export function getPoint(data) {
-	console.log(data);
 	if (data[COORDS] && data[TYPE] === POINT) {
 		return data[COORDS];
 	} else {

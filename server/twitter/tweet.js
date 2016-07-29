@@ -15,12 +15,12 @@ const POINT = "Point";
 const ATTR = "attributes";
 const BBOX = "bounding_box";
 
-export function Tweet(userName, text, hashTags, createdAt, location){
-   this.userName = userName;
-   this.text  = text;
-   this.hashTags = hashTags;
-   this.createdAt = createdAt;
-   this.location = location;
+export function Tweet(userName, text, hashTags, createdAt, location) {
+	this.userName = userName;
+	this.text = text;
+	this.hashTags = hashTags;
+	this.createdAt = createdAt;
+	this.location = location;
 }
 
 function getData() {
@@ -51,6 +51,16 @@ function getData() {
 	}
 }
 
+export function formatTweet(tweet) {
+	let userName = getUserName(tweet);
+	let createdAt = getCreatedAt(tweet);
+	let hashTags = getHashTags(tweet);
+	let location = getLocation(tweet);
+	let text = getText(tweet);
+
+	let formatted = 'userName: ' + userName + '\n' + 'createdAt: ' + createdAt + '\n' + 'location: ' + location + '\n' + 'text: ' + text + '\n';
+}
+
 export function centerOf(bbox) {
 	if (bbox == null) {
 		throw new ArgumentException("bbox is invalid");
@@ -63,7 +73,7 @@ export function centerOf(bbox) {
 		let sw = bbox[COORDS][0][1];
 		let nw = bbox[COORDS][0][2];
 		let ne = bbox[COORDS][0][3];
-		
+
 		long = avg(sw[0], nw[0]);
 		lat = avg(se[1], sw[1]);
 		center = [long, lat];
@@ -124,10 +134,14 @@ export function getHashTags(data) {
 		throw new ArgumentException("valid data is required");
 	}
 
+	let tags = [];
 	if (data[ENTITIES] && data[ENTITIES][HASH_TAGS]) {
-		return data[ENTITIES][HASH_TAGS];
+		for (var i = 0; i < data[ENTITIES][HASH_TAGS].length; i++) {
+			tags[i] = data[ENTITIES][HASH_TAGS][TEXT][i];
+		}
+		return tags;
 	} else {
-		return [];
+		return tags;
 	}
 }
 

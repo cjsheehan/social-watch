@@ -52,7 +52,7 @@ function getData() {
 }
 
 export function centerOf(bbox) {
-	if (!bbox) {
+	if (bbox == null) {
 		throw new ArgumentException("bbox is invalid");
 	}
 
@@ -64,7 +64,7 @@ export function centerOf(bbox) {
 		let nw = bbox[COORDS][0][2];
 		let ne = bbox[COORDS][0][3];
 		
-		long = avg(se[0], ne[0]);
+		long = avg(sw[0], nw[0]);
 		lat = avg(se[1], sw[1]);
 		center = [long, lat];
 
@@ -75,49 +75,57 @@ export function centerOf(bbox) {
 }
 
 export function avg(a, b) {
-	if (!a || !b) {
-		throw new ArgumentException("valid a & b are required");
+	if (a == null || isNaN(a)) {
+		throw new ArgumentException("valid number a is required");
+	} else if (b == null || isNaN(b)) {
+		throw new ArgumentException("valid number b is required");
 	}
 	return ((a + b) / 2).toFixed(6);
 }
 
 export function getText(data) {
-	if (data === undefined) {
-		console.log("data is undefined in getCreatedAt()");
-		return "";
+	if (data == null) {
+		throw new ArgumentException("valid data is required");
 	}
 
-	return data[TEXT];
+	if (data[TEXT]) {
+		return data[TEXT];
+	} else {
+		return "";
+	}
 }
 
 export function getCreatedAt(data) {
-	console.log(data);
-	if (data === undefined) {
-		console.log("data is undefined in getCreatedAt()");
-		return "";
+	if (data == null) {
+		throw new ArgumentException("valid data is required");
 	}
 
-	return data[CREATED_AT];
+	if (data[CREATED_AT]) {
+		return data[CREATED_AT];
+	} else {
+		return "";
+	}
 }
 
 export function getUserName(data) {
-	if (data === undefined) {
-		console.log("data is undefined in getUser()");
-		return "";
+	if (data == null) {
+		throw new ArgumentException("valid data is required");
 	}
 
-	return data[USER][NAME];
+	if (data[USER] && data[USER][NAME]) {
+		return data[USER][NAME];
+	} else {
+		return "";
+	}
 }
 
 export function getHashTags(data) {
-	if (data === undefined) {
-		console.log("data is undefined in getHashTags()");
-		return [];
+	if (data == null) {
+		throw new ArgumentException("valid data is required");
 	}
 
-	let hashTags = data[ENTITIES][HASH_TAGS];
-	if (hashTags && Array.isArray(hashTags)) {
-		return hashTags;
+	if (data[ENTITIES] && data[ENTITIES][HASH_TAGS]) {
+		return data[ENTITIES][HASH_TAGS];
 	} else {
 		return [];
 	}
@@ -125,24 +133,45 @@ export function getHashTags(data) {
 
 export function getLocation(data) {
 	let location = getPoint(data);
-	if (location === null) {
-		location = getBBox(data);
+	if (location == null) {
+		let bbox = getBBox(data);
+		console.log("getLocation", bbox);
+		try {
+			location = centerOf(bbox);
+		} catch (error) {
+			location = null;
+		}
 	}
 	return location;
+}
+
+export function getPlaceName(tweet) {
+	if (!tweet) {
+		throw new ArgumentException("valid tweet required");
+	}
+
+	if (tweet[PLACE] && tweet[PLACE][NAME]) {
+		return tweet[PLACE][NAME];
+	} else {
+		return null;
+	}
 }
 
 function getBBox(data) {
 	if (data[PLACE] && data[PLACE][BBOX]) {
 		return data[PLACE][BBOX];
 	} else {
-
 		return null;
 	}
 }
 
 export function getPoint(data) {
-	if (data[COORDS] && data[TYPE] === POINT) {
-		return data[COORDS];
+	if (data == null) {
+		throw new ArgumentException("valid data is required");
+	}
+
+	if (data[COORDS] && data[COORDS][TYPE] && data[COORDS][TYPE] === POINT && data[COORDS][COORDS]) {
+		return data[COORDS][COORDS];
 	} else {
 		return null;
 	}

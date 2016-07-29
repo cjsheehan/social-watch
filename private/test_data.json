@@ -1,0 +1,2798 @@
+[{
+	"created_at": "Thu Jul 21 17:52:44 +0000 2016",
+	"id": 756185155556048900,
+	"id_str": "756185155556048896",
+	"text": "Harvesting Guitars from the Bones of New York City https://t.co/hYpDK9PXrr #rickkelly #carminestguitars #NYC https://t.co/xwcfpEq4mP",
+	"truncated": false,
+	"entities": {
+		"hashtags": [{
+			"text": "rickkelly",
+			"indices": [75,
+			85]
+		},
+		{
+			"text": "carminestguitars",
+			"indices": [86,
+			103]
+		},
+		{
+			"text": "NYC",
+			"indices": [104,
+			108]
+		}],
+		"symbols": [],
+		"user_mentions": [],
+		"urls": [{
+			"url": "https://t.co/hYpDK9PXrr",
+			"expanded_url": "http://bit.ly/29Wtr0U",
+			"display_url": "bit.ly/29Wtr0U",
+			"indices": [51,
+			74]
+		}],
+		"media": [{
+			"id": 756184879063298000,
+			"id_str": "756184879063298048",
+			"indices": [109,
+			132],
+			"media_url": "http://pbs.twimg.com/media/Cn6CJB0W8AAX71D.jpg",
+			"media_url_https": "https://pbs.twimg.com/media/Cn6CJB0W8AAX71D.jpg",
+			"url": "https://t.co/xwcfpEq4mP",
+			"display_url": "pic.twitter.com/xwcfpEq4mP",
+			"expanded_url": "http://twitter.com/GuitarWorld/status/756185155556048896/photo/1",
+			"type": "photo",
+			"sizes": {
+				"small": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				},
+				"large": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				},
+				"medium": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				},
+				"thumb": {
+					"w": 150,
+					"h": 150,
+					"resize": "crop"
+				}
+			}
+		}]
+	},
+	"extended_entities": {
+		"media": [{
+			"id": 756184879063298000,
+			"id_str": "756184879063298048",
+			"indices": [109,
+			132],
+			"media_url": "http://pbs.twimg.com/media/Cn6CJB0W8AAX71D.jpg",
+			"media_url_https": "https://pbs.twimg.com/media/Cn6CJB0W8AAX71D.jpg",
+			"url": "https://t.co/xwcfpEq4mP",
+			"display_url": "pic.twitter.com/xwcfpEq4mP",
+			"expanded_url": "http://twitter.com/GuitarWorld/status/756185155556048896/photo/1",
+			"type": "photo",
+			"sizes": {
+				"small": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				},
+				"large": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				},
+				"medium": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				},
+				"thumb": {
+					"w": 150,
+					"h": 150,
+					"resize": "crop"
+				}
+			}
+		}]
+	},
+	"source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+	"in_reply_to_status_id": null,
+	"in_reply_to_status_id_str": null,
+	"in_reply_to_user_id": null,
+	"in_reply_to_user_id_str": null,
+	"in_reply_to_screen_name": null,
+	"user": {
+		"id": 23439801,
+		"id_str": "23439801",
+		"name": "Guitar World",
+		"screen_name": "GuitarWorld",
+		"location": "New York City",
+		"description": "Official account of Guitar World magazine! Follow our editors @JeffKitts @BradAngle @DamianFanelli @PaulRiario",
+		"url": "http://t.co/VIYNDL9ITZ",
+		"entities": {
+			"url": {
+				"urls": [{
+					"url": "http://t.co/VIYNDL9ITZ",
+					"expanded_url": "http://www.guitarworld.com",
+					"display_url": "guitarworld.com",
+					"indices": [0,
+					22]
+				}]
+			},
+			"description": {
+				"urls": []
+			}
+		},
+		"protected": false,
+		"followers_count": 311934,
+		"friends_count": 1404,
+		"listed_count": 2376,
+		"created_at": "Mon Mar 09 14:19:20 +0000 2009",
+		"favourites_count": 2241,
+		"utc_offset": -14400,
+		"time_zone": "Eastern Time (US & Canada)",
+		"geo_enabled": false,
+		"verified": true,
+		"statuses_count": 15412,
+		"lang": "en",
+		"contributors_enabled": false,
+		"is_translator": false,
+		"is_translation_enabled": false,
+		"profile_background_color": "131516",
+		"profile_background_image_url": "http://abs.twimg.com/images/themes/theme14/bg.gif",
+		"profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme14/bg.gif",
+		"profile_background_tile": true,
+		"profile_image_url": "http://pbs.twimg.com/profile_images/460880158975471616/15QzGTo__normal.jpeg",
+		"profile_image_url_https": "https://pbs.twimg.com/profile_images/460880158975471616/15QzGTo__normal.jpeg",
+		"profile_banner_url": "https://pbs.twimg.com/profile_banners/23439801/1468326201",
+		"profile_link_color": "009999",
+		"profile_sidebar_border_color": "EEEEEE",
+		"profile_sidebar_fill_color": "EFEFEF",
+		"profile_text_color": "333333",
+		"profile_use_background_image": true,
+		"has_extended_profile": false,
+		"default_profile": false,
+		"default_profile_image": false,
+		"following": true,
+		"follow_request_sent": false,
+		"notifications": false
+	},
+	"geo": null,
+	"coordinates": null,
+	"place": null,
+	"contributors": null,
+	"is_quote_status": false,
+	"retweet_count": 20,
+	"favorite_count": 34,
+	"favorited": false,
+	"retweeted": false,
+	"possibly_sensitive": false,
+	"possibly_sensitive_appealable": false,
+	"lang": "en"
+},
+{
+	"created_at": "Thu Jul 21 16:58:11 +0000 2016",
+	"id": 756171423656341500,
+	"id_str": "756171423656341504",
+	"text": "You Threw a Beer at Angus? @ACDC's #AngusYoung Handles a Heckler During \"Bad Boy Boogie\" https://t.co/zgsz1c7rD9 https://t.co/596QJhpTdn",
+	"truncated": false,
+	"entities": {
+		"hashtags": [{
+			"text": "AngusYoung",
+			"indices": [35,
+			46]
+		}],
+		"symbols": [],
+		"user_mentions": [{
+			"screen_name": "acdc",
+			"name": "AC/DC",
+			"id": 2836755090,
+			"id_str": "2836755090",
+			"indices": [27,
+			32]
+		}],
+		"urls": [{
+			"url": "https://t.co/zgsz1c7rD9",
+			"expanded_url": "http://bit.ly/2acxfgK",
+			"display_url": "bit.ly/2acxfgK",
+			"indices": [89,
+			112]
+		}],
+		"media": [{
+			"id": 756170993014628400,
+			"id_str": "756170993014628352",
+			"indices": [113,
+			136],
+			"media_url": "http://pbs.twimg.com/media/Cn51gwQXYAAwD76.jpg",
+			"media_url_https": "https://pbs.twimg.com/media/Cn51gwQXYAAwD76.jpg",
+			"url": "https://t.co/596QJhpTdn",
+			"display_url": "pic.twitter.com/596QJhpTdn",
+			"expanded_url": "http://twitter.com/GuitarWorld/status/756171423656341504/photo/1",
+			"type": "photo",
+			"sizes": {
+				"thumb": {
+					"w": 150,
+					"h": 150,
+					"resize": "crop"
+				},
+				"large": {
+					"w": 621,
+					"h": 439,
+					"resize": "fit"
+				},
+				"small": {
+					"w": 621,
+					"h": 439,
+					"resize": "fit"
+				},
+				"medium": {
+					"w": 621,
+					"h": 439,
+					"resize": "fit"
+				}
+			}
+		}]
+	},
+	"extended_entities": {
+		"media": [{
+			"id": 756170993014628400,
+			"id_str": "756170993014628352",
+			"indices": [113,
+			136],
+			"media_url": "http://pbs.twimg.com/media/Cn51gwQXYAAwD76.jpg",
+			"media_url_https": "https://pbs.twimg.com/media/Cn51gwQXYAAwD76.jpg",
+			"url": "https://t.co/596QJhpTdn",
+			"display_url": "pic.twitter.com/596QJhpTdn",
+			"expanded_url": "http://twitter.com/GuitarWorld/status/756171423656341504/photo/1",
+			"type": "photo",
+			"sizes": {
+				"thumb": {
+					"w": 150,
+					"h": 150,
+					"resize": "crop"
+				},
+				"large": {
+					"w": 621,
+					"h": 439,
+					"resize": "fit"
+				},
+				"small": {
+					"w": 621,
+					"h": 439,
+					"resize": "fit"
+				},
+				"medium": {
+					"w": 621,
+					"h": 439,
+					"resize": "fit"
+				}
+			}
+		}]
+	},
+	"source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+	"in_reply_to_status_id": null,
+	"in_reply_to_status_id_str": null,
+	"in_reply_to_user_id": null,
+	"in_reply_to_user_id_str": null,
+	"in_reply_to_screen_name": null,
+	"user": {
+		"id": 23439801,
+		"id_str": "23439801",
+		"name": "Guitar World",
+		"screen_name": "GuitarWorld",
+		"location": "New York City",
+		"description": "Official account of Guitar World magazine! Follow our editors @JeffKitts @BradAngle @DamianFanelli @PaulRiario",
+		"url": "http://t.co/VIYNDL9ITZ",
+		"entities": {
+			"url": {
+				"urls": [{
+					"url": "http://t.co/VIYNDL9ITZ",
+					"expanded_url": "http://www.guitarworld.com",
+					"display_url": "guitarworld.com",
+					"indices": [0,
+					22]
+				}]
+			},
+			"description": {
+				"urls": []
+			}
+		},
+		"protected": false,
+		"followers_count": 311934,
+		"friends_count": 1404,
+		"listed_count": 2376,
+		"created_at": "Mon Mar 09 14:19:20 +0000 2009",
+		"favourites_count": 2241,
+		"utc_offset": -14400,
+		"time_zone": "Eastern Time (US & Canada)",
+		"geo_enabled": false,
+		"verified": true,
+		"statuses_count": 15412,
+		"lang": "en",
+		"contributors_enabled": false,
+		"is_translator": false,
+		"is_translation_enabled": false,
+		"profile_background_color": "131516",
+		"profile_background_image_url": "http://abs.twimg.com/images/themes/theme14/bg.gif",
+		"profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme14/bg.gif",
+		"profile_background_tile": true,
+		"profile_image_url": "http://pbs.twimg.com/profile_images/460880158975471616/15QzGTo__normal.jpeg",
+		"profile_image_url_https": "https://pbs.twimg.com/profile_images/460880158975471616/15QzGTo__normal.jpeg",
+		"profile_banner_url": "https://pbs.twimg.com/profile_banners/23439801/1468326201",
+		"profile_link_color": "009999",
+		"profile_sidebar_border_color": "EEEEEE",
+		"profile_sidebar_fill_color": "EFEFEF",
+		"profile_text_color": "333333",
+		"profile_use_background_image": true,
+		"has_extended_profile": false,
+		"default_profile": false,
+		"default_profile_image": false,
+		"following": true,
+		"follow_request_sent": false,
+		"notifications": false
+	},
+	"geo": null,
+	"coordinates": null,
+	"place": null,
+	"contributors": null,
+	"is_quote_status": false,
+	"retweet_count": 14,
+	"favorite_count": 29,
+	"favorited": false,
+	"retweeted": false,
+	"possibly_sensitive": false,
+	"possibly_sensitive_appealable": false,
+	"lang": "en"
+},
+{
+	"created_at": "Thu Jul 21 16:35:13 +0000 2016",
+	"id": 756165645490876400,
+	"id_str": "756165645490876416",
+	"text": ".@DaddarioandCo Factory Tour: Guide to the Inner-Workings of Guitar Strings https://t.co/vRM4iA0PF0 https://t.co/RkI0zPBdmN",
+	"truncated": false,
+	"entities": {
+		"hashtags": [],
+		"symbols": [],
+		"user_mentions": [{
+			"screen_name": "DaddarioandCo",
+			"name": "D'Addario",
+			"id": 17309850,
+			"id_str": "17309850",
+			"indices": [1,
+			15]
+		}],
+		"urls": [{
+			"url": "https://t.co/vRM4iA0PF0",
+			"expanded_url": "http://bit.ly/29XNytA",
+			"display_url": "bit.ly/29XNytA",
+			"indices": [76,
+			99]
+		}],
+		"media": [{
+			"id": 756165423851266000,
+			"id_str": "756165423851266048",
+			"indices": [100,
+			123],
+			"media_url": "http://pbs.twimg.com/media/Cn5wclgWYAAgLjO.jpg",
+			"media_url_https": "https://pbs.twimg.com/media/Cn5wclgWYAAgLjO.jpg",
+			"url": "https://t.co/RkI0zPBdmN",
+			"display_url": "pic.twitter.com/RkI0zPBdmN",
+			"expanded_url": "http://twitter.com/GuitarWorld/status/756165645490876416/photo/1",
+			"type": "photo",
+			"sizes": {
+				"large": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				},
+				"small": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				},
+				"thumb": {
+					"w": 150,
+					"h": 150,
+					"resize": "crop"
+				},
+				"medium": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				}
+			}
+		}]
+	},
+	"extended_entities": {
+		"media": [{
+			"id": 756165423851266000,
+			"id_str": "756165423851266048",
+			"indices": [100,
+			123],
+			"media_url": "http://pbs.twimg.com/media/Cn5wclgWYAAgLjO.jpg",
+			"media_url_https": "https://pbs.twimg.com/media/Cn5wclgWYAAgLjO.jpg",
+			"url": "https://t.co/RkI0zPBdmN",
+			"display_url": "pic.twitter.com/RkI0zPBdmN",
+			"expanded_url": "http://twitter.com/GuitarWorld/status/756165645490876416/photo/1",
+			"type": "photo",
+			"sizes": {
+				"large": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				},
+				"small": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				},
+				"thumb": {
+					"w": 150,
+					"h": 150,
+					"resize": "crop"
+				},
+				"medium": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				}
+			}
+		}]
+	},
+	"source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+	"in_reply_to_status_id": null,
+	"in_reply_to_status_id_str": null,
+	"in_reply_to_user_id": null,
+	"in_reply_to_user_id_str": null,
+	"in_reply_to_screen_name": null,
+	"user": {
+		"id": 23439801,
+		"id_str": "23439801",
+		"name": "Guitar World",
+		"screen_name": "GuitarWorld",
+		"location": "New York City",
+		"description": "Official account of Guitar World magazine! Follow our editors @JeffKitts @BradAngle @DamianFanelli @PaulRiario",
+		"url": "http://t.co/VIYNDL9ITZ",
+		"entities": {
+			"url": {
+				"urls": [{
+					"url": "http://t.co/VIYNDL9ITZ",
+					"expanded_url": "http://www.guitarworld.com",
+					"display_url": "guitarworld.com",
+					"indices": [0,
+					22]
+				}]
+			},
+			"description": {
+				"urls": []
+			}
+		},
+		"protected": false,
+		"followers_count": 311934,
+		"friends_count": 1404,
+		"listed_count": 2376,
+		"created_at": "Mon Mar 09 14:19:20 +0000 2009",
+		"favourites_count": 2241,
+		"utc_offset": -14400,
+		"time_zone": "Eastern Time (US & Canada)",
+		"geo_enabled": false,
+		"verified": true,
+		"statuses_count": 15412,
+		"lang": "en",
+		"contributors_enabled": false,
+		"is_translator": false,
+		"is_translation_enabled": false,
+		"profile_background_color": "131516",
+		"profile_background_image_url": "http://abs.twimg.com/images/themes/theme14/bg.gif",
+		"profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme14/bg.gif",
+		"profile_background_tile": true,
+		"profile_image_url": "http://pbs.twimg.com/profile_images/460880158975471616/15QzGTo__normal.jpeg",
+		"profile_image_url_https": "https://pbs.twimg.com/profile_images/460880158975471616/15QzGTo__normal.jpeg",
+		"profile_banner_url": "https://pbs.twimg.com/profile_banners/23439801/1468326201",
+		"profile_link_color": "009999",
+		"profile_sidebar_border_color": "EEEEEE",
+		"profile_sidebar_fill_color": "EFEFEF",
+		"profile_text_color": "333333",
+		"profile_use_background_image": true,
+		"has_extended_profile": false,
+		"default_profile": false,
+		"default_profile_image": false,
+		"following": true,
+		"follow_request_sent": false,
+		"notifications": false
+	},
+	"geo": null,
+	"coordinates": null,
+	"place": null,
+	"contributors": null,
+	"is_quote_status": false,
+	"retweet_count": 12,
+	"favorite_count": 16,
+	"favorited": false,
+	"retweeted": false,
+	"possibly_sensitive": false,
+	"possibly_sensitive_appealable": false,
+	"lang": "en"
+},
+{
+	"created_at": "Thu Jul 21 16:16:48 +0000 2016",
+	"id": 756161009312796700,
+	"id_str": "756161009312796672",
+	"text": "Testing twurl with jq redirect",
+	"truncated": false,
+	"entities": {
+		"hashtags": [],
+		"symbols": [],
+		"user_mentions": [],
+		"urls": []
+	},
+	"source": "<a href=\"https://github.com/cjsheehan/social-watch\" rel=\"nofollow\">social-watch-xy</a>",
+	"in_reply_to_status_id": null,
+	"in_reply_to_status_id_str": null,
+	"in_reply_to_user_id": null,
+	"in_reply_to_user_id_str": null,
+	"in_reply_to_screen_name": null,
+	"user": {
+		"id": 755380974423277600,
+		"id_str": "755380974423277569",
+		"name": "Chris Sheehan",
+		"screen_name": "c__sheehan",
+		"location": "",
+		"description": "",
+		"url": null,
+		"entities": {
+			"description": {
+				"urls": []
+			}
+		},
+		"protected": false,
+		"followers_count": 1,
+		"friends_count": 1,
+		"listed_count": 0,
+		"created_at": "Tue Jul 19 12:37:13 +0000 2016",
+		"favourites_count": 0,
+		"utc_offset": 3600,
+		"time_zone": "Edinburgh",
+		"geo_enabled": false,
+		"verified": false,
+		"statuses_count": 10,
+		"lang": "en",
+		"contributors_enabled": false,
+		"is_translator": false,
+		"is_translation_enabled": false,
+		"profile_background_color": "F5F8FA",
+		"profile_background_image_url": null,
+		"profile_background_image_url_https": null,
+		"profile_background_tile": false,
+		"profile_image_url": "http://abs.twimg.com/sticky/default_profile_images/default_profile_3_normal.png",
+		"profile_image_url_https": "https://abs.twimg.com/sticky/default_profile_images/default_profile_3_normal.png",
+		"profile_link_color": "2B7BB9",
+		"profile_sidebar_border_color": "C0DEED",
+		"profile_sidebar_fill_color": "DDEEF6",
+		"profile_text_color": "333333",
+		"profile_use_background_image": true,
+		"has_extended_profile": false,
+		"default_profile": true,
+		"default_profile_image": true,
+		"following": false,
+		"follow_request_sent": false,
+		"notifications": false
+	},
+	"geo": null,
+	"coordinates": null,
+	"place": null,
+	"contributors": null,
+	"is_quote_status": false,
+	"retweet_count": 0,
+	"favorite_count": 0,
+	"favorited": false,
+	"retweeted": false,
+	"lang": "en"
+},
+{
+	"created_at": "Thu Jul 21 16:16:07 +0000 2016",
+	"id": 756160838751297500,
+	"id_str": "756160838751297536",
+	"text": "Testing twurl with jq6 redirect",
+	"truncated": false,
+	"entities": {
+		"hashtags": [],
+		"symbols": [],
+		"user_mentions": [],
+		"urls": []
+	},
+	"source": "<a href=\"https://github.com/cjsheehan/social-watch\" rel=\"nofollow\">social-watch-xy</a>",
+	"in_reply_to_status_id": null,
+	"in_reply_to_status_id_str": null,
+	"in_reply_to_user_id": null,
+	"in_reply_to_user_id_str": null,
+	"in_reply_to_screen_name": null,
+	"user": {
+		"id": 755380974423277600,
+		"id_str": "755380974423277569",
+		"name": "Chris Sheehan",
+		"screen_name": "c__sheehan",
+		"location": "",
+		"description": "",
+		"url": null,
+		"entities": {
+			"description": {
+				"urls": []
+			}
+		},
+		"protected": false,
+		"followers_count": 1,
+		"friends_count": 1,
+		"listed_count": 0,
+		"created_at": "Tue Jul 19 12:37:13 +0000 2016",
+		"favourites_count": 0,
+		"utc_offset": 3600,
+		"time_zone": "Edinburgh",
+		"geo_enabled": false,
+		"verified": false,
+		"statuses_count": 10,
+		"lang": "en",
+		"contributors_enabled": false,
+		"is_translator": false,
+		"is_translation_enabled": false,
+		"profile_background_color": "F5F8FA",
+		"profile_background_image_url": null,
+		"profile_background_image_url_https": null,
+		"profile_background_tile": false,
+		"profile_image_url": "http://abs.twimg.com/sticky/default_profile_images/default_profile_3_normal.png",
+		"profile_image_url_https": "https://abs.twimg.com/sticky/default_profile_images/default_profile_3_normal.png",
+		"profile_link_color": "2B7BB9",
+		"profile_sidebar_border_color": "C0DEED",
+		"profile_sidebar_fill_color": "DDEEF6",
+		"profile_text_color": "333333",
+		"profile_use_background_image": true,
+		"has_extended_profile": false,
+		"default_profile": true,
+		"default_profile_image": true,
+		"following": false,
+		"follow_request_sent": false,
+		"notifications": false
+	},
+	"geo": null,
+	"coordinates": null,
+	"place": null,
+	"contributors": null,
+	"is_quote_status": false,
+	"retweet_count": 0,
+	"favorite_count": 0,
+	"favorited": false,
+	"retweeted": false,
+	"lang": "en"
+},
+{
+	"created_at": "Thu Jul 21 16:14:41 +0000 2016",
+	"id": 756160478447927300,
+	"id_str": "756160478447927296",
+	"text": "Testing twurl with jq5",
+	"truncated": false,
+	"entities": {
+		"hashtags": [],
+		"symbols": [],
+		"user_mentions": [],
+		"urls": []
+	},
+	"source": "<a href=\"https://github.com/cjsheehan/social-watch\" rel=\"nofollow\">social-watch-xy</a>",
+	"in_reply_to_status_id": null,
+	"in_reply_to_status_id_str": null,
+	"in_reply_to_user_id": null,
+	"in_reply_to_user_id_str": null,
+	"in_reply_to_screen_name": null,
+	"user": {
+		"id": 755380974423277600,
+		"id_str": "755380974423277569",
+		"name": "Chris Sheehan",
+		"screen_name": "c__sheehan",
+		"location": "",
+		"description": "",
+		"url": null,
+		"entities": {
+			"description": {
+				"urls": []
+			}
+		},
+		"protected": false,
+		"followers_count": 1,
+		"friends_count": 1,
+		"listed_count": 0,
+		"created_at": "Tue Jul 19 12:37:13 +0000 2016",
+		"favourites_count": 0,
+		"utc_offset": 3600,
+		"time_zone": "Edinburgh",
+		"geo_enabled": false,
+		"verified": false,
+		"statuses_count": 10,
+		"lang": "en",
+		"contributors_enabled": false,
+		"is_translator": false,
+		"is_translation_enabled": false,
+		"profile_background_color": "F5F8FA",
+		"profile_background_image_url": null,
+		"profile_background_image_url_https": null,
+		"profile_background_tile": false,
+		"profile_image_url": "http://abs.twimg.com/sticky/default_profile_images/default_profile_3_normal.png",
+		"profile_image_url_https": "https://abs.twimg.com/sticky/default_profile_images/default_profile_3_normal.png",
+		"profile_link_color": "2B7BB9",
+		"profile_sidebar_border_color": "C0DEED",
+		"profile_sidebar_fill_color": "DDEEF6",
+		"profile_text_color": "333333",
+		"profile_use_background_image": true,
+		"has_extended_profile": false,
+		"default_profile": true,
+		"default_profile_image": true,
+		"following": false,
+		"follow_request_sent": false,
+		"notifications": false
+	},
+	"geo": null,
+	"coordinates": null,
+	"place": null,
+	"contributors": null,
+	"is_quote_status": false,
+	"retweet_count": 0,
+	"favorite_count": 0,
+	"favorited": false,
+	"retweeted": false,
+	"lang": "en"
+},
+{
+	"created_at": "Thu Jul 21 16:13:41 +0000 2016",
+	"id": 756160226106105900,
+	"id_str": "756160226106105856",
+	"text": "Testing twurl with jq4",
+	"truncated": false,
+	"entities": {
+		"hashtags": [],
+		"symbols": [],
+		"user_mentions": [],
+		"urls": []
+	},
+	"source": "<a href=\"https://github.com/cjsheehan/social-watch\" rel=\"nofollow\">social-watch-xy</a>",
+	"in_reply_to_status_id": null,
+	"in_reply_to_status_id_str": null,
+	"in_reply_to_user_id": null,
+	"in_reply_to_user_id_str": null,
+	"in_reply_to_screen_name": null,
+	"user": {
+		"id": 755380974423277600,
+		"id_str": "755380974423277569",
+		"name": "Chris Sheehan",
+		"screen_name": "c__sheehan",
+		"location": "",
+		"description": "",
+		"url": null,
+		"entities": {
+			"description": {
+				"urls": []
+			}
+		},
+		"protected": false,
+		"followers_count": 1,
+		"friends_count": 1,
+		"listed_count": 0,
+		"created_at": "Tue Jul 19 12:37:13 +0000 2016",
+		"favourites_count": 0,
+		"utc_offset": 3600,
+		"time_zone": "Edinburgh",
+		"geo_enabled": false,
+		"verified": false,
+		"statuses_count": 10,
+		"lang": "en",
+		"contributors_enabled": false,
+		"is_translator": false,
+		"is_translation_enabled": false,
+		"profile_background_color": "F5F8FA",
+		"profile_background_image_url": null,
+		"profile_background_image_url_https": null,
+		"profile_background_tile": false,
+		"profile_image_url": "http://abs.twimg.com/sticky/default_profile_images/default_profile_3_normal.png",
+		"profile_image_url_https": "https://abs.twimg.com/sticky/default_profile_images/default_profile_3_normal.png",
+		"profile_link_color": "2B7BB9",
+		"profile_sidebar_border_color": "C0DEED",
+		"profile_sidebar_fill_color": "DDEEF6",
+		"profile_text_color": "333333",
+		"profile_use_background_image": true,
+		"has_extended_profile": false,
+		"default_profile": true,
+		"default_profile_image": true,
+		"following": false,
+		"follow_request_sent": false,
+		"notifications": false
+	},
+	"geo": null,
+	"coordinates": null,
+	"place": null,
+	"contributors": null,
+	"is_quote_status": false,
+	"retweet_count": 0,
+	"favorite_count": 0,
+	"favorited": false,
+	"retweeted": false,
+	"lang": "en"
+},
+{
+	"created_at": "Thu Jul 21 16:06:09 +0000 2016",
+	"id": 756158329257201700,
+	"id_str": "756158329257201665",
+	"text": "Testing twurl with jq2",
+	"truncated": false,
+	"entities": {
+		"hashtags": [],
+		"symbols": [],
+		"user_mentions": [],
+		"urls": []
+	},
+	"source": "<a href=\"https://github.com/cjsheehan/social-watch\" rel=\"nofollow\">social-watch-xy</a>",
+	"in_reply_to_status_id": null,
+	"in_reply_to_status_id_str": null,
+	"in_reply_to_user_id": null,
+	"in_reply_to_user_id_str": null,
+	"in_reply_to_screen_name": null,
+	"user": {
+		"id": 755380974423277600,
+		"id_str": "755380974423277569",
+		"name": "Chris Sheehan",
+		"screen_name": "c__sheehan",
+		"location": "",
+		"description": "",
+		"url": null,
+		"entities": {
+			"description": {
+				"urls": []
+			}
+		},
+		"protected": false,
+		"followers_count": 1,
+		"friends_count": 1,
+		"listed_count": 0,
+		"created_at": "Tue Jul 19 12:37:13 +0000 2016",
+		"favourites_count": 0,
+		"utc_offset": 3600,
+		"time_zone": "Edinburgh",
+		"geo_enabled": false,
+		"verified": false,
+		"statuses_count": 10,
+		"lang": "en",
+		"contributors_enabled": false,
+		"is_translator": false,
+		"is_translation_enabled": false,
+		"profile_background_color": "F5F8FA",
+		"profile_background_image_url": null,
+		"profile_background_image_url_https": null,
+		"profile_background_tile": false,
+		"profile_image_url": "http://abs.twimg.com/sticky/default_profile_images/default_profile_3_normal.png",
+		"profile_image_url_https": "https://abs.twimg.com/sticky/default_profile_images/default_profile_3_normal.png",
+		"profile_link_color": "2B7BB9",
+		"profile_sidebar_border_color": "C0DEED",
+		"profile_sidebar_fill_color": "DDEEF6",
+		"profile_text_color": "333333",
+		"profile_use_background_image": true,
+		"has_extended_profile": false,
+		"default_profile": true,
+		"default_profile_image": true,
+		"following": false,
+		"follow_request_sent": false,
+		"notifications": false
+	},
+	"geo": null,
+	"coordinates": null,
+	"place": null,
+	"contributors": null,
+	"is_quote_status": false,
+	"retweet_count": 0,
+	"favorite_count": 0,
+	"favorited": false,
+	"retweeted": false,
+	"lang": "en"
+},
+{
+	"created_at": "Thu Jul 21 15:52:18 +0000 2016",
+	"id": 756154845485232100,
+	"id_str": "756154845485232128",
+	"text": ".@SteveVai Announces 'Passion and Warfare' North American Tour Dates https://t.co/Vlh6hfUezb #stevevai https://t.co/J22ZBbizNi",
+	"truncated": false,
+	"entities": {
+		"hashtags": [{
+			"text": "stevevai",
+			"indices": [93,
+			102]
+		}],
+		"symbols": [],
+		"user_mentions": [{
+			"screen_name": "stevevai",
+			"name": "Steve Vai",
+			"id": 44730484,
+			"id_str": "44730484",
+			"indices": [1,
+			10]
+		}],
+		"urls": [{
+			"url": "https://t.co/Vlh6hfUezb",
+			"expanded_url": "http://bit.ly/29Wvqq3",
+			"display_url": "bit.ly/29Wvqq3",
+			"indices": [69,
+			92]
+		}],
+		"media": [{
+			"id": 756154689998164000,
+			"id_str": "756154689998163968",
+			"indices": [103,
+			126],
+			"media_url": "http://pbs.twimg.com/media/Cn5mryyWEAAAJda.jpg",
+			"media_url_https": "https://pbs.twimg.com/media/Cn5mryyWEAAAJda.jpg",
+			"url": "https://t.co/J22ZBbizNi",
+			"display_url": "pic.twitter.com/J22ZBbizNi",
+			"expanded_url": "http://twitter.com/GuitarWorld/status/756154845485232128/photo/1",
+			"type": "photo",
+			"sizes": {
+				"thumb": {
+					"w": 150,
+					"h": 150,
+					"resize": "crop"
+				},
+				"small": {
+					"w": 621,
+					"h": 439,
+					"resize": "fit"
+				},
+				"medium": {
+					"w": 621,
+					"h": 439,
+					"resize": "fit"
+				},
+				"large": {
+					"w": 621,
+					"h": 439,
+					"resize": "fit"
+				}
+			}
+		}]
+	},
+	"extended_entities": {
+		"media": [{
+			"id": 756154689998164000,
+			"id_str": "756154689998163968",
+			"indices": [103,
+			126],
+			"media_url": "http://pbs.twimg.com/media/Cn5mryyWEAAAJda.jpg",
+			"media_url_https": "https://pbs.twimg.com/media/Cn5mryyWEAAAJda.jpg",
+			"url": "https://t.co/J22ZBbizNi",
+			"display_url": "pic.twitter.com/J22ZBbizNi",
+			"expanded_url": "http://twitter.com/GuitarWorld/status/756154845485232128/photo/1",
+			"type": "photo",
+			"sizes": {
+				"thumb": {
+					"w": 150,
+					"h": 150,
+					"resize": "crop"
+				},
+				"small": {
+					"w": 621,
+					"h": 439,
+					"resize": "fit"
+				},
+				"medium": {
+					"w": 621,
+					"h": 439,
+					"resize": "fit"
+				},
+				"large": {
+					"w": 621,
+					"h": 439,
+					"resize": "fit"
+				}
+			}
+		}]
+	},
+	"source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+	"in_reply_to_status_id": null,
+	"in_reply_to_status_id_str": null,
+	"in_reply_to_user_id": null,
+	"in_reply_to_user_id_str": null,
+	"in_reply_to_screen_name": null,
+	"user": {
+		"id": 23439801,
+		"id_str": "23439801",
+		"name": "Guitar World",
+		"screen_name": "GuitarWorld",
+		"location": "New York City",
+		"description": "Official account of Guitar World magazine! Follow our editors @JeffKitts @BradAngle @DamianFanelli @PaulRiario",
+		"url": "http://t.co/VIYNDL9ITZ",
+		"entities": {
+			"url": {
+				"urls": [{
+					"url": "http://t.co/VIYNDL9ITZ",
+					"expanded_url": "http://www.guitarworld.com",
+					"display_url": "guitarworld.com",
+					"indices": [0,
+					22]
+				}]
+			},
+			"description": {
+				"urls": []
+			}
+		},
+		"protected": false,
+		"followers_count": 311934,
+		"friends_count": 1404,
+		"listed_count": 2376,
+		"created_at": "Mon Mar 09 14:19:20 +0000 2009",
+		"favourites_count": 2241,
+		"utc_offset": -14400,
+		"time_zone": "Eastern Time (US & Canada)",
+		"geo_enabled": false,
+		"verified": true,
+		"statuses_count": 15412,
+		"lang": "en",
+		"contributors_enabled": false,
+		"is_translator": false,
+		"is_translation_enabled": false,
+		"profile_background_color": "131516",
+		"profile_background_image_url": "http://abs.twimg.com/images/themes/theme14/bg.gif",
+		"profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme14/bg.gif",
+		"profile_background_tile": true,
+		"profile_image_url": "http://pbs.twimg.com/profile_images/460880158975471616/15QzGTo__normal.jpeg",
+		"profile_image_url_https": "https://pbs.twimg.com/profile_images/460880158975471616/15QzGTo__normal.jpeg",
+		"profile_banner_url": "https://pbs.twimg.com/profile_banners/23439801/1468326201",
+		"profile_link_color": "009999",
+		"profile_sidebar_border_color": "EEEEEE",
+		"profile_sidebar_fill_color": "EFEFEF",
+		"profile_text_color": "333333",
+		"profile_use_background_image": true,
+		"has_extended_profile": false,
+		"default_profile": false,
+		"default_profile_image": false,
+		"following": true,
+		"follow_request_sent": false,
+		"notifications": false
+	},
+	"geo": null,
+	"coordinates": null,
+	"place": null,
+	"contributors": null,
+	"is_quote_status": false,
+	"retweet_count": 22,
+	"favorite_count": 36,
+	"favorited": false,
+	"retweeted": false,
+	"possibly_sensitive": false,
+	"possibly_sensitive_appealable": false,
+	"lang": "en"
+},
+{
+	"created_at": "Thu Jul 21 15:35:08 +0000 2016",
+	"id": 756150524613955600,
+	"id_str": "756150524613955585",
+	"text": "How to Build Shredding Speed https://t.co/ON7ESHRw6P https://t.co/61ffoLxMDG",
+	"truncated": false,
+	"entities": {
+		"hashtags": [],
+		"symbols": [],
+		"user_mentions": [],
+		"urls": [{
+			"url": "https://t.co/ON7ESHRw6P",
+			"expanded_url": "http://bit.ly/1SKzzfi",
+			"display_url": "bit.ly/1SKzzfi",
+			"indices": [29,
+			52]
+		}],
+		"media": [{
+			"id": 756150506804899800,
+			"id_str": "756150506804899840",
+			"indices": [53,
+			76],
+			"media_url": "http://pbs.twimg.com/media/Cn5i4TLWcAA1ttz.jpg",
+			"media_url_https": "https://pbs.twimg.com/media/Cn5i4TLWcAA1ttz.jpg",
+			"url": "https://t.co/61ffoLxMDG",
+			"display_url": "pic.twitter.com/61ffoLxMDG",
+			"expanded_url": "http://twitter.com/GuitarWorld/status/756150524613955585/photo/1",
+			"type": "photo",
+			"sizes": {
+				"large": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				},
+				"small": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				},
+				"thumb": {
+					"w": 150,
+					"h": 150,
+					"resize": "crop"
+				},
+				"medium": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				}
+			}
+		}]
+	},
+	"extended_entities": {
+		"media": [{
+			"id": 756150506804899800,
+			"id_str": "756150506804899840",
+			"indices": [53,
+			76],
+			"media_url": "http://pbs.twimg.com/media/Cn5i4TLWcAA1ttz.jpg",
+			"media_url_https": "https://pbs.twimg.com/media/Cn5i4TLWcAA1ttz.jpg",
+			"url": "https://t.co/61ffoLxMDG",
+			"display_url": "pic.twitter.com/61ffoLxMDG",
+			"expanded_url": "http://twitter.com/GuitarWorld/status/756150524613955585/photo/1",
+			"type": "photo",
+			"sizes": {
+				"large": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				},
+				"small": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				},
+				"thumb": {
+					"w": 150,
+					"h": 150,
+					"resize": "crop"
+				},
+				"medium": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				}
+			}
+		}]
+	},
+	"source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+	"in_reply_to_status_id": null,
+	"in_reply_to_status_id_str": null,
+	"in_reply_to_user_id": null,
+	"in_reply_to_user_id_str": null,
+	"in_reply_to_screen_name": null,
+	"user": {
+		"id": 23439801,
+		"id_str": "23439801",
+		"name": "Guitar World",
+		"screen_name": "GuitarWorld",
+		"location": "New York City",
+		"description": "Official account of Guitar World magazine! Follow our editors @JeffKitts @BradAngle @DamianFanelli @PaulRiario",
+		"url": "http://t.co/VIYNDL9ITZ",
+		"entities": {
+			"url": {
+				"urls": [{
+					"url": "http://t.co/VIYNDL9ITZ",
+					"expanded_url": "http://www.guitarworld.com",
+					"display_url": "guitarworld.com",
+					"indices": [0,
+					22]
+				}]
+			},
+			"description": {
+				"urls": []
+			}
+		},
+		"protected": false,
+		"followers_count": 311934,
+		"friends_count": 1404,
+		"listed_count": 2376,
+		"created_at": "Mon Mar 09 14:19:20 +0000 2009",
+		"favourites_count": 2241,
+		"utc_offset": -14400,
+		"time_zone": "Eastern Time (US & Canada)",
+		"geo_enabled": false,
+		"verified": true,
+		"statuses_count": 15412,
+		"lang": "en",
+		"contributors_enabled": false,
+		"is_translator": false,
+		"is_translation_enabled": false,
+		"profile_background_color": "131516",
+		"profile_background_image_url": "http://abs.twimg.com/images/themes/theme14/bg.gif",
+		"profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme14/bg.gif",
+		"profile_background_tile": true,
+		"profile_image_url": "http://pbs.twimg.com/profile_images/460880158975471616/15QzGTo__normal.jpeg",
+		"profile_image_url_https": "https://pbs.twimg.com/profile_images/460880158975471616/15QzGTo__normal.jpeg",
+		"profile_banner_url": "https://pbs.twimg.com/profile_banners/23439801/1468326201",
+		"profile_link_color": "009999",
+		"profile_sidebar_border_color": "EEEEEE",
+		"profile_sidebar_fill_color": "EFEFEF",
+		"profile_text_color": "333333",
+		"profile_use_background_image": true,
+		"has_extended_profile": false,
+		"default_profile": false,
+		"default_profile_image": false,
+		"following": true,
+		"follow_request_sent": false,
+		"notifications": false
+	},
+	"geo": null,
+	"coordinates": null,
+	"place": null,
+	"contributors": null,
+	"is_quote_status": false,
+	"retweet_count": 16,
+	"favorite_count": 50,
+	"favorited": false,
+	"retweeted": false,
+	"possibly_sensitive": false,
+	"possibly_sensitive_appealable": false,
+	"lang": "en"
+},
+{
+	"created_at": "Thu Jul 21 15:33:52 +0000 2016",
+	"id": 756150205997867000,
+	"id_str": "756150205997867008",
+	"text": "#SteveVai Invites Guitarists to Vai Academy 2017 https://t.co/BCO5zDoMpd @stevevai https://t.co/iC08juos9k",
+	"truncated": false,
+	"entities": {
+		"hashtags": [{
+			"text": "SteveVai",
+			"indices": [0,
+			9]
+		}],
+		"symbols": [],
+		"user_mentions": [{
+			"screen_name": "stevevai",
+			"name": "Steve Vai",
+			"id": 44730484,
+			"id_str": "44730484",
+			"indices": [73,
+			82]
+		}],
+		"urls": [{
+			"url": "https://t.co/BCO5zDoMpd",
+			"expanded_url": "http://bit.ly/2a3htn4",
+			"display_url": "bit.ly/2a3htn4",
+			"indices": [49,
+			72]
+		}],
+		"media": [{
+			"id": 756150091245842400,
+			"id_str": "756150091245842432",
+			"indices": [83,
+			106],
+			"media_url": "http://pbs.twimg.com/media/Cn5igHGWcAAuqK5.jpg",
+			"media_url_https": "https://pbs.twimg.com/media/Cn5igHGWcAAuqK5.jpg",
+			"url": "https://t.co/iC08juos9k",
+			"display_url": "pic.twitter.com/iC08juos9k",
+			"expanded_url": "http://twitter.com/GuitarWorld/status/756150205997867008/photo/1",
+			"type": "photo",
+			"sizes": {
+				"medium": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				},
+				"thumb": {
+					"w": 150,
+					"h": 150,
+					"resize": "crop"
+				},
+				"small": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				},
+				"large": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				}
+			}
+		}]
+	},
+	"extended_entities": {
+		"media": [{
+			"id": 756150091245842400,
+			"id_str": "756150091245842432",
+			"indices": [83,
+			106],
+			"media_url": "http://pbs.twimg.com/media/Cn5igHGWcAAuqK5.jpg",
+			"media_url_https": "https://pbs.twimg.com/media/Cn5igHGWcAAuqK5.jpg",
+			"url": "https://t.co/iC08juos9k",
+			"display_url": "pic.twitter.com/iC08juos9k",
+			"expanded_url": "http://twitter.com/GuitarWorld/status/756150205997867008/photo/1",
+			"type": "photo",
+			"sizes": {
+				"medium": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				},
+				"thumb": {
+					"w": 150,
+					"h": 150,
+					"resize": "crop"
+				},
+				"small": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				},
+				"large": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				}
+			}
+		}]
+	},
+	"source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+	"in_reply_to_status_id": null,
+	"in_reply_to_status_id_str": null,
+	"in_reply_to_user_id": null,
+	"in_reply_to_user_id_str": null,
+	"in_reply_to_screen_name": null,
+	"user": {
+		"id": 23439801,
+		"id_str": "23439801",
+		"name": "Guitar World",
+		"screen_name": "GuitarWorld",
+		"location": "New York City",
+		"description": "Official account of Guitar World magazine! Follow our editors @JeffKitts @BradAngle @DamianFanelli @PaulRiario",
+		"url": "http://t.co/VIYNDL9ITZ",
+		"entities": {
+			"url": {
+				"urls": [{
+					"url": "http://t.co/VIYNDL9ITZ",
+					"expanded_url": "http://www.guitarworld.com",
+					"display_url": "guitarworld.com",
+					"indices": [0,
+					22]
+				}]
+			},
+			"description": {
+				"urls": []
+			}
+		},
+		"protected": false,
+		"followers_count": 311934,
+		"friends_count": 1404,
+		"listed_count": 2376,
+		"created_at": "Mon Mar 09 14:19:20 +0000 2009",
+		"favourites_count": 2241,
+		"utc_offset": -14400,
+		"time_zone": "Eastern Time (US & Canada)",
+		"geo_enabled": false,
+		"verified": true,
+		"statuses_count": 15412,
+		"lang": "en",
+		"contributors_enabled": false,
+		"is_translator": false,
+		"is_translation_enabled": false,
+		"profile_background_color": "131516",
+		"profile_background_image_url": "http://abs.twimg.com/images/themes/theme14/bg.gif",
+		"profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme14/bg.gif",
+		"profile_background_tile": true,
+		"profile_image_url": "http://pbs.twimg.com/profile_images/460880158975471616/15QzGTo__normal.jpeg",
+		"profile_image_url_https": "https://pbs.twimg.com/profile_images/460880158975471616/15QzGTo__normal.jpeg",
+		"profile_banner_url": "https://pbs.twimg.com/profile_banners/23439801/1468326201",
+		"profile_link_color": "009999",
+		"profile_sidebar_border_color": "EEEEEE",
+		"profile_sidebar_fill_color": "EFEFEF",
+		"profile_text_color": "333333",
+		"profile_use_background_image": true,
+		"has_extended_profile": false,
+		"default_profile": false,
+		"default_profile_image": false,
+		"following": true,
+		"follow_request_sent": false,
+		"notifications": false
+	},
+	"geo": null,
+	"coordinates": null,
+	"place": null,
+	"contributors": null,
+	"is_quote_status": false,
+	"retweet_count": 16,
+	"favorite_count": 30,
+	"favorited": false,
+	"retweeted": false,
+	"possibly_sensitive": false,
+	"possibly_sensitive_appealable": false,
+	"lang": "pt"
+},
+{
+	"created_at": "Thu Jul 21 15:32:15 +0000 2016",
+	"id": 756149801016787000,
+	"id_str": "756149801016786944",
+	"text": "New Ways to Use the Minor Pentatonic Scale https://t.co/h6230kpN04 @MetalMikeC https://t.co/Db9wG2YvlO",
+	"truncated": false,
+	"entities": {
+		"hashtags": [],
+		"symbols": [],
+		"user_mentions": [{
+			"screen_name": "MetalMikeC",
+			"name": "Metal Mike Chlasciak",
+			"id": 25457200,
+			"id_str": "25457200",
+			"indices": [67,
+			78]
+		}],
+		"urls": [{
+			"url": "https://t.co/h6230kpN04",
+			"expanded_url": "http://bit.ly/1jopHc3",
+			"display_url": "bit.ly/1jopHc3",
+			"indices": [43,
+			66]
+		}],
+		"media": [{
+			"id": 756149701636919300,
+			"id_str": "756149701636919296",
+			"indices": [79,
+			102],
+			"media_url": "http://pbs.twimg.com/media/Cn5iJbsWEAA63_T.jpg",
+			"media_url_https": "https://pbs.twimg.com/media/Cn5iJbsWEAA63_T.jpg",
+			"url": "https://t.co/Db9wG2YvlO",
+			"display_url": "pic.twitter.com/Db9wG2YvlO",
+			"expanded_url": "http://twitter.com/GuitarWorld/status/756149801016786944/photo/1",
+			"type": "photo",
+			"sizes": {
+				"large": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				},
+				"small": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				},
+				"thumb": {
+					"w": 150,
+					"h": 150,
+					"resize": "crop"
+				},
+				"medium": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				}
+			}
+		}]
+	},
+	"extended_entities": {
+		"media": [{
+			"id": 756149701636919300,
+			"id_str": "756149701636919296",
+			"indices": [79,
+			102],
+			"media_url": "http://pbs.twimg.com/media/Cn5iJbsWEAA63_T.jpg",
+			"media_url_https": "https://pbs.twimg.com/media/Cn5iJbsWEAA63_T.jpg",
+			"url": "https://t.co/Db9wG2YvlO",
+			"display_url": "pic.twitter.com/Db9wG2YvlO",
+			"expanded_url": "http://twitter.com/GuitarWorld/status/756149801016786944/photo/1",
+			"type": "photo",
+			"sizes": {
+				"large": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				},
+				"small": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				},
+				"thumb": {
+					"w": 150,
+					"h": 150,
+					"resize": "crop"
+				},
+				"medium": {
+					"w": 622,
+					"h": 439,
+					"resize": "fit"
+				}
+			}
+		}]
+	},
+	"source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+	"in_reply_to_status_id": null,
+	"in_reply_to_status_id_str": null,
+	"in_reply_to_user_id": null,
+	"in_reply_to_user_id_str": null,
+	"in_reply_to_screen_name": null,
+	"user": {
+		"id": 23439801,
+		"id_str": "23439801",
+		"name": "Guitar World",
+		"screen_name": "GuitarWorld",
+		"location": "New York City",
+		"description": "Official account of Guitar World magazine! Follow our editors @JeffKitts @BradAngle @DamianFanelli @PaulRiario",
+		"url": "http://t.co/VIYNDL9ITZ",
+		"entities": {
+			"url": {
+				"urls": [{
+					"url": "http://t.co/VIYNDL9ITZ",
+					"expanded_url": "http://www.guitarworld.com",
+					"display_url": "guitarworld.com",
+					"indices": [0,
+					22]
+				}]
+			},
+			"description": {
+				"urls": []
+			}
+		},
+		"protected": false,
+		"followers_count": 311934,
+		"friends_count": 1404,
+		"listed_count": 2376,
+		"created_at": "Mon Mar 09 14:19:20 +0000 2009",
+		"favourites_count": 2241,
+		"utc_offset": -14400,
+		"time_zone": "Eastern Time (US & Canada)",
+		"geo_enabled": false,
+		"verified": true,
+		"statuses_count": 15412,
+		"lang": "en",
+		"contributors_enabled": false,
+		"is_translator": false,
+		"is_translation_enabled": false,
+		"profile_background_color": "131516",
+		"profile_background_image_url": "http://abs.twimg.com/images/themes/theme14/bg.gif",
+		"profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme14/bg.gif",
+		"profile_background_tile": true,
+		"profile_image_url": "http://pbs.twimg.com/profile_images/460880158975471616/15QzGTo__normal.jpeg",
+		"profile_image_url_https": "https://pbs.twimg.com/profile_images/460880158975471616/15QzGTo__normal.jpeg",
+		"profile_banner_url": "https://pbs.twimg.com/profile_banners/23439801/1468326201",
+		"profile_link_color": "009999",
+		"profile_sidebar_border_color": "EEEEEE",
+		"profile_sidebar_fill_color": "EFEFEF",
+		"profile_text_color": "333333",
+		"profile_use_background_image": true,
+		"has_extended_profile": false,
+		"default_profile": false,
+		"default_profile_image": false,
+		"following": true,
+		"follow_request_sent": false,
+		"notifications": false
+	},
+	"geo": null,
+	"coordinates": null,
+	"place": null,
+	"contributors": null,
+	"is_quote_status": false,
+	"retweet_count": 15,
+	"favorite_count": 48,
+	"favorited": false,
+	"retweeted": false,
+	"possibly_sensitive": false,
+	"possibly_sensitive_appealable": false,
+	"lang": "en"
+},
+{
+	"created_at": "Thu Jul 21 15:30:55 +0000 2016",
+	"id": 756149464998477800,
+	"id_str": "756149464998477824",
+	"text": "High Strung! The 25 Weirdest Guitarists of All Time https://t.co/Dz9KVVUnGt https://t.co/0mJ23RCEfk",
+	"truncated": false,
+	"entities": {
+		"hashtags": [],
+		"symbols": [],
+		"user_mentions": [],
+		"urls": [{
+			"url": "https://t.co/Dz9KVVUnGt",
+			"expanded_url": "http://bit.ly/1L5vmya",
+			"display_url": "bit.ly/1L5vmya",
+			"indices": [52,
+			75]
+		}],
+		"media": [{
+			"id": 756149349999140900,
+			"id_str": "756149349999140864",
+			"indices": [76,
+			99],
+			"media_url": "http://pbs.twimg.com/media/Cn5h09vXYAAlswZ.jpg",
+			"media_url_https": "https://pbs.twimg.com/media/Cn5h09vXYAAlswZ.jpg",
+			"url": "https://t.co/0mJ23RCEfk",
+			"display_url": "pic.twitter.com/0mJ23RCEfk",
+			"expanded_url": "http://twitter.com/GuitarWorld/status/756149464998477824/photo/1",
+			"type": "photo",
+			"sizes": {
+				"small": {
+					"w": 680,
+					"h": 379,
+					"resize": "fit"
+				},
+				"thumb": {
+					"w": 150,
+					"h": 150,
+					"resize": "crop"
+				},
+				"large": {
+					"w": 950,
+					"h": 530,
+					"resize": "fit"
+				},
+				"medium": {
+					"w": 950,
+					"h": 530,
+					"resize": "fit"
+				}
+			}
+		}]
+	},
+	"extended_entities": {
+		"media": [{
+			"id": 756149349999140900,
+			"id_str": "756149349999140864",
+			"indices": [76,
+			99],
+			"media_url": "http://pbs.twimg.com/media/Cn5h09vXYAAlswZ.jpg",
+			"media_url_https": "https://pbs.twimg.com/media/Cn5h09vXYAAlswZ.jpg",
+			"url": "https://t.co/0mJ23RCEfk",
+			"display_url": "pic.twitter.com/0mJ23RCEfk",
+			"expanded_url": "http://twitter.com/GuitarWorld/status/756149464998477824/photo/1",
+			"type": "photo",
+			"sizes": {
+				"small": {
+					"w": 680,
+					"h": 379,
+					"resize": "fit"
+				},
+				"thumb": {
+					"w": 150,
+					"h": 150,
+					"resize": "crop"
+				},
+				"large": {
+					"w": 950,
+					"h": 530,
+					"resize": "fit"
+				},
+				"medium": {
+					"w": 950,
+					"h": 530,
+					"resize": "fit"
+				}
+			}
+		}]
+	},
+	"source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+	"in_reply_to_status_id": null,
+	"in_reply_to_status_id_str": null,
+	"in_reply_to_user_id": null,
+	"in_reply_to_user_id_str": null,
+	"in_reply_to_screen_name": null,
+	"user": {
+		"id": 23439801,
+		"id_str": "23439801",
+		"name": "Guitar World",
+		"screen_name": "GuitarWorld",
+		"location": "New York City",
+		"description": "Official account of Guitar World magazine! Follow our editors @JeffKitts @BradAngle @DamianFanelli @PaulRiario",
+		"url": "http://t.co/VIYNDL9ITZ",
+		"entities": {
+			"url": {
+				"urls": [{
+					"url": "http://t.co/VIYNDL9ITZ",
+					"expanded_url": "http://www.guitarworld.com",
+					"display_url": "guitarworld.com",
+					"indices": [0,
+					22]
+				}]
+			},
+			"description": {
+				"urls": []
+			}
+		},
+		"protected": false,
+		"followers_count": 311934,
+		"friends_count": 1404,
+		"listed_count": 2376,
+		"created_at": "Mon Mar 09 14:19:20 +0000 2009",
+		"favourites_count": 2241,
+		"utc_offset": -14400,
+		"time_zone": "Eastern Time (US & Canada)",
+		"geo_enabled": false,
+		"verified": true,
+		"statuses_count": 15412,
+		"lang": "en",
+		"contributors_enabled": false,
+		"is_translator": false,
+		"is_translation_enabled": false,
+		"profile_background_color": "131516",
+		"profile_background_image_url": "http://abs.twimg.com/images/themes/theme14/bg.gif",
+		"profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme14/bg.gif",
+		"profile_background_tile": true,
+		"profile_image_url": "http://pbs.twimg.com/profile_images/460880158975471616/15QzGTo__normal.jpeg",
+		"profile_image_url_https": "https://pbs.twimg.com/profile_images/460880158975471616/15QzGTo__normal.jpeg",
+		"profile_banner_url": "https://pbs.twimg.com/profile_banners/23439801/1468326201",
+		"profile_link_color": "009999",
+		"profile_sidebar_border_color": "EEEEEE",
+		"profile_sidebar_fill_color": "EFEFEF",
+		"profile_text_color": "333333",
+		"profile_use_background_image": true,
+		"has_extended_profile": false,
+		"default_profile": false,
+		"default_profile_image": false,
+		"following": true,
+		"follow_request_sent": false,
+		"notifications": false
+	},
+	"geo": null,
+	"coordinates": null,
+	"place": null,
+	"contributors": null,
+	"is_quote_status": false,
+	"retweet_count": 14,
+	"favorite_count": 17,
+	"favorited": false,
+	"retweeted": false,
+	"possibly_sensitive": false,
+	"possibly_sensitive_appealable": false,
+	"lang": "en"
+},
+{
+	"created_at": "Thu Jul 21 15:30:03 +0000 2016",
+	"id": 756149247075086300,
+	"id_str": "756149247075086336",
+	"text": "Win an @Epiphone Acoustic/Electric and @discmakers Prize Pack!\nhttps://t.co/dKWonPlKEb https://t.co/3tho5UgCCt",
+	"truncated": false,
+	"entities": {
+		"hashtags": [],
+		"symbols": [],
+		"user_mentions": [{
+			"screen_name": "Epiphone",
+			"name": "Epiphone",
+			"id": 15809522,
+			"id_str": "15809522",
+			"indices": [7,
+			16]
+		},
+		{
+			"screen_name": "discmakers",
+			"name": "Disc Makers",
+			"id": 17867982,
+			"id_str": "17867982",
+			"indices": [39,
+			50]
+		}],
+		"urls": [{
+			"url": "https://t.co/dKWonPlKEb",
+			"expanded_url": "http://bit.ly/1URrQrf",
+			"display_url": "bit.ly/1URrQrf",
+			"indices": [63,
+			86]
+		}],
+		"media": [{
+			"id": 756149229551226900,
+			"id_str": "756149229551226881",
+			"indices": [87,
+			110],
+			"media_url": "http://pbs.twimg.com/media/Cn5ht9CWEAEJ0AU.jpg",
+			"media_url_https": "https://pbs.twimg.com/media/Cn5ht9CWEAEJ0AU.jpg",
+			"url": "https://t.co/3tho5UgCCt",
+			"display_url": "pic.twitter.com/3tho5UgCCt",
+			"expanded_url": "http://twitter.com/GuitarWorld/status/756149247075086336/photo/1",
+			"type": "photo",
+			"sizes": {
+				"medium": {
+					"w": 602,
+					"h": 564,
+					"resize": "fit"
+				},
+				"small": {
+					"w": 602,
+					"h": 564,
+					"resize": "fit"
+				},
+				"thumb": {
+					"w": 150,
+					"h": 150,
+					"resize": "crop"
+				},
+				"large": {
+					"w": 602,
+					"h": 564,
+					"resize": "fit"
+				}
+			}
+		}]
+	},
+	"extended_entities": {
+		"media": [{
+			"id": 756149229551226900,
+			"id_str": "756149229551226881",
+			"indices": [87,
+			110],
+			"media_url": "http://pbs.twimg.com/media/Cn5ht9CWEAEJ0AU.jpg",
+			"media_url_https": "https://pbs.twimg.com/media/Cn5ht9CWEAEJ0AU.jpg",
+			"url": "https://t.co/3tho5UgCCt",
+			"display_url": "pic.twitter.com/3tho5UgCCt",
+			"expanded_url": "http://twitter.com/GuitarWorld/status/756149247075086336/photo/1",
+			"type": "photo",
+			"sizes": {
+				"medium": {
+					"w": 602,
+					"h": 564,
+					"resize": "fit"
+				},
+				"small": {
+					"w": 602,
+					"h": 564,
+					"resize": "fit"
+				},
+				"thumb": {
+					"w": 150,
+					"h": 150,
+					"resize": "crop"
+				},
+				"large": {
+					"w": 602,
+					"h": 564,
+					"resize": "fit"
+				}
+			}
+		}]
+	},
+	"source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+	"in_reply_to_status_id": null,
+	"in_reply_to_status_id_str": null,
+	"in_reply_to_user_id": null,
+	"in_reply_to_user_id_str": null,
+	"in_reply_to_screen_name": null,
+	"user": {
+		"id": 23439801,
+		"id_str": "23439801",
+		"name": "Guitar World",
+		"screen_name": "GuitarWorld",
+		"location": "New York City",
+		"description": "Official account of Guitar World magazine! Follow our editors @JeffKitts @BradAngle @DamianFanelli @PaulRiario",
+		"url": "http://t.co/VIYNDL9ITZ",
+		"entities": {
+			"url": {
+				"urls": [{
+					"url": "http://t.co/VIYNDL9ITZ",
+					"expanded_url": "http://www.guitarworld.com",
+					"display_url": "guitarworld.com",
+					"indices": [0,
+					22]
+				}]
+			},
+			"description": {
+				"urls": []
+			}
+		},
+		"protected": false,
+		"followers_count": 311934,
+		"friends_count": 1404,
+		"listed_count": 2376,
+		"created_at": "Mon Mar 09 14:19:20 +0000 2009",
+		"favourites_count": 2241,
+		"utc_offset": -14400,
+		"time_zone": "Eastern Time (US & Canada)",
+		"geo_enabled": false,
+		"verified": true,
+		"statuses_count": 15412,
+		"lang": "en",
+		"contributors_enabled": false,
+		"is_translator": false,
+		"is_translation_enabled": false,
+		"profile_background_color": "131516",
+		"profile_background_image_url": "http://abs.twimg.com/images/themes/theme14/bg.gif",
+		"profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme14/bg.gif",
+		"profile_background_tile": true,
+		"profile_image_url": "http://pbs.twimg.com/profile_images/460880158975471616/15QzGTo__normal.jpeg",
+		"profile_image_url_https": "https://pbs.twimg.com/profile_images/460880158975471616/15QzGTo__normal.jpeg",
+		"profile_banner_url": "https://pbs.twimg.com/profile_banners/23439801/1468326201",
+		"profile_link_color": "009999",
+		"profile_sidebar_border_color": "EEEEEE",
+		"profile_sidebar_fill_color": "EFEFEF",
+		"profile_text_color": "333333",
+		"profile_use_background_image": true,
+		"has_extended_profile": false,
+		"default_profile": false,
+		"default_profile_image": false,
+		"following": true,
+		"follow_request_sent": false,
+		"notifications": false
+	},
+	"geo": null,
+	"coordinates": null,
+	"place": null,
+	"contributors": null,
+	"is_quote_status": false,
+	"retweet_count": 17,
+	"favorite_count": 15,
+	"favorited": false,
+	"retweeted": false,
+	"possibly_sensitive": false,
+	"possibly_sensitive_appealable": false,
+	"lang": "en"
+},
+{
+	"created_at": "Thu Jul 21 15:15:36 +0000 2016",
+	"id": 756145609195688000,
+	"id_str": "756145609195687937",
+	"text": "Testing twurl with jq",
+	"truncated": false,
+	"entities": {
+		"hashtags": [],
+		"symbols": [],
+		"user_mentions": [],
+		"urls": []
+	},
+	"source": "<a href=\"https://github.com/cjsheehan/social-watch\" rel=\"nofollow\">social-watch-xy</a>",
+	"in_reply_to_status_id": null,
+	"in_reply_to_status_id_str": null,
+	"in_reply_to_user_id": null,
+	"in_reply_to_user_id_str": null,
+	"in_reply_to_screen_name": null,
+	"user": {
+		"id": 755380974423277600,
+		"id_str": "755380974423277569",
+		"name": "Chris Sheehan",
+		"screen_name": "c__sheehan",
+		"location": "",
+		"description": "",
+		"url": null,
+		"entities": {
+			"description": {
+				"urls": []
+			}
+		},
+		"protected": false,
+		"followers_count": 1,
+		"friends_count": 1,
+		"listed_count": 0,
+		"created_at": "Tue Jul 19 12:37:13 +0000 2016",
+		"favourites_count": 0,
+		"utc_offset": 3600,
+		"time_zone": "Edinburgh",
+		"geo_enabled": false,
+		"verified": false,
+		"statuses_count": 10,
+		"lang": "en",
+		"contributors_enabled": false,
+		"is_translator": false,
+		"is_translation_enabled": false,
+		"profile_background_color": "F5F8FA",
+		"profile_background_image_url": null,
+		"profile_background_image_url_https": null,
+		"profile_background_tile": false,
+		"profile_image_url": "http://abs.twimg.com/sticky/default_profile_images/default_profile_3_normal.png",
+		"profile_image_url_https": "https://abs.twimg.com/sticky/default_profile_images/default_profile_3_normal.png",
+		"profile_link_color": "2B7BB9",
+		"profile_sidebar_border_color": "C0DEED",
+		"profile_sidebar_fill_color": "DDEEF6",
+		"profile_text_color": "333333",
+		"profile_use_background_image": true,
+		"has_extended_profile": false,
+		"default_profile": true,
+		"default_profile_image": true,
+		"following": false,
+		"follow_request_sent": false,
+		"notifications": false
+	},
+	"geo": null,
+	"coordinates": null,
+	"place": null,
+	"contributors": null,
+	"is_quote_status": false,
+	"retweet_count": 0,
+	"favorite_count": 0,
+	"favorited": false,
+	"retweeted": false,
+	"lang": "en"
+},
+{
+	"created_at": "Thu Jul 21 15:14:02 +0000 2016",
+	"id": 756145215145185300,
+	"id_str": "756145215145185280",
+	"text": "Testing twurl",
+	"truncated": false,
+	"entities": {
+		"hashtags": [],
+		"symbols": [],
+		"user_mentions": [],
+		"urls": []
+	},
+	"source": "<a href=\"https://github.com/cjsheehan/social-watch\" rel=\"nofollow\">social-watch-xy</a>",
+	"in_reply_to_status_id": null,
+	"in_reply_to_status_id_str": null,
+	"in_reply_to_user_id": null,
+	"in_reply_to_user_id_str": null,
+	"in_reply_to_screen_name": null,
+	"user": {
+		"id": 755380974423277600,
+		"id_str": "755380974423277569",
+		"name": "Chris Sheehan",
+		"screen_name": "c__sheehan",
+		"location": "",
+		"description": "",
+		"url": null,
+		"entities": {
+			"description": {
+				"urls": []
+			}
+		},
+		"protected": false,
+		"followers_count": 1,
+		"friends_count": 1,
+		"listed_count": 0,
+		"created_at": "Tue Jul 19 12:37:13 +0000 2016",
+		"favourites_count": 0,
+		"utc_offset": 3600,
+		"time_zone": "Edinburgh",
+		"geo_enabled": false,
+		"verified": false,
+		"statuses_count": 10,
+		"lang": "en",
+		"contributors_enabled": false,
+		"is_translator": false,
+		"is_translation_enabled": false,
+		"profile_background_color": "F5F8FA",
+		"profile_background_image_url": null,
+		"profile_background_image_url_https": null,
+		"profile_background_tile": false,
+		"profile_image_url": "http://abs.twimg.com/sticky/default_profile_images/default_profile_3_normal.png",
+		"profile_image_url_https": "https://abs.twimg.com/sticky/default_profile_images/default_profile_3_normal.png",
+		"profile_link_color": "2B7BB9",
+		"profile_sidebar_border_color": "C0DEED",
+		"profile_sidebar_fill_color": "DDEEF6",
+		"profile_text_color": "333333",
+		"profile_use_background_image": true,
+		"has_extended_profile": false,
+		"default_profile": true,
+		"default_profile_image": true,
+		"following": false,
+		"follow_request_sent": false,
+		"notifications": false
+	},
+	"geo": null,
+	"coordinates": null,
+	"place": null,
+	"contributors": null,
+	"is_quote_status": false,
+	"retweet_count": 0,
+	"favorite_count": 0,
+	"favorited": false,
+	"retweeted": false,
+	"lang": "in"
+},
+{
+	"created_at": "Thu Jul 21 11:29:57 +0000 2016",
+	"id": 756088820961914900,
+	"id_str": "756088820961914880",
+	"text": "test app",
+	"truncated": false,
+	"entities": {
+		"hashtags": [],
+		"symbols": [],
+		"user_mentions": [],
+		"urls": []
+	},
+	"source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+	"in_reply_to_status_id": null,
+	"in_reply_to_status_id_str": null,
+	"in_reply_to_user_id": null,
+	"in_reply_to_user_id_str": null,
+	"in_reply_to_screen_name": null,
+	"user": {
+		"id": 755380974423277600,
+		"id_str": "755380974423277569",
+		"name": "Chris Sheehan",
+		"screen_name": "c__sheehan",
+		"location": "",
+		"description": "",
+		"url": null,
+		"entities": {
+			"description": {
+				"urls": []
+			}
+		},
+		"protected": false,
+		"followers_count": 1,
+		"friends_count": 1,
+		"listed_count": 0,
+		"created_at": "Tue Jul 19 12:37:13 +0000 2016",
+		"favourites_count": 0,
+		"utc_offset": 3600,
+		"time_zone": "Edinburgh",
+		"geo_enabled": false,
+		"verified": false,
+		"statuses_count": 10,
+		"lang": "en",
+		"contributors_enabled": false,
+		"is_translator": false,
+		"is_translation_enabled": false,
+		"profile_background_color": "F5F8FA",
+		"profile_background_image_url": null,
+		"profile_background_image_url_https": null,
+		"profile_background_tile": false,
+		"profile_image_url": "http://abs.twimg.com/sticky/default_profile_images/default_profile_3_normal.png",
+		"profile_image_url_https": "https://abs.twimg.com/sticky/default_profile_images/default_profile_3_normal.png",
+		"profile_link_color": "2B7BB9",
+		"profile_sidebar_border_color": "C0DEED",
+		"profile_sidebar_fill_color": "DDEEF6",
+		"profile_text_color": "333333",
+		"profile_use_background_image": true,
+		"has_extended_profile": false,
+		"default_profile": true,
+		"default_profile_image": true,
+		"following": false,
+		"follow_request_sent": false,
+		"notifications": false
+	},
+	"geo": null,
+	"coordinates": null,
+	"place": null,
+	"contributors": null,
+	"is_quote_status": false,
+	"retweet_count": 0,
+	"favorite_count": 0,
+	"favorited": false,
+	"retweeted": false,
+	"lang": "et"
+},
+{
+	"created_at": "Thu Jul 21 11:24:15 +0000 2016",
+	"id": 756087386539458600,
+	"id_str": "756087386539458563",
+	"text": "Test for app",
+	"truncated": false,
+	"entities": {
+		"hashtags": [],
+		"symbols": [],
+		"user_mentions": [],
+		"urls": []
+	},
+	"source": "<a href=\"https://github.com/cjsheehan/social-watch\" rel=\"nofollow\">social-watch-rt</a>",
+	"in_reply_to_status_id": null,
+	"in_reply_to_status_id_str": null,
+	"in_reply_to_user_id": null,
+	"in_reply_to_user_id_str": null,
+	"in_reply_to_screen_name": null,
+	"user": {
+		"id": 755380974423277600,
+		"id_str": "755380974423277569",
+		"name": "Chris Sheehan",
+		"screen_name": "c__sheehan",
+		"location": "",
+		"description": "",
+		"url": null,
+		"entities": {
+			"description": {
+				"urls": []
+			}
+		},
+		"protected": false,
+		"followers_count": 1,
+		"friends_count": 1,
+		"listed_count": 0,
+		"created_at": "Tue Jul 19 12:37:13 +0000 2016",
+		"favourites_count": 0,
+		"utc_offset": 3600,
+		"time_zone": "Edinburgh",
+		"geo_enabled": false,
+		"verified": false,
+		"statuses_count": 10,
+		"lang": "en",
+		"contributors_enabled": false,
+		"is_translator": false,
+		"is_translation_enabled": false,
+		"profile_background_color": "F5F8FA",
+		"profile_background_image_url": null,
+		"profile_background_image_url_https": null,
+		"profile_background_tile": false,
+		"profile_image_url": "http://abs.twimg.com/sticky/default_profile_images/default_profile_3_normal.png",
+		"profile_image_url_https": "https://abs.twimg.com/sticky/default_profile_images/default_profile_3_normal.png",
+		"profile_link_color": "2B7BB9",
+		"profile_sidebar_border_color": "C0DEED",
+		"profile_sidebar_fill_color": "DDEEF6",
+		"profile_text_color": "333333",
+		"profile_use_background_image": true,
+		"has_extended_profile": false,
+		"default_profile": true,
+		"default_profile_image": true,
+		"following": false,
+		"follow_request_sent": false,
+		"notifications": false
+	},
+	"geo": null,
+	"coordinates": null,
+	"place": null,
+	"contributors": null,
+	"is_quote_status": false,
+	"retweet_count": 0,
+	"favorite_count": 0,
+	"favorited": false,
+	"retweeted": false,
+	"lang": "en"
+},
+{
+	"created_at": "Wed Jul 20 23:46:22 +0000 2016",
+	"id": 755911759240826900,
+	"id_str": "755911759240826880",
+	"text": "RT @COUGAR_COURIERS: @GuitarWorld we cannot begin to calculate the 1,000's of miles we've covered with the brilliant @SantanaCarlos providi…",
+	"truncated": false,
+	"entities": {
+		"hashtags": [],
+		"symbols": [],
+		"user_mentions": [{
+			"screen_name": "COUGAR_COURIERS",
+			"name": "COUGAR COURIERS",
+			"id": 199235234,
+			"id_str": "199235234",
+			"indices": [3,
+			19]
+		},
+		{
+			"screen_name": "GuitarWorld",
+			"name": "Guitar World",
+			"id": 23439801,
+			"id_str": "23439801",
+			"indices": [21,
+			33]
+		},
+		{
+			"screen_name": "SantanaCarlos",
+			"name": "Carlos Santana",
+			"id": 26540417,
+			"id_str": "26540417",
+			"indices": [117,
+			131]
+		}],
+		"urls": []
+	},
+	"source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+	"in_reply_to_status_id": null,
+	"in_reply_to_status_id_str": null,
+	"in_reply_to_user_id": null,
+	"in_reply_to_user_id_str": null,
+	"in_reply_to_screen_name": null,
+	"user": {
+		"id": 23439801,
+		"id_str": "23439801",
+		"name": "Guitar World",
+		"screen_name": "GuitarWorld",
+		"location": "New York City",
+		"description": "Official account of Guitar World magazine! Follow our editors @JeffKitts @BradAngle @DamianFanelli @PaulRiario",
+		"url": "http://t.co/VIYNDL9ITZ",
+		"entities": {
+			"url": {
+				"urls": [{
+					"url": "http://t.co/VIYNDL9ITZ",
+					"expanded_url": "http://www.guitarworld.com",
+					"display_url": "guitarworld.com",
+					"indices": [0,
+					22]
+				}]
+			},
+			"description": {
+				"urls": []
+			}
+		},
+		"protected": false,
+		"followers_count": 311934,
+		"friends_count": 1404,
+		"listed_count": 2376,
+		"created_at": "Mon Mar 09 14:19:20 +0000 2009",
+		"favourites_count": 2241,
+		"utc_offset": -14400,
+		"time_zone": "Eastern Time (US & Canada)",
+		"geo_enabled": false,
+		"verified": true,
+		"statuses_count": 15412,
+		"lang": "en",
+		"contributors_enabled": false,
+		"is_translator": false,
+		"is_translation_enabled": false,
+		"profile_background_color": "131516",
+		"profile_background_image_url": "http://abs.twimg.com/images/themes/theme14/bg.gif",
+		"profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme14/bg.gif",
+		"profile_background_tile": true,
+		"profile_image_url": "http://pbs.twimg.com/profile_images/460880158975471616/15QzGTo__normal.jpeg",
+		"profile_image_url_https": "https://pbs.twimg.com/profile_images/460880158975471616/15QzGTo__normal.jpeg",
+		"profile_banner_url": "https://pbs.twimg.com/profile_banners/23439801/1468326201",
+		"profile_link_color": "009999",
+		"profile_sidebar_border_color": "EEEEEE",
+		"profile_sidebar_fill_color": "EFEFEF",
+		"profile_text_color": "333333",
+		"profile_use_background_image": true,
+		"has_extended_profile": false,
+		"default_profile": false,
+		"default_profile_image": false,
+		"following": true,
+		"follow_request_sent": false,
+		"notifications": false
+	},
+	"geo": null,
+	"coordinates": null,
+	"place": null,
+	"contributors": null,
+	"retweeted_status": {
+		"created_at": "Wed Jul 20 13:25:17 +0000 2016",
+		"id": 755755458804256800,
+		"id_str": "755755458804256769",
+		"text": "@GuitarWorld we cannot begin to calculate the 1,000's of miles we've covered with the brilliant @SantanaCarlos providing the backing track.",
+		"truncated": false,
+		"entities": {
+			"hashtags": [],
+			"symbols": [],
+			"user_mentions": [{
+				"screen_name": "GuitarWorld",
+				"name": "Guitar World",
+				"id": 23439801,
+				"id_str": "23439801",
+				"indices": [0,
+				12]
+			},
+			{
+				"screen_name": "SantanaCarlos",
+				"name": "Carlos Santana",
+				"id": 26540417,
+				"id_str": "26540417",
+				"indices": [96,
+				110]
+			}],
+			"urls": []
+		},
+		"source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+		"in_reply_to_status_id": 755753875127361500,
+		"in_reply_to_status_id_str": "755753875127361537",
+		"in_reply_to_user_id": 23439801,
+		"in_reply_to_user_id_str": "23439801",
+		"in_reply_to_screen_name": "GuitarWorld",
+		"user": {
+			"id": 199235234,
+			"id_str": "199235234",
+			"name": "COUGAR COURIERS",
+			"screen_name": "COUGAR_COURIERS",
+			"location": "Falmouth and Slough, UK",
+			"description": "UK same day, Mainland EU next day and Air Freight courier services.",
+			"url": "http://t.co/nY1gtuCyxh",
+			"entities": {
+				"url": {
+					"urls": [{
+						"url": "http://t.co/nY1gtuCyxh",
+						"expanded_url": "http://cougar-couriers.co.uk",
+						"display_url": "cougar-couriers.co.uk",
+						"indices": [0,
+						22]
+					}]
+				},
+				"description": {
+					"urls": []
+				}
+			},
+			"protected": false,
+			"followers_count": 1570,
+			"friends_count": 1273,
+			"listed_count": 13,
+			"created_at": "Wed Oct 06 10:59:51 +0000 2010",
+			"favourites_count": 557,
+			"utc_offset": 3600,
+			"time_zone": "London",
+			"geo_enabled": false,
+			"verified": false,
+			"statuses_count": 2354,
+			"lang": "en",
+			"contributors_enabled": false,
+			"is_translator": false,
+			"is_translation_enabled": false,
+			"profile_background_color": "C0DEED",
+			"profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+			"profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+			"profile_background_tile": false,
+			"profile_image_url": "http://pbs.twimg.com/profile_images/1138560328/Round_Cougar_Logo_-_email_incert_Copy_normal.jpg",
+			"profile_image_url_https": "https://pbs.twimg.com/profile_images/1138560328/Round_Cougar_Logo_-_email_incert_Copy_normal.jpg",
+			"profile_banner_url": "https://pbs.twimg.com/profile_banners/199235234/1403776169",
+			"profile_link_color": "0084B4",
+			"profile_sidebar_border_color": "C0DEED",
+			"profile_sidebar_fill_color": "DDEEF6",
+			"profile_text_color": "333333",
+			"profile_use_background_image": true,
+			"has_extended_profile": false,
+			"default_profile": true,
+			"default_profile_image": false,
+			"following": false,
+			"follow_request_sent": false,
+			"notifications": false
+		},
+		"geo": null,
+		"coordinates": null,
+		"place": null,
+		"contributors": null,
+		"is_quote_status": false,
+		"retweet_count": 11,
+		"favorite_count": 6,
+		"favorited": false,
+		"retweeted": false,
+		"lang": "en"
+	},
+	"is_quote_status": false,
+	"retweet_count": 11,
+	"favorite_count": 0,
+	"favorited": false,
+	"retweeted": false,
+	"lang": "en"
+},
+{
+	"created_at": "Wed Jul 20 23:46:12 +0000 2016",
+	"id": 755911716492443600,
+	"id_str": "755911716492443648",
+	"text": "RT @jjkramer76: @GuitarWorld check out the custom @Fender &amp; Hallmark guitars avail @ CREEM Kickstarter. https://t.co/nMQjpc9hT0 https://t.c…",
+	"truncated": false,
+	"entities": {
+		"hashtags": [],
+		"symbols": [],
+		"user_mentions": [{
+			"screen_name": "jjkramer76",
+			"name": "J.J. Kramer",
+			"id": 94161380,
+			"id_str": "94161380",
+			"indices": [3,
+			14]
+		},
+		{
+			"screen_name": "GuitarWorld",
+			"name": "Guitar World",
+			"id": 23439801,
+			"id_str": "23439801",
+			"indices": [16,
+			28]
+		},
+		{
+			"screen_name": "Fender",
+			"name": "Fender",
+			"id": 707913,
+			"id_str": "707913",
+			"indices": [50,
+			57]
+		}],
+		"urls": [{
+			"url": "https://t.co/nMQjpc9hT0",
+			"expanded_url": "http://kck.st/29s2Md1",
+			"display_url": "kck.st/29s2Md1",
+			"indices": [108,
+			131]
+		}],
+		"media": [{
+			"id": 755763806039572500,
+			"id_str": "755763806039572480",
+			"indices": [143,
+			144],
+			"media_url": "http://pbs.twimg.com/media/Cn0DLWkWAAA3s2M.jpg",
+			"media_url_https": "https://pbs.twimg.com/media/Cn0DLWkWAAA3s2M.jpg",
+			"url": "https://t.co/c88dgQVbUl",
+			"display_url": "pic.twitter.com/c88dgQVbUl",
+			"expanded_url": "http://twitter.com/jjkramer76/status/755763817141993472/photo/1",
+			"type": "photo",
+			"sizes": {
+				"medium": {
+					"w": 900,
+					"h": 1200,
+					"resize": "fit"
+				},
+				"large": {
+					"w": 1452,
+					"h": 1936,
+					"resize": "fit"
+				},
+				"thumb": {
+					"w": 150,
+					"h": 150,
+					"resize": "crop"
+				},
+				"small": {
+					"w": 510,
+					"h": 680,
+					"resize": "fit"
+				}
+			},
+			"source_status_id": 755763817141993500,
+			"source_status_id_str": "755763817141993472",
+			"source_user_id": 94161380,
+			"source_user_id_str": "94161380"
+		}]
+	},
+	"extended_entities": {
+		"media": [{
+			"id": 755763806039572500,
+			"id_str": "755763806039572480",
+			"indices": [143,
+			144],
+			"media_url": "http://pbs.twimg.com/media/Cn0DLWkWAAA3s2M.jpg",
+			"media_url_https": "https://pbs.twimg.com/media/Cn0DLWkWAAA3s2M.jpg",
+			"url": "https://t.co/c88dgQVbUl",
+			"display_url": "pic.twitter.com/c88dgQVbUl",
+			"expanded_url": "http://twitter.com/jjkramer76/status/755763817141993472/photo/1",
+			"type": "photo",
+			"sizes": {
+				"medium": {
+					"w": 900,
+					"h": 1200,
+					"resize": "fit"
+				},
+				"large": {
+					"w": 1452,
+					"h": 1936,
+					"resize": "fit"
+				},
+				"thumb": {
+					"w": 150,
+					"h": 150,
+					"resize": "crop"
+				},
+				"small": {
+					"w": 510,
+					"h": 680,
+					"resize": "fit"
+				}
+			},
+			"source_status_id": 755763817141993500,
+			"source_status_id_str": "755763817141993472",
+			"source_user_id": 94161380,
+			"source_user_id_str": "94161380"
+		}]
+	},
+	"source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+	"in_reply_to_status_id": null,
+	"in_reply_to_status_id_str": null,
+	"in_reply_to_user_id": null,
+	"in_reply_to_user_id_str": null,
+	"in_reply_to_screen_name": null,
+	"user": {
+		"id": 23439801,
+		"id_str": "23439801",
+		"name": "Guitar World",
+		"screen_name": "GuitarWorld",
+		"location": "New York City",
+		"description": "Official account of Guitar World magazine! Follow our editors @JeffKitts @BradAngle @DamianFanelli @PaulRiario",
+		"url": "http://t.co/VIYNDL9ITZ",
+		"entities": {
+			"url": {
+				"urls": [{
+					"url": "http://t.co/VIYNDL9ITZ",
+					"expanded_url": "http://www.guitarworld.com",
+					"display_url": "guitarworld.com",
+					"indices": [0,
+					22]
+				}]
+			},
+			"description": {
+				"urls": []
+			}
+		},
+		"protected": false,
+		"followers_count": 311934,
+		"friends_count": 1404,
+		"listed_count": 2376,
+		"created_at": "Mon Mar 09 14:19:20 +0000 2009",
+		"favourites_count": 2241,
+		"utc_offset": -14400,
+		"time_zone": "Eastern Time (US & Canada)",
+		"geo_enabled": false,
+		"verified": true,
+		"statuses_count": 15412,
+		"lang": "en",
+		"contributors_enabled": false,
+		"is_translator": false,
+		"is_translation_enabled": false,
+		"profile_background_color": "131516",
+		"profile_background_image_url": "http://abs.twimg.com/images/themes/theme14/bg.gif",
+		"profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme14/bg.gif",
+		"profile_background_tile": true,
+		"profile_image_url": "http://pbs.twimg.com/profile_images/460880158975471616/15QzGTo__normal.jpeg",
+		"profile_image_url_https": "https://pbs.twimg.com/profile_images/460880158975471616/15QzGTo__normal.jpeg",
+		"profile_banner_url": "https://pbs.twimg.com/profile_banners/23439801/1468326201",
+		"profile_link_color": "009999",
+		"profile_sidebar_border_color": "EEEEEE",
+		"profile_sidebar_fill_color": "EFEFEF",
+		"profile_text_color": "333333",
+		"profile_use_background_image": true,
+		"has_extended_profile": false,
+		"default_profile": false,
+		"default_profile_image": false,
+		"following": true,
+		"follow_request_sent": false,
+		"notifications": false
+	},
+	"geo": null,
+	"coordinates": null,
+	"place": null,
+	"contributors": null,
+	"retweeted_status": {
+		"created_at": "Wed Jul 20 13:58:30 +0000 2016",
+		"id": 755763817141993500,
+		"id_str": "755763817141993472",
+		"text": "@GuitarWorld check out the custom @Fender &amp; Hallmark guitars avail @ CREEM Kickstarter. https://t.co/nMQjpc9hT0 https://t.co/c88dgQVbUl",
+		"truncated": false,
+		"entities": {
+			"hashtags": [],
+			"symbols": [],
+			"user_mentions": [{
+				"screen_name": "GuitarWorld",
+				"name": "Guitar World",
+				"id": 23439801,
+				"id_str": "23439801",
+				"indices": [0,
+				12]
+			},
+			{
+				"screen_name": "Fender",
+				"name": "Fender",
+				"id": 707913,
+				"id_str": "707913",
+				"indices": [34,
+				41]
+			}],
+			"urls": [{
+				"url": "https://t.co/nMQjpc9hT0",
+				"expanded_url": "http://kck.st/29s2Md1",
+				"display_url": "kck.st/29s2Md1",
+				"indices": [92,
+				115]
+			}],
+			"media": [{
+				"id": 755763806039572500,
+				"id_str": "755763806039572480",
+				"indices": [116,
+				139],
+				"media_url": "http://pbs.twimg.com/media/Cn0DLWkWAAA3s2M.jpg",
+				"media_url_https": "https://pbs.twimg.com/media/Cn0DLWkWAAA3s2M.jpg",
+				"url": "https://t.co/c88dgQVbUl",
+				"display_url": "pic.twitter.com/c88dgQVbUl",
+				"expanded_url": "http://twitter.com/jjkramer76/status/755763817141993472/photo/1",
+				"type": "photo",
+				"sizes": {
+					"medium": {
+						"w": 900,
+						"h": 1200,
+						"resize": "fit"
+					},
+					"large": {
+						"w": 1452,
+						"h": 1936,
+						"resize": "fit"
+					},
+					"thumb": {
+						"w": 150,
+						"h": 150,
+						"resize": "crop"
+					},
+					"small": {
+						"w": 510,
+						"h": 680,
+						"resize": "fit"
+					}
+				}
+			}]
+		},
+		"extended_entities": {
+			"media": [{
+				"id": 755763806039572500,
+				"id_str": "755763806039572480",
+				"indices": [116,
+				139],
+				"media_url": "http://pbs.twimg.com/media/Cn0DLWkWAAA3s2M.jpg",
+				"media_url_https": "https://pbs.twimg.com/media/Cn0DLWkWAAA3s2M.jpg",
+				"url": "https://t.co/c88dgQVbUl",
+				"display_url": "pic.twitter.com/c88dgQVbUl",
+				"expanded_url": "http://twitter.com/jjkramer76/status/755763817141993472/photo/1",
+				"type": "photo",
+				"sizes": {
+					"medium": {
+						"w": 900,
+						"h": 1200,
+						"resize": "fit"
+					},
+					"large": {
+						"w": 1452,
+						"h": 1936,
+						"resize": "fit"
+					},
+					"thumb": {
+						"w": 150,
+						"h": 150,
+						"resize": "crop"
+					},
+					"small": {
+						"w": 510,
+						"h": 680,
+						"resize": "fit"
+					}
+				}
+			}]
+		},
+		"source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+		"in_reply_to_status_id": null,
+		"in_reply_to_status_id_str": null,
+		"in_reply_to_user_id": 23439801,
+		"in_reply_to_user_id_str": "23439801",
+		"in_reply_to_screen_name": "GuitarWorld",
+		"user": {
+			"id": 94161380,
+			"id_str": "94161380",
+			"name": "J.J. Kramer",
+			"screen_name": "jjkramer76",
+			"location": "",
+			"description": "Proud son of CREEM Magazine.",
+			"url": "https://t.co/h70PIKNjn8",
+			"entities": {
+				"url": {
+					"urls": [{
+						"url": "https://t.co/h70PIKNjn8",
+						"expanded_url": "https://www.kickstarter.com/projects/1243182560/boy-howdy-the-story-of-creem-magazine?ref=user_menu",
+						"display_url": "kickstarter.com/projects/12431…",
+						"indices": [0,
+						23]
+					}]
+				},
+				"description": {
+					"urls": []
+				}
+			},
+			"protected": false,
+			"followers_count": 187,
+			"friends_count": 632,
+			"listed_count": 2,
+			"created_at": "Wed Dec 02 19:49:11 +0000 2009",
+			"favourites_count": 176,
+			"utc_offset": null,
+			"time_zone": null,
+			"geo_enabled": false,
+			"verified": false,
+			"statuses_count": 260,
+			"lang": "en",
+			"contributors_enabled": false,
+			"is_translator": false,
+			"is_translation_enabled": false,
+			"profile_background_color": "C0DEED",
+			"profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+			"profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+			"profile_background_tile": false,
+			"profile_image_url": "http://pbs.twimg.com/profile_images/751836726423908352/NsXR3171_normal.jpg",
+			"profile_image_url_https": "https://pbs.twimg.com/profile_images/751836726423908352/NsXR3171_normal.jpg",
+			"profile_banner_url": "https://pbs.twimg.com/profile_banners/94161380/1468086777",
+			"profile_link_color": "0084B4",
+			"profile_sidebar_border_color": "C0DEED",
+			"profile_sidebar_fill_color": "DDEEF6",
+			"profile_text_color": "333333",
+			"profile_use_background_image": true,
+			"has_extended_profile": false,
+			"default_profile": true,
+			"default_profile_image": false,
+			"following": false,
+			"follow_request_sent": false,
+			"notifications": false
+		},
+		"geo": null,
+		"coordinates": null,
+		"place": null,
+		"contributors": null,
+		"is_quote_status": false,
+		"retweet_count": 14,
+		"favorite_count": 20,
+		"favorited": false,
+		"retweeted": false,
+		"possibly_sensitive": false,
+		"possibly_sensitive_appealable": false,
+		"lang": "en"
+	},
+	"is_quote_status": false,
+	"retweet_count": 14,
+	"favorite_count": 0,
+	"favorited": false,
+	"retweeted": false,
+	"possibly_sensitive": false,
+	"possibly_sensitive_appealable": false,
+	"lang": "en"
+}]

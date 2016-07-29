@@ -18,11 +18,11 @@ describe('tweet', function () {
 
 		let expected = [(0).toFixed(6), (0).toFixed(6)];
 		let actual = centerOf(bbox["bounding_box_a"]);
-		chai.assert.deepEqual(actual, expected);
+		chai.assert.deepEqual(expected, actual);
 
 		expected = [(-3.5).toFixed(6), (0.5).toFixed(6)];
 		actual = centerOf(bbox["bounding_box_b"]);
-		chai.assert.deepEqual(actual, expected);
+		chai.assert.deepEqual(expected, actual);
 	})
 
 	it('calculate avg of 2 numbers', function () {
@@ -35,16 +35,20 @@ describe('tweet', function () {
 	it('extract point data', function () {
 		let long = -12.34567890;
 		let lat = -22.34567890;
+		let expected = [long, lat];
 
 		let tweet = {
-			"coordinates": [
-				long,
-				lat
-			],
-			"type": "Point"
+			"coordinates": {
+				"coordinates": [
+					long,
+					lat
+				],
+				"type": "Point"
+			}
 		};
 
-		chai.assert.deepEqual(getPoint(tweet), [long, lat]);
+		let actual = getPoint(tweet);
+		chai.assert.deepEqual(actual, expected);
 	})
 
 	it('extract text data', function () {
@@ -116,6 +120,7 @@ describe('tweet', function () {
 		let se = [-76.909393, 38.791645];
 		let ne = [-76.909393, 38.995548];
 		let nw = [-77.119759, 38.995548];
+		let expected = sw;
 
 		let tweet = {
 			"place": {
@@ -126,14 +131,33 @@ describe('tweet', function () {
 				}
 			},
 			"coordinates": {
-				"coordinates": [sw],
+				"coordinates": sw,
 				"type": "Point"
 			},
 		};
 
 		let actual = getLocation(tweet);
-		console.log(actual);
-		chai.assert.equal("Point", actual["coordinates"]["type"]);
-		chai.assert.equal(expected, getLocation(tweet));
+		chai.assert.equal(expected, actual);
+	})
+
+	it('extract location, pt from bbox', function () {
+		let sw = [-10, -3];
+		let se = [-10, 4];
+		let ne = [3, 4];
+		let nw = [3, -3];
+		let expected = [(-3.5).toFixed(6), (0.5).toFixed(6)];
+
+		let tweet = {
+			"place": {
+				"attributes": {},
+				"bounding_box": {
+					"coordinates": [[sw, se, ne, nw]],
+					"type": "Polygon"
+				}
+			}
+		};
+
+		let actual = getLocation(tweet);
+		chai.assert.deepEqual(expected, actual);
 	})
 })

@@ -2,9 +2,30 @@
   "name": "social-watch",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "meteor run",
+    "lint": "eslint .",
+    "pretest": "npm run lint --silent"
   },
   "dependencies": {
     "meteor-node-stubs": "~0.2.0"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "allowImportExportEverywhere": true
+    },
+    "plugins": [
+      "meteor"
+    ],
+    "extends": [
+    ],
+    "settings": {
+      "import/resolver": "meteor"
+    },
+    "rules": {}
+  },
+  "devDependencies": {
+    "eslint": "^3.2.0",
+    "eslint-plugin-meteor": "^3.6.0"
   }
 }

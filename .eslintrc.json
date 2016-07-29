@@ -1,0 +1,26 @@
+{
+	"rules": {
+		"no-undef": "off",
+		"no-unused-vars": 1,
+		"eqeqeq": "off",
+		"curly": "error",
+		"quotes": [
+			"error",
+			"double"
+		]
+	},
+	"plugins": [],
+	"extends": [
+		"eslint:recommended"
+	],
+	"env": {
+		"meteor": true
+	},
+	"ecmaFeatures": {
+		"modules": true
+	},
+	"parserOptions": {
+		"sourceType": "module"
+	},
+	"globals": {}
+}

@@ -1,19 +1,19 @@
-import { chai } from 'meteor/practicalmeteor:chai';
-import { centerOf } from './tweet.js';
-import { avg } from './tweet.js';
-import { getPoint } from  './tweet.js';
-import { getText } from  './tweet.js';
-import { getCreatedAt } from  './tweet.js';
-import { getLocation } from  './tweet.js';
-import { getUserName } from  './tweet.js';
-import { getHashTags } from  './tweet.js';
+import { chai } from "meteor/practicalmeteor:chai";
+import { centerOf } from "./tweet.js";
+import { avg } from "./tweet.js";
+import { getPoint } from  "./tweet.js";
+import { getText } from  "./tweet.js";
+import { getCreatedAt } from  "./tweet.js";
+import { getLocation } from  "./tweet.js";
+import { getUserName } from  "./tweet.js";
+import { getHashTags } from  "./tweet.js";
 
-import './tweet.js';
+import "./tweet.js";
 
 
-describe('tweet', function () {
-	it('calculate center point of bbox', function () {
-		let bboxJson = Assets.getText('bbox.json');
+describe("tweet", function () {
+	it("calculate center point of bbox", function () {
+		let bboxJson = Assets.getText("bbox.json");
 		let bbox = JSON.parse(bboxJson);
 
 		let expected = [(0).toFixed(6), (0).toFixed(6)];
@@ -25,14 +25,14 @@ describe('tweet', function () {
 		chai.assert.deepEqual(expected, actual);
 	})
 
-	it('calculate avg of 2 numbers', function () {
+	it("calculate avg of 2 numbers", function () {
 		let a = -7;
 		let b = 4;
 		let expected = -1.5;
 		chai.assert.equal(avg(a, b), expected);
 	})
 
-	it('extract point data', function () {
+	it("extract point data", function () {
 		let long = -12.34567890;
 		let lat = -22.34567890;
 		let expected = [long, lat];
@@ -51,7 +51,7 @@ describe('tweet', function () {
 		chai.assert.deepEqual(actual, expected);
 	})
 
-	it('extract text data', function () {
+	it("extract text data", function () {
 		let expected = "test text";
 
 		let tweet = {
@@ -61,7 +61,7 @@ describe('tweet', function () {
 		chai.assert.equal(expected, getText(tweet));
 	})
 
-	it('extract created_at data', function () {
+	it("extract created_at data", function () {
 		let expected = "Mon Jul 25 16:52:01 +0000 2016";
 
 		let tweet = {
@@ -71,7 +71,7 @@ describe('tweet', function () {
 		chai.assert.equal(expected, getCreatedAt(tweet));
 	})
 
-	it('extract userName data', function () {
+	it("extract userName data", function () {
 		let expected = "Chris Sheehan";
 
 		let tweet = {
@@ -83,7 +83,7 @@ describe('tweet', function () {
 		chai.assert.equal(expected, getUserName(tweet));
 	})
 
-	it('extract hashtag data', function () {
+	it("extract hashtag data", function () {
 		let expectedA = "ABC";
 		let expectedB = "DEF";
 
@@ -115,7 +115,7 @@ describe('tweet', function () {
 	})
 
 
-	it('extract location, pt should take precedence', function () {
+	it("extract location, pt should take precedence", function () {
 		let sw = [-77.119759, 38.791645];
 		let se = [-76.909393, 38.791645];
 		let ne = [-76.909393, 38.995548];
@@ -140,7 +140,7 @@ describe('tweet', function () {
 		chai.assert.equal(expected, actual);
 	})
 
-	it('extract location, pt from bbox', function () {
+	it("extract location, pt from bbox", function () {
 		let sw = [-10, -3];
 		let se = [-10, 4];
 		let ne = [3, 4];

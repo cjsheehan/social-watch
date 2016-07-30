@@ -24,7 +24,7 @@ export function Tweet(userName, text, hashTags, createdAt, location) {
 }
 
 function getData() {
-	let jsonTweet = Assets.getText('twitter.json');
+	let jsonTweet = Assets.getText("twitter.json");
 	let data = JSON.parse(jsonTweet);
 	for (let index = 0; index < data.length; index++) {
 		let tweet = data[index];
@@ -58,7 +58,7 @@ export function formatTweet(tweet) {
 	let location = getLocation(tweet);
 	let text = getText(tweet);
 
-	let formatted = 'userName: ' + userName + '\n' + 'createdAt: ' + createdAt + '\n' + 'location: ' + location + '\n' + 'text: ' + text + '\n';
+	let formatted = "userName: " + userName + "\n" + "createdAt: " + createdAt + "\n" + "location: " + location + "\n" + "text: " + text + "\n";
 }
 
 export function centerOf(bbox) {
@@ -79,7 +79,7 @@ export function centerOf(bbox) {
 		center = [long, lat];
 
 	} else {
-		throw new ArgumentException("bbox doesn't contain a valid polygon");
+		throw new ArgumentException("bbox does not contain a valid polygon");
 	}
 	return [long, lat];
 }
@@ -194,7 +194,7 @@ export function getPoint(data) {
 function outHashTags(data) {
 	if (data && data.length > 0) {
 		for (let index = 0; index < data.length; index++) {
-			console.log("outHashTags " + data[index][TEXT] + ' ' + data[index][INDICES]);
+			console.log("outHashTags " + data[index][TEXT] + " " + data[index][INDICES]);
 		}
 	}
 }

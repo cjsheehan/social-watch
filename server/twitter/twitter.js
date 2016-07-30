@@ -6,7 +6,7 @@ const options = {
 	access_token_secret: Meteor.settings.private.twitter.access_secret
 }
 
-let fs = Npm.require('fs');
+let fs = Npm.require("fs");
 
 export function streamTwitter(locations) {
 
@@ -18,13 +18,13 @@ export function streamTwitter(locations) {
 
 	try {
 		let client = new Twitter(options);
-		Twitter.streamAsync(client, 'statuses/filter', { LOCATIONS_KEY: locations.toString() },
+		Twitter.streamAsync(client, "statuses/filter", { LOCATIONS_KEY: locations.toString() },
 			function (stream) {
 
-				stream.on('data', function (tweet) {
+				stream.on("data", function (tweet) {
 					console.log(tweet.text);
 					try {
-						fs.appendFile('../../../../../../../tweets.txt', JSON.stringify(tweet), function (err) {
+						fs.appendFile("../../../../../../../tweets.txt", JSON.stringify(tweet), function (err) {
 							if (err) {
 								return console.log(err);
 							}
@@ -34,7 +34,7 @@ export function streamTwitter(locations) {
 					}
 				});
 
-				stream.on('error', function (error) {
+				stream.on("error", function (error) {
 					throw error;
 				});
 

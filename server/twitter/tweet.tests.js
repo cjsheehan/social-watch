@@ -7,8 +7,7 @@ import { getCreatedAt } from  "./tweet.js";
 import { getLocation } from  "./tweet.js";
 import { getUserName } from  "./tweet.js";
 import { getHashTags } from  "./tweet.js";
-
-import "./tweet.js";
+import { getIdStr } from  "./tweet.js";
 
 
 describe("tweet", function () {
@@ -30,6 +29,14 @@ describe("tweet", function () {
 		let b = 4;
 		let expected = -1.5;
 		chai.assert.equal(avg(a, b), expected);
+	})
+
+	it("extract id string", function () {
+		let expected = "759058862032826369";
+		let tweet = {
+			"id_str": expected
+		};
+		chai.assert.equal(expected, getIdStr(tweet));
 	})
 
 	it("extract point data", function () {
@@ -84,21 +91,20 @@ describe("tweet", function () {
 	})
 
 	it("extract hashtag data", function () {
-		let expectedA = "ABC";
-		let expectedB = "DEF";
+		let expected = ["ABC", "BCD"];
 
 		let tweet = {
 			"entities": {
 				"hashtags": [
 					{
-						"text": expectedA,
+						"text": expected[0],
 						"indices": [
 							130,
 							134
 						]
 					},
 					{
-						"text": expectedB,
+						"text": expected[1],
 						"indices": [
 							130,
 							134
@@ -109,9 +115,11 @@ describe("tweet", function () {
 		}
 
 		let actual = getHashTags(tweet);
-		console.log(actual);
-		chai.assert.equal(expectedA, actual[0]["text"]);
-		chai.assert.equal(expectedB, actual[1]["text"]);
+		chai.assert.equal(expected.length, actual.length);
+		for (var i = 0; i < expected.length; i++) {
+			chai.assert.equal(expected[i], actual[i]);
+			
+		}
 	})
 
 

@@ -38,6 +38,18 @@ export function formatTweet(tweet) {
 	return formatted;
 }
 
+export function getIdStr(tweet) {
+	if (tweet == null) {
+		throw new ArgumentException("valid tweet is required");
+	}
+
+	if(tweet[ID_STR]) {
+		return tweet[ID_STR];
+	} else {
+		return null;
+	}
+}
+
 export function centerOf(bbox) {
 	if (bbox == null) {
 		throw new ArgumentException("bbox is invalid");
@@ -114,7 +126,7 @@ export function getHashTags(data) {
 	let tags = [];
 	if (data[ENTITIES] && data[ENTITIES][HASH_TAGS]) {
 		for (var i = 0; i < data[ENTITIES][HASH_TAGS].length; i++) {
-			tags[i] = data[ENTITIES][HASH_TAGS][TEXT][i];
+			tags[i] = data[ENTITIES][HASH_TAGS][i][TEXT];
 		}
 		return tags;
 	} else {
@@ -126,7 +138,6 @@ export function getLocation(data) {
 	let location = getPoint(data);
 	if (location == null) {
 		let bbox = getBBox(data);
-		console.log("getLocation", bbox);
 		try {
 			location = centerOf(bbox);
 		} catch (error) {

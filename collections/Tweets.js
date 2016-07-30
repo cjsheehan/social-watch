@@ -1,64 +1,29 @@
+import { Mongo } from "meteor/mongo";
+
+export const Tweets = new Mongo.Collection("tweets");
+
 TweetSchema = new SimpleSchema({
-  name: {
+  [USER]: {
     type: String,
-    label: "Name"
+    label: "UserName"
   },
-  entities: {
-    type: Object,
-    label: "Entities"
-  },
-  loc: {
+  [ID_STR]: {
     type: String,
+    label: "IdStr"
+  },
+  [LOCATION]: {
+    type: [Number],
     label: "Location"
   },
-  id_str: {
+  [TEXT]: {
     type: String,
-    label: "TwitId"
+    label: "Text"
   },
-  coord: {
-    type: [Number]
+  [HASH_TAGS]: {
+    type: [String],
+    label: "HashTags"
   }
-
 });
 
-EntitySchema = new SimpleSchema({
+Tweets.attachSchema(TweetSchema);
 
-});
-
-// type
-
-// Type can be a standard Javascript object like:
-
-// String
-// Number
-// Boolean
-// Object
-
-// coordinates
-
-// "coordinates":  --> Collection of Float
-// {
-//     "coordinates":
-//     [
-//         -75.14310264,
-//         40.05701649
-//     ],
-//     "type":"Point"
-// }
-
-// location code
-
-// tweet - created_at
-
-// entities
-
-// "entities":
-// {
-//     "hashtags":[],
-//     "urls":[],
-//     "user_mentions":[]
-// }
-
-// id_str, safe tweet uid
-
-// text : str utf8 of tweet

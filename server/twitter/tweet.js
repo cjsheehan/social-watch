@@ -1,29 +1,8 @@
-// Twitter field consts
-const ENTITIES = "entities";
-const USER = "user";
-const HASH_TAGS = "hashtags";
-const TEXT = "text";
-const INDICES = "indices";
-const NAME = "name";
-const CREATED_AT = "created_at";
-const ID_STR = "id_str";
-const COORDS = "coordinates";
-const PLACE = "place";
-const TYPE = "type";
-const POLYGON = "Polygon";
-const POINT = "Point";
-const ATTR = "attributes";
-const BBOX = "bounding_box";
-const LOCATION = "location";
-export const COORD_PRECISION = 6;
+import { ArgumentException } from "../util";
+import { Tweet } from "/lib/Tweet";
+import { ENTITIES, USER, HASH_TAGS, TEXT, NAME, CREATED_AT, ID_STR, COORDS, PLACE, TYPE, POLYGON, LOCATION, POINT, BBOX} from "/lib/constants";
 
-export function Tweet(userName, text, hashTags, createdAt, location) {
-	this.USER = userName;
-	this.TEXT = text;
-	this.HASH_TAGS = hashTags;
-	this.CREATED_AT = createdAt;
-	this.LOCATION = location;
-}
+import { COORD_PRECISION } from "/lib/constants";
 
 export function formatTweet(tweet, formatAs) {
 	if (tweet == null) {
@@ -42,14 +21,7 @@ export function formatTweet(tweet, formatAs) {
 	if (formatAs === "string") {
 		formatted = [USER] + ": " + userName + "\n" + [CREATED_AT] + ": " + createdAt + "\n" + [LOCATION] + ": " + location + "\n" + [TEXT] + ": " + text + "\n" + [HASH_TAGS] + ": " + hashTags.toString() + [ID_STR] + ": " + idStr;
 	} else {
-		formatted = {
-			[USER]: userName,
-			[CREATED_AT]: createdAt,
-			[LOCATION]: location,
-			[TEXT]: text,
-			[HASH_TAGS]: hashTags,
-			[ID_STR]: idStr
-		}
+		formatted = new Tweet(userName, text, hashTags, createdAt, location, idStr);
 	}
 
 	return formatted;

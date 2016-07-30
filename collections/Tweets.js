@@ -1,27 +1,32 @@
 import { Mongo } from "meteor/mongo";
+import { USER, ID_STR, LOCATION, TEXT, CREATED_AT, HASH_TAGS } from "/lib/constants";
+import { Tweet } from "/lib/Tweet";
 
 export const Tweets = new Mongo.Collection("tweets");
 
 TweetSchema = new SimpleSchema({
-  [USER]: {
+  userName: {
     type: String,
     label: "UserName"
   },
-  [ID_STR]: {
+  idStr: {
     type: String,
     label: "IdStr"
   },
-  [LOCATION]: {
+  location: {
     type: [Number],
-    label: "Location"
+    label: "Location",
+    decimal: true,
+    maxCount: 2,
+    minCount: 2
   },
-  [TEXT]: {
+  text: {
     type: String,
     label: "Text"
   },
-  [HASH_TAGS]: {
-    type: [String],
-    label: "HashTags"
+  createdAt: {
+    type: String,
+    label: "Created At"
   }
 });
 

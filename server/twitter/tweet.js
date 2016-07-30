@@ -14,26 +14,43 @@ const POLYGON = "Polygon";
 const POINT = "Point";
 const ATTR = "attributes";
 const BBOX = "bounding_box";
+const LOCATION = "location";
+export const COORD_PRECISION = 6;
 
 export function Tweet(userName, text, hashTags, createdAt, location) {
-	this.userName = userName;
-	this.text = text;
-	this.hashTags = hashTags;
-	this.createdAt = createdAt;
-	this.location = location;
+	this.USER = userName;
+	this.TEXT = text;
+	this.HASH_TAGS = hashTags;
+	this.CREATED_AT = createdAt;
+	this.LOCATION = location;
 }
 
-export function formatTweet(tweet) {
+export function formatTweet(tweet, formatAs) {
 	if (tweet == null) {
 		throw new ArgumentException("valid tweet is required");
+	} else if (formatAs == null) {
+		throw new ArgumentException("valid formatAs argument is required");
 	}
 	let userName = getUserName(tweet);
 	let createdAt = getCreatedAt(tweet);
 	let hashTags = getHashTags(tweet);
 	let location = getLocation(tweet);
 	let text = getText(tweet);
+	let idStr = getIdStr(tweet);
 
-	let formatted = "userName: " + userName + "\n" + "createdAt: " + createdAt + "\n" + "location: " + location + "\n" + "text: " + text + "\n" + "hashtags: " + hashTags.toString();
+	let formatted = "";
+	if (formatAs === "string") {
+		formatted = [USER] + ": " + userName + "\n" + [CREATED_AT] + ": " + createdAt + "\n" + [LOCATION] + ": " + location + "\n" + [TEXT] + ": " + text + "\n" + [HASH_TAGS] + ": " + hashTags.toString() + [ID_STR] + ": " + idStr;
+	} else {
+		formatted = {
+			[USER]: userName,
+			[CREATED_AT]: createdAt,
+			[LOCATION]: location,
+			[TEXT]: text,
+			[HASH_TAGS]: hashTags,
+			[ID_STR]: idStr
+		}
+	}
 
 	return formatted;
 }
@@ -79,7 +96,7 @@ export function avg(a, b) {
 	} else if (b == null || isNaN(b)) {
 		throw new ArgumentException("valid number b is required");
 	}
-	return ((a + b) / 2).toFixed(6);
+	return ((a + b) / 2).toFixed(COORD_PRECISION);
 }
 
 export function getText(data) {

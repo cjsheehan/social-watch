@@ -8,6 +8,7 @@ import { getLocation } from  "./tweet.js";
 import { getUserName } from  "./tweet.js";
 import { getHashTags } from  "./tweet.js";
 import { getIdStr } from  "./tweet.js";
+import { COORD_PRECISION }  from  "./tweet.js";
 
 
 describe("tweet", function () {
@@ -15,11 +16,11 @@ describe("tweet", function () {
 		let bboxJson = Assets.getText("bbox.json");
 		let bbox = JSON.parse(bboxJson);
 
-		let expected = [(0).toFixed(6), (0).toFixed(6)];
+		let expected = [(0).toFixed(COORD_PRECISION), (0).toFixed(COORD_PRECISION)];
 		let actual = centerOf(bbox["bounding_box_a"]);
 		chai.assert.deepEqual(expected, actual);
 
-		expected = [(-3.5).toFixed(6), (0.5).toFixed(6)];
+		expected = [(-3.5).toFixed(COORD_PRECISION), (0.5).toFixed(COORD_PRECISION)];
 		actual = centerOf(bbox["bounding_box_b"]);
 		chai.assert.deepEqual(expected, actual);
 	})
@@ -153,7 +154,7 @@ describe("tweet", function () {
 		let se = [-10, 4];
 		let ne = [3, 4];
 		let nw = [3, -3];
-		let expected = [(-3.5).toFixed(6), (0.5).toFixed(6)];
+		let expected = [(-3.5).toFixed(COORD_PRECISION), (0.5).toFixed(COORD_PRECISION)];
 
 		let tweet = {
 			"place": {

@@ -23,42 +23,19 @@ export function Tweet(userName, text, hashTags, createdAt, location) {
 	this.location = location;
 }
 
-function getData() {
-	let jsonTweet = Assets.getText("twitter.json");
-	let data = JSON.parse(jsonTweet);
-	for (let index = 0; index < data.length; index++) {
-		let tweet = data[index];
-		let hashTags = getHashTags(tweet);
-		let userName = getUserName(tweet);
-		let createdAt = getCreatedAt(tweet);
-		let location = getLocation(tweet);
-		let text = getText(tweet);
-		let center = "";
-
-		try {
-			if (location[TYPE] !== POLYGON) {
-				center = centerOf(location);
-			} else {
-				center = [location[COORDS][0][0], location[COORDS][0][1]];
-			}
-		} catch (e) {
-			if (e instanceof ArgumentException) {
-				console.log(e.message);
-			}
-		}
-
-		console.log(userName, createdAt, text, center);
-	}
-}
-
 export function formatTweet(tweet) {
+	if (tweet == null) {
+		throw new ArgumentException("valid tweet is required");
+	}
 	let userName = getUserName(tweet);
 	let createdAt = getCreatedAt(tweet);
 	let hashTags = getHashTags(tweet);
 	let location = getLocation(tweet);
 	let text = getText(tweet);
 
-	let formatted = "userName: " + userName + "\n" + "createdAt: " + createdAt + "\n" + "location: " + location + "\n" + "text: " + text + "\n";
+	let formatted = "userName: " + userName + "\n" + "createdAt: " + createdAt + "\n" + "location: " + location + "\n" + "text: " + text + "\n" + "hashtags: " + hashTags.toString();
+
+	return formatted;
 }
 
 export function centerOf(bbox) {
@@ -188,14 +165,6 @@ export function getPoint(data) {
 		return data[COORDS][COORDS];
 	} else {
 		return null;
-	}
-}
-
-function outHashTags(data) {
-	if (data && data.length > 0) {
-		for (let index = 0; index < data.length; index++) {
-			console.log("outHashTags " + data[index][TEXT] + " " + data[index][INDICES]);
-		}
 	}
 }
 

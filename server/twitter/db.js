@@ -1,16 +1,16 @@
-import { Tweets } from "/collections/Tweets";
 import { DuplicateDocException, ArgumentException } from "/lib/exceptions";
 
-
-export function insertTweet(tweet) {
+export function insertTweet(tweet, db) {
     if (tweet == null) {
         throw new ArgumentException("valid tweet argument required to insertTweet");
-    }
+    } else if (db == null) {
+		throw new ArgumentException("valid db argument required to isExisting");
+	}
 
-    if (!isExisting(tweet, Tweets)) {
-        Tweets.insert(tweet);
+    if (!isExisting(tweet, db)) {
+        db.insert(tweet);
     } else {
-		throw new DuplicateDocException("tweet with idStr" + tweet.idStr + "already exists in db");
+		throw new DuplicateDocException("tweet with idStr " + tweet.idStr + " already exists in db");
 	}
 }
 
@@ -22,10 +22,8 @@ export function isExisting(tweet, db) {
 	}
     var exists = db.findOne( { idStr: tweet.idStr } );
     if (exists) {
-		console.log("true exists");
         return true;
     } else {
-		console.log("false exists");
         return false;
     }
 }

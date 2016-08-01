@@ -1,6 +1,7 @@
+import { Tweets } from "/collections/Tweets";
 import { formatTweet } from "./twitter/tweet";
 import { insertTweet } from "./twitter/db";
-import { ArgumentException } from "/lib/exceptions";
+import { ArgumentException, DuplicateDocException } from "/lib/exceptions";
 
 
 
@@ -15,15 +16,18 @@ export function populateDb(tweets) {
         throw new ArgumentException("valid tweets argument required");
     }
 
-    let formatted = formatTweet(tweets[0], "object");
-    console.log(formatted);
-    insertTweet(formatted);
-
-    // for (var i = 0; i < tweets.length; i++) {
-    //     var tweet = tweets[i];
-    //     Tweets.insert
-
-    // }
+    for (var i = 0; i < tweets.length; i++) {
+        var tweet = tweets[i];
+        let formatted = formatTweet(tweet, "object");
+        console.log(formatted);
+        try {
+            insertTweet(formatted, Tweets); 
+        } catch (error) {
+            if (error instanceof DuplicateDocException) {
+                console.log("populateDb error: " + error.message);
+            }
+        }
+    }
 }
 
 

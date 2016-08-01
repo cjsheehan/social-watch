@@ -1,0 +1,11 @@
+<template name="Tweets">
+	<section class="tweets">
+		{{#if Template.subscriptionsReady}} 
+			{{#each tweets}} 
+				{{> Tweet}} 
+			{{/each}} 
+		{{else}}
+			<p>Loading...</p>
+		{{/if}}
+	</section>
+</template>

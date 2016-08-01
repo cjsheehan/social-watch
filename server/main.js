@@ -4,7 +4,7 @@ import { formatTweet } from "./twitter/tweet.js";
 import { getTestTweets, populateDb } from "./util";
 /* eslint-enable no-unused-vars*/
 
-import "../collections/Tweets.js";
+import "/collections/Tweets.js";
 
 Meteor.startup(() => {
 	// code to run on server at startup

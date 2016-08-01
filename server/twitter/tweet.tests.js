@@ -8,7 +8,7 @@ import { getLocation } from  "./tweet.js";
 import { getUserName } from  "./tweet.js";
 import { getHashTags } from  "./tweet.js";
 import { getIdStr } from  "./tweet.js";
-import { COORD_PRECISION }  from  "./tweet.js";
+import { COORD_PRECISION } from "/lib/constants";
 
 
 describe("tweet", function () {

@@ -22,5 +22,5 @@ ecmascript@0.5.7              # Enable ECMAScript2015+ syntax in app code
 lablancas:twitter
 aldeed:collection2
 aldeed:autoform
-
+hwillson:stub-collections
 practicalmeteor:mocha

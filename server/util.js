@@ -1,17 +1,7 @@
-import { Tweets } from "/collections/Tweets";
 import { formatTweet } from "./twitter/tweet";
+import { insertTweet } from "./twitter/db";
+import { ArgumentException } from "/lib/exceptions";
 
-/* eslint-disable no-unused-vars*/
-export function ArgumentNullException(message) {
-    this.message = message;
-    this.name = "ArgumentNullException";
-}
-
-export function ArgumentException(message) {
-    this.message = message;
-    this.name = "ArgumentException";
-}
-/* eslint-enable no-unused-vars*/
 
 
 export function getTestTweets() {
@@ -27,7 +17,7 @@ export function populateDb(tweets) {
 
     let formatted = formatTweet(tweets[0], "object");
     console.log(formatted);
-    Tweets.insert(formatted);
+    insertTweet(formatted);
 
     // for (var i = 0; i < tweets.length; i++) {
     //     var tweet = tweets[i];
@@ -35,6 +25,8 @@ export function populateDb(tweets) {
 
     // }
 }
+
+
 
 export function outputTweets(tweets, formatAs) {
     if (tweets == null) {

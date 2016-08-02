@@ -1,3 +1,5 @@
+import { ArgumentException } from "/lib/exceptions";
+
 const LOCATIONS_KEY = "locations";
 const options = {
 	consumer_key: Meteor.settings.private.twitter.consumer_key,

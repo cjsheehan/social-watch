@@ -1,4 +1,4 @@
-import { ArgumentException } from "../util";
+import { ArgumentException } from "/lib/exceptions";
 import { Tweet } from "/lib/Tweet";
 import { ENTITIES, USER, HASH_TAGS, TEXT, NAME, CREATED_AT, ID_STR, COORDS, PLACE, TYPE, POLYGON, LOCATION, POINT, BBOX} from "/lib/constants";
 

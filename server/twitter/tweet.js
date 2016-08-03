@@ -50,7 +50,6 @@ export function centerOf(bbox) {
 		let se = bbox[COORDS][0][0];
 		let sw = bbox[COORDS][0][1];
 		let nw = bbox[COORDS][0][2];
-		let ne = bbox[COORDS][0][3];
 
 		long = avg(sw[0], nw[0]);
 		lat = avg(se[1], sw[1]);

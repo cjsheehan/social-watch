@@ -1,6 +1,4 @@
 import { Mongo } from "meteor/mongo";
-import { USER, ID_STR, LOCATION, TEXT, CREATED_AT, HASH_TAGS } from "/lib/constants";
-import { Tweet } from "/lib/Tweet";
 
 export const Tweets = new Mongo.Collection("tweets");
 

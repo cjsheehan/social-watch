@@ -4,7 +4,7 @@
 	{{> Words}}
 	<p>You've pressed the button {{counter}} times.</p>
 		{{#if Template.subscriptionsReady}} 
-			{{#each tweets}} 
+			{{#each tweet in tweets}} 
 				{{> Tweet}} 
 			{{/each}} 
 		{{else}}

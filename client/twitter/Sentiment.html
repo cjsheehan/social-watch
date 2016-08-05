@@ -1,0 +1,7 @@
+<template name="Sentiment">
+	<section class="sentiment">
+		{{#with sentiment text}}
+		<h4>score: {{score}} pos {{positive.score}} neg {{negative.score}}</h4>
+		{{/with}}
+	</section>
+</template>

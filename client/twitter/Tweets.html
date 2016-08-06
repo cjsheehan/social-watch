@@ -1,14 +1,13 @@
 <template name="Tweets">
-	<section class="tweets">
-	<button>Add to Db</button>
-	{{> Words}}
-	<p>You've pressed the button {{counter}} times.</p>
-		{{#if Template.subscriptionsReady}} 
-			{{#each tweet in tweets}} 
-				{{> Tweet}} 
-			{{/each}} 
-		{{else}}
-			<p>Loading...</p>
-		{{/if}}
+	<section class="tweet-container">
+		<button>Add to Db</button>
+		<p>You've pressed the button {{counter}} times.</p>
+			{{#if Template.subscriptionsReady}} 
+				{{#each tweets}} 
+					{{> Tweet}} 
+				{{/each}} 
+			{{else}}
+				<p>Loading...</p>
+			{{/if}}
 	</section>
 </template>

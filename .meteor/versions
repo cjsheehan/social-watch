@@ -103,6 +103,7 @@ spacebars@1.0.12
 spacebars-compiler@1.0.12
 standard-minifier-css@1.1.8
 standard-minifier-js@1.1.8
+stolinski:stylus-multi@1.4.3
 templating@1.1.14
 templating-tools@1.0.4
 tmeasday:test-reporter-helpers@0.2.1

@@ -1,14 +1,4 @@
-import { analyze } from "Sentimental";
-
 Template.Sentiment.helpers({
-	sentiment: (text) => {
-		console.log("text:" + text);
-		
-		let sentiment = analyze(text);
-		console.log(JSON.stringify(sentiment));
-		return sentiment;
-	},
-
 	evalScore: (score, isNegative) => {
 		if (score > 0) {
 			if(isNegative) {

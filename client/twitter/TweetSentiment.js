@@ -1,4 +1,4 @@
-Template.Sentiment.helpers({
+Template.TweetSentiment.helpers({
 	evalScore: (score, isNegative) => {
 		if (score > 0) {
 			if(isNegative) {

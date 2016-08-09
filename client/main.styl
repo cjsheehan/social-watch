@@ -283,11 +283,25 @@ input, select, textarea
 		border-bottom: rgba(0,0,0, 0.3) solid 3px
 		margin-top 0
 		margin-bottom 10px 
+
+	td, th
+		border 1px solid #999
+		padding 0.3em
+		shadow-level(1)
+
 	button
 		margin-top 20px 
 	&:hover 
 		shadow-level(3)
 		// animation card 0.6s ease 1 forwards
+
+td, th
+    border 1px solid #999
+    text-align center
+    padding 0.3em
+
+.sentiment-results
+    @extend .word-cloud
 
 .sentiment
 	font-size: 1em
@@ -304,9 +318,7 @@ input, select, textarea
 	@extend .sentiment
 	font-size 200%
 
-td, th
-	border 1px solid #999
-	padding 0.3em
+
 
 .tweet-container
     padding 20px 
@@ -318,6 +330,7 @@ td, th
     textarea, input
         width 100% 
 	overflow-y scroll
+
 
 .twitter-analysis
 	display flex

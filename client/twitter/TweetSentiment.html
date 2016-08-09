@@ -3,11 +3,11 @@
 		{{#with sentiment text}}
 		<table>
 			<tr>
-				<th rowspan="2" class="{{evalScore score false}} overall-sentiment">{{score}}</th>
-				<td class="{{evalScore positive.score false}}">{{positive.score}}</td>
+				<th rowspan="2" class="{{sentimentAttr score false}} overall-sentiment">{{score}}</th>
+				<td class="{{sentimentAttr positive.score false}}">{{positive.score}}</td>
 			</tr>
 			<tr>
-				<td class="{{evalScore negative.score true}}">{{negative.score}}</td>
+				<td class="{{sentimentAttr negative.score true}}">{{negative.score}}</td>
 			</tr>
 		</table>
 		{{/with}}

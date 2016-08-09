@@ -7,3 +7,18 @@ Template.registerHelper("sentiment", function (text) {
 	let sentiment = analyze(text);
 	return sentiment;
 });
+
+Template.registerHelper("sentimentAttr", function (score, isNegative = true) {
+	console.log(isNegative);
+	if (score > 0) {
+		if (isNegative) {
+			return "neg-sentiment";
+		} else {
+			return "pos-sentiment";
+		}
+	} else if (score < 0) {
+		return "neg-sentiment";
+	} else {
+		return "neutral-sentiment";
+	}
+});

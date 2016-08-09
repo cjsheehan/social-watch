@@ -1,0 +1,28 @@
+<template name="SentimentResults">
+	<section class="sentiment-results">
+		{{#if Template.subscriptionsReady}}
+			<table>
+				<tr>
+					<th>Token</th>
+					<th>Score</th>
+					<th>Comparative</th>
+					<th>+</th>
+					<th>-</th>
+				</tr>
+
+				{{#each results}}
+					<tr>
+						<td>{{word}}</td>
+						<td>{{score}}</td>
+						<td>{{comparative}}</td>
+						<td class="{{sentimentAttr positive false}}">{{positive}}</td>
+						<td class="{{sentimentAttr negative true}}">{{negative}}</td>
+					</tr>
+				{{/each}} 
+
+			</table>
+		{{else}}
+			<p>Loading...</p>
+		{{/if}}
+	</section>
+</template>

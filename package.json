@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "meteor-node-stubs": "~0.2.0",
+    "moment": "^2.14.1",
     "wordcloud": "^1.0.5"
   },
   "eslintConfig": {

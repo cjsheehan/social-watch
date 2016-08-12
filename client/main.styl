@@ -263,6 +263,13 @@ input, select, textarea
 	margin auto 0
 	shadow-level(2) 
 
+p.tweet-location
+    float right 
+    font-weight bold
+
+p.tweet-meta
+    float left 
+
 .tweet
     display inline-block
     font-family "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
@@ -278,16 +285,20 @@ input, select, textarea
     margin 8px
     padding 8px
     width 400px
-    height 140px
+    height 120px
 
 
 .tweet-sentiment
     margin auto
     float left
     height 100px
+    td, th
+        border 1px solid #999
+        text-align center
+        padding 0.2em
 
 .tweet-content
-    height 75px
+    height 60px
     margin auto
     margin-left 80px
 
@@ -329,6 +340,7 @@ td, th
     margin-bottom 20px 
     shadow-level(2)   
     width 460px
+    float right
     label
         display block
         margin-bottom 10px 

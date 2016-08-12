@@ -3,16 +3,20 @@ import { ReactiveVar } from "meteor/reactive-var";
 import { randomInt } from "/lib/util";
 import { wordFrequency } from "/lib/modules/wordStats";
 import { testTweets } from "./testTweets";
+import { tweetStats } from "/lib/modules/twitterStats"
+
 /* eslint-disable no-unused-vars*/
 import { WordCloud } from "wordcloud";
 /* eslint-enable no-unused-vars*/
 const wordcloud = require("wordcloud");
 
+export const SentimentResults = new Mongo.Collection(null);
+
 const cloudOptions = {
 	gridSize: 100,
 	rotateRatio: 1,
 	color: "random-dark",
-	weightFactor: 3
+	weightFactor: 2
 }
 
 Template.Tweets.onRendered(function () {
@@ -22,8 +26,9 @@ Template.Tweets.onRendered(function () {
 
 Template.Tweets.onCreated(function () {
 	this.counter = new ReactiveVar(0);
-    this.testTweets = testTweets;
-
+	this.testTweets = testTweets;
+	this.wordStats = {};
+    
 	var self = this;
 	self.autorun(function () {
 		self.subscribe("tweets");
@@ -33,13 +38,9 @@ Template.Tweets.onCreated(function () {
 Template.Tweets.helpers({
 	tweets: () => {
 		const instance = Template.instance();
-		let text = "";
-		let tweets = Tweets.find({});
-		tweets.forEach(function (tweet) {
-			text += tweet.text + " ";
-		});
-		let words = wordFrequency(text);
-		cloudOptions.list = words;
+		let tweets = Tweets.find({}).fetch().reverse();
+		this.wordStats = tweetStats(tweets);
+		cloudOptions.list = this.wordStats.frequency;
 		wordcloud(instance.canvas, cloudOptions);
 		return tweets;
 	},

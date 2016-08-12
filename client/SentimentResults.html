@@ -13,10 +13,10 @@
 				{{#each results}}
 					<tr>
 						<td>{{word}}</td>
-						<td>{{score}}</td>
-						<td>{{comparative}}</td>
-						<td class="{{sentimentAttr positive}}">{{positive}}</td>
-						<td class="{{sentimentAttr negative}}">{{negative}}</td>
+						<td>{{stats.sentiment.score}}</td>
+						<td>{{formatDecimal stats.sentiment.comparative 3}}</td>
+						<td class="{{sentimentAttr stats.sentiment.positive.score}}">{{stats.sentiment.positive.score}}</td>
+						<td class="{{sentimentAttr stats.sentiment.negative.score}}">{{stats.sentiment.negative.score}}</td>
 					</tr>
 				{{/each}} 
 

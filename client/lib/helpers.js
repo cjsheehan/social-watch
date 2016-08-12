@@ -17,3 +17,7 @@ Template.registerHelper("sentimentAttr", function (score) {
 		return "neutral-sentiment";
 	}
 });
+
+Template.registerHelper("formatDecimal", function (num, places) {
+	return num.toFixed(places);
+});

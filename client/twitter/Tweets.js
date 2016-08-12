@@ -28,7 +28,6 @@ Template.Tweets.onCreated(function () {
 	this.counter = new ReactiveVar(0);
 	this.testTweets = testTweets;
 	this.wordStats = {};
-    
 	var self = this;
 	self.autorun(function () {
 		self.subscribe("tweets");
@@ -40,6 +39,7 @@ Template.Tweets.helpers({
 		const instance = Template.instance();
 		let tweets = Tweets.find({}).fetch().reverse();
 		this.wordStats = tweetStats(tweets);
+		Session.set("activeWordStats", this.wordStats);
 		cloudOptions.list = this.wordStats.frequency;
 		wordcloud(instance.canvas, cloudOptions);
 		return tweets;

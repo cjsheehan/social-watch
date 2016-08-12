@@ -1,7 +1,13 @@
 <template name="Tweet">
 	<article class="tweet">
-		<h3>{{userName}}</h3>
-		<h2>{{text}}</h2>
-		{{> TweetSentiment text=text}}
+		<div class="tweet-container">
+			{{> TweetSentiment text=text}}
+			<div class="tweet-content">
+				<p>{{text}}</p>
+			</div>
+			<div class="tweet-footer">
+				<p>{{userName}} {{createdAt}} {{location}}</p>
+			</div>
+		</div>
 	</article>
 </template>

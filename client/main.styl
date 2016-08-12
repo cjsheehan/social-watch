@@ -264,36 +264,40 @@ input, select, textarea
 	shadow-level(2) 
 
 .tweet
-	padding 20px 
-	background #FFF 
-	padding 0 20px 20px
-	margin-bottom 20px
-	position relative 
-	z-index 1
-	shadow-level(1)
-	trans()
-	.btn-primary, .btn-deny
-		display block
-	&.in-menu
-		background teal
-		color #FFF
-	h3
-		font-size: 3em;
-		opacity: 0.3;
-		border-bottom: rgba(0,0,0, 0.3) solid 3px
-		margin-top 0
-		margin-bottom 10px 
+    display inline-block
+    font-family "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+    font-size 12px
+    font-weight bold
+    line-height 16px
+    background-color #fff
+    border-color #e1e8ed
+    border-radius 5px
+    border-style solid
+    border-width 1px
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    margin 8px
+    padding 8px
+    width 400px
+    height 140px
 
-	td, th
-		border 1px solid #999
-		padding 0.3em
-		shadow-level(1)
 
-	button
-		margin-top 20px 
-	&:hover 
-		shadow-level(3)
-		// animation card 0.6s ease 1 forwards
+.tweet-sentiment
+    margin auto
+    float left
+    height 100px
+
+.tweet-content
+    height 75px
+    margin auto
+    margin-left 80px
+
+.tweet-footer
+    margin-left 80px
+    height 15px
+    font-weight normal
+
+.tweet-container
+    margin auto
 
 td, th
     border 1px solid #999
@@ -320,10 +324,11 @@ td, th
 
 
 
-.tweet-container
+.tweet-list-container
     padding 20px 
     margin-bottom 20px 
     shadow-level(2)   
+    width 460px
     label
         display block
         margin-bottom 10px 

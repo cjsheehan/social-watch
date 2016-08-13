@@ -18,24 +18,56 @@ Template.SentimentResults.onCreated(function () {
 });
 
 Template.SentimentResults.helpers({
-	results: () => {
+	frequency: () => {
 		let wordStats = Session.get("activeWordStats");
 		let results = [];
 
 		if (wordStats != null && wordStats.hasOwnProperty("frequency")) {
-			let len = wordStats.frequency.length;
-			for (var i = 0; i < 10; i++) {
-				console.log(wordStats.frequency[i]);
+			for (let i = 0; i < 10; i++) {
 				let word = wordStats.frequency[i][0];
 				let res = {
 					"word": word,
 					"stats": wordStats.words[word]
 				}
 				results.push(res);
-				
 			}
 		}
-		console.log(results[0]);
+		return results;
+	},
+
+	scorePos: () => {
+			let wordStats = Session.get("activeWordStats");
+			let results = [];
+
+			if (wordStats != null && wordStats.hasOwnProperty("score")) {
+				for (let i = 0; i < 5 && i < wordStats.score.length; i++) {
+					let word = wordStats.score[i][0];
+					let res = {
+						"word": word,
+						"stats": wordStats.words[word]
+					}
+					results.push(res);
+				}
+			}
+			return results;
+	},
+
+	scoreNeg: () => {
+		let wordStats = Session.get("activeWordStats");
+		let results = [];
+
+		if (wordStats != null && wordStats.hasOwnProperty("score")) {
+			let start = wordStats.score.length - 1;
+			let end = start - 5;
+			for (let i = start; i >= end; i--) {
+				let word = wordStats.score[i][0];
+				let res = {
+					"word": word,
+					"stats": wordStats.words[word]
+				}
+				results.push(res);
+			}
+		}
 		return results;
 	}
 });

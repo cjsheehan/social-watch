@@ -1,28 +1,74 @@
 <template name="SentimentResults">
 	<section class="sentiment-results">
 		{{#if Template.subscriptionsReady}}
-			<table>
-				<tr>
-					<th>Token</th>
-					<th>Score</th>
-					<th>Comparative</th>
-					<th>+</th>
-					<th>-</th>
-				</tr>
+		<table>
+			<tr>
+				<th>Token</th>
+				<th>Score</th>
+				<th>Comparative</th>
+				<th>+</th>
+				<th>-</th>
+			</tr>
 
-				{{#each results}}
-					<tr>
-						<td>{{word}}</td>
-						<td>{{stats.sentiment.score}}</td>
-						<td>{{formatDecimal stats.sentiment.comparative 3}}</td>
-						<td class="{{sentimentAttr stats.sentiment.positive.score}}">{{stats.sentiment.positive.score}}</td>
-						<td class="{{sentimentAttr stats.sentiment.negative.score}}">{{stats.sentiment.negative.score}}</td>
-					</tr>
-				{{/each}} 
+			{{#each frequency}}
+			<tr>
+				<td>{{word}}</td>
+				<td>{{stats.sentiment.score}}</td>
+				<td>{{formatDecimal stats.sentiment.comparative 3}}</td>
+				<td class="{{sentimentAttr stats.sentiment.positive.score}}">{{stats.sentiment.positive.score}}</td>
+				<td class="{{sentimentAttr stats.sentiment.negative.score}}">{{stats.sentiment.negative.score}}</td>
+			</tr>
+			{{/each}}
 
-			</table>
+		</table>
+
+		<br><br>
+
+		<table>
+			<tr>
+				<th>Token</th>
+				<th>Score</th>
+				<th>Comparative</th>
+				<th>+</th>
+				<th>-</th>
+			</tr>
+
+			{{#each scorePos}}
+			<tr>
+				<td>{{word}}</td>
+				<td>{{stats.sentiment.score}}</td>
+				<td>{{formatDecimal stats.sentiment.comparative 3}}</td>
+				<td class="{{sentimentAttr stats.sentiment.positive.score}}">{{stats.sentiment.positive.score}}</td>
+				<td class="{{sentimentAttr stats.sentiment.negative.score}}">{{stats.sentiment.negative.score}}</td>
+			</tr>
+			{{/each}}
+
+		</table>
+
+		<br><br>
+		
+		<table>
+			<tr>
+				<th>Token</th>
+				<th>Score</th>
+				<th>Comparative</th>
+				<th>+</th>
+				<th>-</th>
+			</tr>
+
+			{{#each scoreNeg}}
+			<tr>
+				<td>{{word}}</td>
+				<td>{{stats.sentiment.score}}</td>
+				<td>{{formatDecimal stats.sentiment.comparative 3}}</td>
+				<td class="{{sentimentAttr stats.sentiment.positive.score}}">{{stats.sentiment.positive.score}}</td>
+				<td class="{{sentimentAttr stats.sentiment.negative.score}}">{{stats.sentiment.negative.score}}</td>
+			</tr>
+			{{/each}}
+
+		</table>
 		{{else}}
-			<p>Loading...</p>
+		<p>Loading...</p>
 		{{/if}}
 	</section>
 </template>

@@ -42,7 +42,12 @@ Template.Tweets.helpers({
 		Session.set("activeWordStats", this.wordStats);
 		cloudOptions.list = this.wordStats.frequency;
 		wordcloud(instance.canvas, cloudOptions);
-		return tweets;
+		let subset = [];
+		let len = tweets.length;
+		for (var i = 0; i < 10 || i < len; i++) {
+			subset[i] = tweets[i];
+		}
+		return subset;
 	},
 
 	counter() {
@@ -52,10 +57,8 @@ Template.Tweets.helpers({
 
 Template.Tweets.events({
 	"click button"(event, instance) {
-		console.log("button pressed");
 		let testTweet = instance.testTweets[randomInt(0, instance.testTweets.length)];
 		testTweet.idStr = instance.counter.get();
-		console.log(testTweet);
 		Tweets.insert(testTweet);
 		instance.counter.set(instance.counter.get() + 1);
 	},

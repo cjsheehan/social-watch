@@ -12,11 +12,10 @@ Meteor.startup(() => {
 
 // streamTwitter(glasgow_bbox);
 
-
 // outputStream();
-let tweets = getTestTweets();
+// let tweets = getTestTweets();
 // console.log(tweets);
-populateDb(tweets);
+// populateDb(tweets);
 
 // outputStream(tweets, "string");
 

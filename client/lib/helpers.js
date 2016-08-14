@@ -2,7 +2,7 @@ import { analyse } from "/lib/modules/sentiment";
 
 Template.registerHelper("sentiment", function (text) {
 	if (text == null) {
-		throw new Error("Handlebars Helper sentiment requires 1 argument");
+		text = "";
 	}
 	let sentiment = analyse(text);
 	return sentiment;

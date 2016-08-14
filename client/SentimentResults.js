@@ -24,12 +24,14 @@ Template.SentimentResults.helpers({
 
 		if (wordStats != null && wordStats.hasOwnProperty("frequency")) {
 			for (let i = 0; i < 10; i++) {
-				let word = wordStats.frequency[i][0];
-				let res = {
-					"word": word,
-					"stats": wordStats.words[word]
+				if (wordStats.score[i] != null) {
+					let word = wordStats.frequency[i][0];
+					let res = {
+						"word": word,
+						"stats": wordStats.words[word]
+					}
+					results.push(res);
 				}
-				results.push(res);
 			}
 		}
 		return results;
@@ -41,12 +43,14 @@ Template.SentimentResults.helpers({
 
 			if (wordStats != null && wordStats.hasOwnProperty("score")) {
 				for (let i = 0; i < 5 && i < wordStats.score.length; i++) {
-					let word = wordStats.score[i][0];
-					let res = {
-						"word": word,
-						"stats": wordStats.words[word]
+					if (wordStats.score[i] != null) {
+						let word = wordStats.score[i][0];
+						let res = {
+							"word": word,
+							"stats": wordStats.words[word]
+						}
+						results.push(res);
 					}
-					results.push(res);
 				}
 			}
 			return results;
@@ -60,12 +64,14 @@ Template.SentimentResults.helpers({
 			let start = wordStats.score.length - 1;
 			let end = start - 5;
 			for (let i = start; i >= end; i--) {
-				let word = wordStats.score[i][0];
-				let res = {
-					"word": word,
-					"stats": wordStats.words[word]
+					if (wordStats.score[i] != null) {
+					let word = wordStats.score[i][0];
+					let res = {
+						"word": word,
+						"stats": wordStats.words[word]
+					}
+					results.push(res);
 				}
-				results.push(res);
 			}
 		}
 		return results;
@@ -74,7 +80,7 @@ Template.SentimentResults.helpers({
 	percentOfTweets: (word) => {
 		let wordStats = Session.get("activeWordStats");
 		let percent = 0;
-		if (wordStats != null) {
+		if (wordStats != null && wordStats.words[word] != null) {
 			percent = 100 * (wordStats.words[word].frequency / wordStats.numTweets);
 		}
 		return percent;

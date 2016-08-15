@@ -38,7 +38,7 @@ Template.SentimentResults.helpers({
 				}
 			}
 		}
-
+		Session.set((attribute + "Stats"), results);
 		return results;
 	},
 
@@ -53,11 +53,13 @@ Template.SentimentResults.helpers({
 
 	frequencyChart: () => {
 
-		let wordStats = Session.get("activeFreqStats");
+		let wordStats = Session.get("frequencyStats");
 		let categories = [];
 		let posSeries = [];
 		let negSeries = [];
 		let scoreSeries = [];
+
+		if(wordStats == null) {return;}
 
 		wordStats.forEach(function (w) {
 			categories.push(w.word);

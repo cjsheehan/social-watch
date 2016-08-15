@@ -91,7 +91,7 @@ Template.SentimentResults.helpers({
 
 				tooltip: {
 					formatter: function () {
-						return "<b>" + "\"" + this.point.category + "\" : " + "</b><br/>" + this.series.name + "Sentiment: " + Highcharts.numberFormat(this.point.y, 0);
+						return "<b>" + "\"" + this.point.category + "\" : " + "</b><br/>" + this.series.name + " Sentiment: " + Highcharts.numberFormat(this.point.y, 0);
 					}
 				},
 
@@ -107,14 +107,14 @@ Template.SentimentResults.helpers({
 						color: "#00ce00"
 					},
 					{
-						name: "Score",
+						name: "Overall",
 						data: scoreSeries
 					},
 				]
 			});
 		});
 	},
-	
+
 	scorePos: () => {
 		let wordStats = Session.get("activeWordStats");
 		let results = [];

@@ -1,4 +1,5 @@
 import { SentimentResults } from "./twitter/Tweets";
+const Highcharts = require("highcharts/highstock");
 
 Template.SentimentResults.onCreated(function () {
 	var self = this;
@@ -6,21 +7,13 @@ Template.SentimentResults.onCreated(function () {
 		self.subscribe("results");
 	});
 	this.count = 0;
-	// console.log("testResults: " + testResults);
-	// populateResultsDb(testResults);
-	// let cursor = SentimentResults.find({});
-	// console.log(JSON.stringify(res));
-	// console.log("results from db: " + JSON.stringify(res));
-	// cursor.forEach(function(row) {
-	// 	console.log(row.word);
-	// });
-
 });
 
 Template.SentimentResults.helpers({
 	frequency: () => {
 		let wordStats = Session.get("activeWordStats");
 		let results = [];
+		let frequencySeries = [];
 
 		if (wordStats != null && wordStats.hasOwnProperty("frequency")) {
 			for (let i = 0; i < 10; i++) {
@@ -30,30 +23,117 @@ Template.SentimentResults.helpers({
 						"word": word,
 						"stats": wordStats.words[word]
 					}
+
 					results.push(res);
 				}
 			}
 		}
+
+		// console.log("results", JSON.stringify(results));
+		Session.set("activeFreqStats", results);
 		return results;
 	},
 
-	scorePos: () => {
-			let wordStats = Session.get("activeWordStats");
-			let results = [];
+	frequencyChart: () => {
 
-			if (wordStats != null && wordStats.hasOwnProperty("score")) {
-				for (let i = 0; i < 5 && i < wordStats.score.length; i++) {
-					if (wordStats.score[i] != null) {
-						let word = wordStats.score[i][0];
-						let res = {
-							"word": word,
-							"stats": wordStats.words[word]
-						}
-						results.push(res);
+		let wordStats = Session.get("activeFreqStats");
+		let categories = [];
+		let posSeries = [];
+		let negSeries = [];
+		let scoreSeries = [];
+
+		wordStats.forEach(function (w) {
+			categories.push(w.word);
+			posSeries.push(w.stats.sentiment.positive.score);
+			negSeries.push(w.stats.sentiment.negative.score);
+			scoreSeries.push(w.stats.sentiment.score);
+		});
+
+		Meteor.defer(function () {
+			Highcharts.chart(document.getElementById("frequency-chart"), {
+				chart: {
+					type: "bar"
+				},
+				title: {
+					text: "Aggregated sentiment for popular words on twitter stream"
+				},
+				xAxis: [{
+					categories: categories,
+					reversed: true,
+					labels: {
+						step: 1
 					}
+				}, { // mirror axis on right side
+						opposite: true,
+						reversed: true,
+						categories: categories,
+						linkedTo: 0,
+						labels: {
+							step: 1
+						}
+					}],
+				yAxis: {
+					title: {
+						text: "Sentiment"
+					},
+					labels: {
+						formatter: function () {
+							return this.value;
+						}
+					}
+				},
+
+				plotOptions: {
+					bar: {
+						grouping: false
+					}
+				},
+
+				tooltip: {
+					formatter: function () {
+						return "<b>" + "\"" + this.point.category + "\" : " + "</b><br/>" + this.series.name + "Sentiment: " + Highcharts.numberFormat(this.point.y, 0);
+					}
+				},
+
+				series: [
+					{
+						name: "Negative",
+						data: negSeries,
+						color: "#cc0000"
+					},
+					{
+						name: "Positive",
+						data: posSeries,
+						color: "#00ce00"
+					},
+					{
+						name: "Score",
+						data: scoreSeries
+					},
+				]
+			});
+		});
+	},
+	
+	scorePos: () => {
+		let wordStats = Session.get("activeWordStats");
+		let results = [];
+
+		if (wordStats != null && wordStats.hasOwnProperty("score")) {
+			for (let i = 0; i < 5 && i < wordStats.score.length; i++) {
+				if (wordStats.score[i] != null) {
+					let word = wordStats.score[i][0];
+					let res = {
+						"word": word,
+						"stats": wordStats.words[word]
+					}
+					results.push(res);
 				}
 			}
-			return results;
+		}
+
+		Session.set("activePosStats", results);
+		return results;
 	},
 
 	scoreNeg: () => {
@@ -64,7 +144,7 @@ Template.SentimentResults.helpers({
 			let start = wordStats.score.length - 1;
 			let end = start - 5;
 			for (let i = start; i >= end; i--) {
-					if (wordStats.score[i] != null) {
+				if (wordStats.score[i] != null) {
 					let word = wordStats.score[i][0];
 					let res = {
 						"word": word,
@@ -74,6 +154,7 @@ Template.SentimentResults.helpers({
 				}
 			}
 		}
+		Session.set("activeNegStats", results);
 		return results;
 	},
 
@@ -89,7 +170,7 @@ Template.SentimentResults.helpers({
 
 function populateResultsDb(results) {
 	// console.log("Results: " + JSON.stringify(results));
-	results.forEach(function(result) {
+	results.forEach(function (result) {
 		SentimentResults.insert(result);
 	});
 }
@@ -97,7 +178,7 @@ function populateResultsDb(results) {
 const testResults = [
 	{
 		"carrrrr": {
-			sentiment : {
+			sentiment: {
 				score: 6,
 				comparative: 1.25,
 				positive: {
@@ -114,7 +195,7 @@ const testResults = [
 	},
 	{
 		"toy": {
-			sentiment : {
+			sentiment: {
 				score: 6,
 				comparative: 1.25,
 				positive: {

@@ -1,6 +1,5 @@
 <template name="SentimentResults">
 	<section class="sentiment-results">
-		{{#if Template.subscriptionsReady}}
 		<table>
 			<tr>
 				<th>Token</th>
@@ -11,7 +10,7 @@
 				<th>% tweets</th>
 			</tr>
 
-			{{#each frequency}}
+			{{#each sentiment "frequency" true}}
 			<tr>
 				<td>{{word}}</td>
 				<td>{{stats.sentiment.score}}</td>
@@ -36,7 +35,7 @@
 				<th>% tweets</th>
 			</tr>
 
-			{{#each scorePos}}
+			{{#each sentiment "score" true}}
 			<tr>
 				<td>{{word}}</td>
 				<td>{{stats.sentiment.score}}</td>
@@ -61,7 +60,7 @@
 				<th>% tweets</th>
 			</tr>
 
-			{{#each scoreNeg}}
+			{{#each sentiment "score" false}}
 			<tr>
 				<td>{{word}}</td>
 				<td>{{stats.sentiment.score}}</td>
@@ -74,9 +73,30 @@
 
 		</table>
 
-		{{ frequencyChart }}
-		{{else}}
-		<p>Loading...</p>
-		{{/if}}
+		<br><br>
+
+		<table>
+			<tr>
+				<th>Token</th>
+				<th>Score</th>
+				<th>Comparative</th>
+				<th>+</th>
+				<th>-</th>
+				<th>% tweets</th>
+			</tr>
+
+			{{#each sentiment "comparative" true}}
+			<tr>
+				<td>{{word}}</td>
+				<td>{{stats.sentiment.score}}</td>
+				<td>{{formatDecimal stats.sentiment.comparative 3}}</td>
+				<td class="{{sentimentAttr stats.sentiment.positive.score}}">{{stats.sentiment.positive.score}}</td>
+				<td class="{{sentimentAttr stats.sentiment.negative.score}}">{{stats.sentiment.negative.score}}</td>
+				<td>{{formatDecimal (percentOfTweets word) 2}}</td>
+			</tr>
+			{{/each}}
+
+		</table>
+		{{ frequencyChart }} 
 	</section>
 </template>

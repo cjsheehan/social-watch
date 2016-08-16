@@ -17,12 +17,14 @@
 				<td>{{formatDecimal stats.sentiment.comparative 3}}</td>
 				<td class="{{sentimentAttr stats.sentiment.positive.score}}">{{stats.sentiment.positive.score}}</td>
 				<td class="{{sentimentAttr stats.sentiment.negative.score}}">{{stats.sentiment.negative.score}}</td>
-				<td>{{formatDecimal (percentOfTweets word) 2}}</td>
+				<td>{{formatDecimal stats.percent 2}}</td>
 			</tr>
 			{{/each}}
 
 		</table>
-
+		
+		<div id="frequency-chart" class="chart">{{ frequencyChart }}</div>
+		
 		<br><br>
 
 		<table>
@@ -42,7 +44,7 @@
 				<td>{{formatDecimal stats.sentiment.comparative 3}}</td>
 				<td class="{{sentimentAttr stats.sentiment.positive.score}}">{{stats.sentiment.positive.score}}</td>
 				<td class="{{sentimentAttr stats.sentiment.negative.score}}">{{stats.sentiment.negative.score}}</td>
-				<td>{{formatDecimal (percentOfTweets word) 2}}</td>
+				<td>{{formatDecimal stats.percent 2}}</td>
 			</tr>
 			{{/each}}
 
@@ -67,7 +69,7 @@
 				<td>{{formatDecimal stats.sentiment.comparative 3}}</td>
 				<td class="{{sentimentAttr stats.sentiment.positive.score}}">{{stats.sentiment.positive.score}}</td>
 				<td class="{{sentimentAttr stats.sentiment.negative.score}}">{{stats.sentiment.negative.score}}</td>
-				<td>{{formatDecimal (percentOfTweets word) 2}}</td>
+				<td>{{formatDecimal stats.percent 2}}</td>
 			</tr>
 			{{/each}}
 
@@ -92,11 +94,11 @@
 				<td>{{formatDecimal stats.sentiment.comparative 3}}</td>
 				<td class="{{sentimentAttr stats.sentiment.positive.score}}">{{stats.sentiment.positive.score}}</td>
 				<td class="{{sentimentAttr stats.sentiment.negative.score}}">{{stats.sentiment.negative.score}}</td>
-				<td>{{formatDecimal (percentOfTweets word) 2}}</td>
+				<td>{{formatDecimal stats.percent 2}}</td>
 			</tr>
 			{{/each}}
 
 		</table>
-		{{ frequencyChart }} 
+		
 	</section>
 </template>

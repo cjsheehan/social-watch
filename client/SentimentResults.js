@@ -42,15 +42,6 @@ Template.SentimentResults.helpers({
 		return results;
 	},
 
-	percentOfTweets: (word) => {
-		let wordStats = Session.get("activeWordStats");
-		let percent = 0;
-		if (wordStats != null && wordStats.words[word] != null) {
-			percent = 100 * (wordStats.words[word].frequency / wordStats.numTweets);
-		}
-		return percent;
-	},
-
 	frequencyChart: () => {
 
 		let wordStats = Session.get("frequencyStats");

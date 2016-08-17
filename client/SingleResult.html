@@ -1,7 +1,8 @@
 <template name="SingleResult">
 	<section class="stats-result">
-		{{> Chart attribute=attribute}}
-		<table>
+		{{> Chart attribute=attribute type="score"}}
+		{{> Chart attribute=attribute type="comparative"}}
+		<table class="stats-table">
 			<tr>
 				<th>Token</th>
 				<th>Score</th>

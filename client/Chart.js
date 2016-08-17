@@ -1,59 +1,55 @@
 const Highcharts = require("highcharts/highstock");
 
 Template.Chart.helpers({
-	chart: (attribute) => {
+	chart: (attribute, type) => {
 
 		let wordStats = Session.get(attribute + "Stats");
 		let categories = [];
 		let posSeries = [];
 		let negSeries = [];
-		let scoreSeries = [];
+		let sumSeries = [];
+		let decimalPlaces = 0;
+		let visibility = true;
 
 		if (wordStats == null) { return; }
 
-		// if(attribute == "comparative") {
-		// 	console.log("comparative chart", JSON.stringify(wordStats));
-			
-		// 	wordStats.forEach(function (w) {
-		// 		categories.push(w.word);
-		// 		posSeries.push(w.stats.sentiment.positive.comparative);
-		// 		negSeries.push(w.stats.sentiment.negative.comparative);
-		// 		scoreSeries.push(w.stats.sentiment.comparative);
-		// 	});
-		// } else {
-		// 	wordStats.forEach(function (w) {
-		// 		categories.push(w.word);
-		// 		posSeries.push(w.stats.sentiment.positive.score);
-		// 		negSeries.push(w.stats.sentiment.negative.score);
-		// 		scoreSeries.push(w.stats.sentiment.score);
-		// 	});
-		// }
-
-		wordStats.forEach(function (w) {
-			categories.push(w.word);
-			posSeries.push(w.stats.sentiment.positive.score);
-			negSeries.push(w.stats.sentiment.negative.score);
-			scoreSeries.push(w.stats.sentiment.score);
-		});
-
+		if (type == "comparative") {
+			wordStats.forEach(function (w) {
+				categories.push(w.word);
+				posSeries.push(w.stats.sentiment.positive.comparative);
+				negSeries.push(w.stats.sentiment.negative.comparative);
+				sumSeries.push(w.stats.sentiment.comparative);
+				decimalPlaces = 3;
+				visibility = false;
+			});
+		} else {
+			wordStats.forEach(function (w) {
+				categories.push(w.word);
+				posSeries.push(w.stats.sentiment.positive.score);
+				negSeries.push(w.stats.sentiment.negative.score);
+				sumSeries.push(w.stats.sentiment.score);
+			});
+		}
+		
+		let chartElement = document.getElementById(attribute + "-" + type + "-chart");
 		Meteor.defer(function () {
-			Highcharts.chart(document.getElementById(attribute +"-chart"), {
+			Highcharts.chart(chartElement, {
 				chart: {
 					type: "bar"
 				},
 				title: {
-					text: "Aggregated sentiment for words on twitter stream"
+					text: "words vs " + type
 				},
 				subtitle: {
-					text: "sorted by " + attribute
+					text: "words sorted by descending " + attribute
 				},
 				xAxis: [{
-					categories: categories,
-					reversed: true,
-					labels: {
-						step: 1
-					}
-				}, { // mirror axis on right side
+						categories: categories,
+						reversed: true,
+						labels: {
+							step: 1
+						}
+					}, { // mirror axis on right side
 						opposite: true,
 						reversed: true,
 						categories: categories,
@@ -64,7 +60,7 @@ Template.Chart.helpers({
 					}],
 				yAxis: {
 					title: {
-						text: "Sentiment"
+						text: type + "(sentiment)"
 					},
 					labels: {
 						formatter: function () {
@@ -81,7 +77,7 @@ Template.Chart.helpers({
 
 				tooltip: {
 					formatter: function () {
-						return "<b>" + "\"" + this.point.category + "\" : " + "</b><br/>" + this.series.name + " Sentiment: " + Highcharts.numberFormat(this.point.y, 0);
+						return "<b>" + "\"" + this.point.category + "\" : " + "</b><br/>" + this.series.name + " Sentiment: " + Highcharts.numberFormat(this.point.y, decimalPlaces);
 					}
 				},
 
@@ -89,16 +85,18 @@ Template.Chart.helpers({
 					{
 						name: "Negative",
 						data: negSeries,
-						color: "#cc0000"
+						color: "#cc0000",
+						visible: visibility
 					},
 					{
 						name: "Positive",
 						data: posSeries,
-						color: "#00ce00"
+						color: "#00ce00",
+						visible: visibility
 					},
 					{
 						name: "Overall",
-						data: scoreSeries
+						data: sumSeries
 					},
 				]
 			});

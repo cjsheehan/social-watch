@@ -20,7 +20,7 @@ export function streamTwitter(loc) {
 
 	try {
 		let client = new Twitter(options);
-		Twitter.streamAsync(client, "statuses/filter", { locations: loc.toString() },
+		Twitter.streamAsync(client, "statuses/filter", { locations: loc.toString(), language: "en" },
 			function (stream) {
 				stream.on("data", Meteor.bindEnvironment(function (tweet) {
 					try {

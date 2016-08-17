@@ -1,6 +1,50 @@
+import { MAX_SENTIMENT_ROWS } from "./lib/constants";
 const Highcharts = require("highcharts/highstock");
 
-Template.Chart.helpers({
+Template.SingleResult.helpers({
+
+	id: (attribute) => {
+		return "id=\"" + attribute + "-chart\"";
+	},
+
+	sentiment: (attribute, isPositive = true) => {
+		// wordStats[attribute] is sorted descending list wrt attribute
+		let wordStats = Session.get("activeWordStats");
+		let results = [];
+
+		if (wordStats != null && wordStats.hasOwnProperty([attribute])) {
+			if (isPositive) {
+				// iterate forward in array
+				for (let i = 0; i < MAX_SENTIMENT_ROWS && i < wordStats[attribute].length; i++) {
+					if (wordStats.score[i] != null) {
+						let word = wordStats[attribute][i][0];
+						let res = {
+							"word": word,
+							"stats": wordStats.words[word]
+						}
+						results.push(res);
+					}
+				}
+			} else {
+				// iterate backwards in array
+				let start = wordStats[attribute].length - 1;
+				let end = start - MAX_SENTIMENT_ROWS;
+				for (let i = start; i > end && i >= 0; i--) {
+					if (wordStats[attribute][i] != null) {
+						let word = wordStats[attribute][i][0];
+						let res = {
+							"word": word,
+							"stats": wordStats.words[word]
+						}
+						results.push(res);
+					}
+				}
+			}
+		}
+		Session.set((attribute + "Stats"), results);
+		return results;
+	},
+
 	chart: (attribute) => {
 
 		let wordStats = Session.get(attribute + "Stats");
@@ -11,24 +55,6 @@ Template.Chart.helpers({
 
 		if (wordStats == null) { return; }
 
-		// if(attribute == "comparative") {
-		// 	console.log("comparative chart", JSON.stringify(wordStats));
-			
-		// 	wordStats.forEach(function (w) {
-		// 		categories.push(w.word);
-		// 		posSeries.push(w.stats.sentiment.positive.comparative);
-		// 		negSeries.push(w.stats.sentiment.negative.comparative);
-		// 		scoreSeries.push(w.stats.sentiment.comparative);
-		// 	});
-		// } else {
-		// 	wordStats.forEach(function (w) {
-		// 		categories.push(w.word);
-		// 		posSeries.push(w.stats.sentiment.positive.score);
-		// 		negSeries.push(w.stats.sentiment.negative.score);
-		// 		scoreSeries.push(w.stats.sentiment.score);
-		// 	});
-		// }
-
 		wordStats.forEach(function (w) {
 			categories.push(w.word);
 			posSeries.push(w.stats.sentiment.positive.score);
@@ -37,15 +63,12 @@ Template.Chart.helpers({
 		});
 
 		Meteor.defer(function () {
-			Highcharts.chart(document.getElementById(attribute +"-chart"), {
+			Highcharts.chart(document.getElementById("frequency-chart"), {
 				chart: {
 					type: "bar"
 				},
 				title: {
-					text: "Aggregated sentiment for words on twitter stream"
-				},
-				subtitle: {
-					text: "sorted by " + attribute
+					text: "Aggregated sentiment for popular words on twitter stream"
 				},
 				xAxis: [{
 					categories: categories,
@@ -103,5 +126,6 @@ Template.Chart.helpers({
 				]
 			});
 		});
-	}
+	},
 });
+

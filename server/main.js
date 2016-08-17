@@ -1,23 +1,21 @@
 /* eslint-disable no-unused-vars*/
 import { Meteor } from "meteor/meteor";
+import { streamTwitter } from "./twitter/twitter";
 import { formatTweet } from "./twitter/tweet.js";
 import { getTestTweets, populateDb } from "./util";
+import { glasgow_bbox, uk_bbox } from "./twitter/location";
 /* eslint-enable no-unused-vars*/
 
-import "/collections/Tweets.js";
+const STREAM_ON = true;
 
 Meteor.startup(() => {
-	// code to run on server at startup
+
 });
 
-// streamTwitter(glasgow_bbox);
+if (STREAM_ON) {
+	streamTwitter(glasgow_bbox);
+}
 
-// outputStream();
-// let tweets = getTestTweets();
-// console.log(tweets);
-// populateDb(tweets);
-
-// outputStream(tweets, "string");
 
 
 

@@ -1,22 +1,27 @@
 import { Tweets } from "/collections/Tweets";
 import { ReactiveVar } from "meteor/reactive-var";
 import { randomInt } from "/lib/util";
-import { wordFrequency } from "/lib/modules/wordStats";
 import { testTweets } from "./testTweets";
 import { tweetStats } from "/lib/modules/twitterStats"
-
 /* eslint-disable no-unused-vars*/
 import { WordCloud } from "wordcloud";
 /* eslint-enable no-unused-vars*/
+
 const wordcloud = require("wordcloud");
 
-export const SentimentResults = new Mongo.Collection(null);
+const serverOnly = false;
+
+const weights = {
+	min : 1,
+	med : 3,
+	max : 5
+};
 
 const cloudOptions = {
-	gridSize: 100,
+	gridSize: 60,
 	rotateRatio: 1,
 	color: "random-dark",
-	weightFactor: 2
+	weightFactor: 1
 }
 
 Template.Tweets.onRendered(function () {
@@ -25,6 +30,7 @@ Template.Tweets.onRendered(function () {
 });
 
 Template.Tweets.onCreated(function () {
+	Session.set("sortByHashtags", true);
 	this.counter = new ReactiveVar(0);
 	this.testTweets = testTweets;
 	this.wordStats = {};
@@ -36,18 +42,29 @@ Template.Tweets.onCreated(function () {
 
 Template.Tweets.helpers({
 	tweets: () => {
-		const instance = Template.instance();
-		let tweets = Tweets.find({}).fetch().reverse();
-		this.wordStats = tweetStats(tweets);
-		Session.set("activeWordStats", this.wordStats);
-		cloudOptions.list = this.wordStats.frequency;
-		wordcloud(instance.canvas, cloudOptions);
-		let subset = [];
-		let len = tweets.length;
-		for (var i = 0; i < 10 || i < len; i++) {
-			subset[i] = tweets[i];
+		if (!serverOnly) {
+			const instance = Template.instance();
+			let tweets = Tweets.find({}).fetch().reverse();
+			this.wordStats = tweetStats(tweets, Session.get("sortByHashtags"));
+			Session.set("activeWordStats", this.wordStats);
+
+			let cloudSource = wordStats.frequency;
+			if (cloudSource[0][1] < 50) {
+				cloudOptions.weightFactor = weights.max;
+			} else {
+				cloudOptions.weightFactor = weights.min;
+			}
+			cloudOptions.list = cloudSource;
+			wordcloud(instance.canvas, cloudOptions);
+			let subset = [];
+			let len = tweets.length;
+			for (var i = 0; i < 10; i++) {
+				subset[i] = tweets[i];
+			}
+			return subset;
+		} else {
+			return [];
 		}
-		return subset;
 	},
 
 	counter() {

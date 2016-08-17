@@ -13,7 +13,7 @@ export function getTestTweets() {
 
 export function populateDb(tweets) {
     if (tweets == null) {
-        throw new ArgumentException("valid tweets argument required");
+        throw new ArgumentException("populateDb(tweets) valid tweets argument required");
     }
 
     for (var i = 0; i < tweets.length; i++) {

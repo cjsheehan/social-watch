@@ -25,7 +25,19 @@ TweetSchema = new SimpleSchema({
   createdAt: {
     type: String,
     label: "Created At"
-  }
+  },
+  insertedAt: {
+    type: Date,
+    autoValue: function () {
+      if (this.isInsert) {
+        return new Date();
+      } else if (this.isUpsert) {
+        return { $setOnInsert: new Date() };
+      } else {
+        this.unset();  // Prevent user from supplying their own value
+      }
+    }
+  },
 });
 
 Tweets.attachSchema(TweetSchema);

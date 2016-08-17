@@ -19,6 +19,7 @@ const weights = {
 
 const WEIGHT_THRESHOLD = 50;
 const ACTIVE_TWEETS = 10;
+const MAX_RECORDS = 100;
 
 
 const cloudOptions = {
@@ -34,7 +35,7 @@ Template.Tweets.onRendered(function () {
 });
 
 Template.Tweets.onCreated(function () {
-	Session.set("sortByHashtags", true);
+	Session.set("sortByHashtags", false);
 	this.counter = new ReactiveVar(0);
 	this.testTweets = testTweets;
 	this.wordStats = {};
@@ -48,7 +49,8 @@ Template.Tweets.helpers({
 	tweets: () => {
 		if (!serverOnly) {
 			const instance = Template.instance();
-			let tweets = Tweets.find({}).fetch().reverse();
+			let tweets = Tweets.find({}, { sort: { insertedAt: -1 }, limit: 100}).fetch();
+			
 			this.wordStats = tweetStats(tweets, Session.get("sortByHashtags"));
 			Session.set("activeWordStats", this.wordStats);
 
@@ -62,7 +64,7 @@ Template.Tweets.helpers({
 			wordcloud(instance.canvas, cloudOptions);
 			let subset = [];
 			let len = tweets.length;
-			for (var i = 0; i < ACTIVE_TWEETS; i++) {
+			for (var i = 0; i < ACTIVE_TWEETS && i < len; i++) {
 				subset[i] = tweets[i];
 			}
 			return subset;

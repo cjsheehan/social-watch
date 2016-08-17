@@ -1,6 +1,6 @@
 import { ArgumentException } from "/lib/exceptions";
 import { Tweet } from "/lib/Tweet";
-import { ENTITIES, USER, HASH_TAGS, TEXT, NAME, CREATED_AT, ID_STR, COORDS, PLACE, TYPE, POLYGON, LOCATION, POINT, BBOX} from "/lib/constants";
+import { ENTITIES, USER, HASH_TAGS, TEXT, NAME, CREATED_AT, TW_CREATED_AT, ID_STR, COORDS, PLACE, TYPE, POLYGON, LOCATION, POINT, BBOX} from "/lib/constants";
 
 import { round } from "/lib/util";
 
@@ -88,7 +88,7 @@ export function getCreatedAt(data) {
 	if (data == null) {
 		throw new ArgumentException("valid data is required");
 	}
-
+	
 	if (data[CREATED_AT]) {
 		return data[CREATED_AT];
 	} else {

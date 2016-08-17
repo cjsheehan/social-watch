@@ -17,6 +17,10 @@ const weights = {
 	max : 5
 };
 
+const WEIGHT_THRESHOLD = 50;
+const ACTIVE_TWEETS = 10;
+
+
 const cloudOptions = {
 	gridSize: 60,
 	rotateRatio: 1,
@@ -49,7 +53,7 @@ Template.Tweets.helpers({
 			Session.set("activeWordStats", this.wordStats);
 
 			let cloudSource = wordStats.frequency;
-			if (cloudSource[0][1] < 50) {
+			if (cloudSource[0][1] < WEIGHT_THRESHOLD) {
 				cloudOptions.weightFactor = weights.max;
 			} else {
 				cloudOptions.weightFactor = weights.min;
@@ -58,7 +62,7 @@ Template.Tweets.helpers({
 			wordcloud(instance.canvas, cloudOptions);
 			let subset = [];
 			let len = tweets.length;
-			for (var i = 0; i < 10; i++) {
+			for (var i = 0; i < ACTIVE_TWEETS; i++) {
 				subset[i] = tweets[i];
 			}
 			return subset;

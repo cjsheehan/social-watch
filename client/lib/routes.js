@@ -1,8 +1,8 @@
-import "/client/layouts/HomeLayout.html";
+import "/client/layouts/Stream.html";
 
 FlowRouter.route("/", {
-	name: "home",
+	name: "strea,",
 	action() {
-		BlazeLayout.render("HomeLayout");
+		BlazeLayout.render("Stream");
 	}
 });

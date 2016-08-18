@@ -49,7 +49,7 @@ Template.Tweets.helpers({
 	tweets: () => {
 		if (!serverOnly) {
 			const instance = Template.instance();
-			let tweets = Tweets.find({}, { sort: { insertedAt: -1 }, limit: 100}).fetch();
+			let tweets = Tweets.find({}, { sort: { insertedAt: -1 }, limit: MAX_RECORDS}).fetch();
 			
 			this.wordStats = tweetStats(tweets, Session.get("sortByHashtags"));
 			Session.set("activeWordStats", this.wordStats);

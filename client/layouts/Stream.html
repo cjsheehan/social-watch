@@ -1,9 +1,16 @@
 <template name="Stream">
 	{{> Header}}
 	<main>
+		<div class="stream-controls">
+			<button id="btn-pause">Pause</button>
+			<select id="select-attr">
+				<option value="words">words</option>
+				<option value="hashtags">hashtags</option>
+			</select>
+		</div>
+
 		<div id="twitter-results">
-			{{> Words}}
-			{{> Results }}
+			{{> Words}} {{> Results }}
 		</div>
 		<div id="twitter-stream">
 			{{> Tweets }}

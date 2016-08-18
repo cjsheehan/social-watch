@@ -187,6 +187,13 @@ p
             opacity 1
             shadow-level(2)
             border-color @background
+    &.btn-pause
+        background teal
+        border-color teal
+        color dark-purp
+        &:hover
+            background @background - 40
+            border-color @background
 
 input, select, textarea
     color purp
@@ -340,10 +347,16 @@ td, th
     h2
         text-align center
 
+.stream-controls
+    padding 10px
+    margin-right 1000px
+    #select-attr
+        width 150px
+
+
 .stats-table
     padding 20px
     margin-left 240px
-
 
 table
     padding 8px 

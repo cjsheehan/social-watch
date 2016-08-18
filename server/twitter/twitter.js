@@ -25,7 +25,6 @@ export function streamTwitter(loc) {
 				stream.on("data", Meteor.bindEnvironment(function (tweet) {
 					try {
 						let formatted = formatTweet(tweet, "db");
-						console.log("formatted", JSON.stringify(formatted));
 						insertTweet(formatted, Tweets);
 					} catch (error) {
 						console.log(error);

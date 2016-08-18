@@ -10,7 +10,6 @@ Template.Stream.events({
 		} else {
 			Session.set("sortByHashtags", true);
 		}
-		console.log(selectValue);
 	},
 
 	"click #btn-pause": function (e) {

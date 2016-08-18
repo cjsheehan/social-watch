@@ -1,10 +1,11 @@
 <template name="HomeLayout">
 	{{> Header}}
 	<main>
-		<div class="twitter-analysis">
-			{{> Chart }}
+		<div id="twitter-results">
 			{{> Words}}
-			{{> SentimentResults }}
+			{{> Results }}
+		</div>
+		<div id="twitter-stream">
 			{{> Tweets }}
 		</div>
 	</main>

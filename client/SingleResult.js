@@ -7,6 +7,24 @@ Template.SingleResult.helpers({
 		return "id=\"" + attribute + "-chart\"";
 	},
 
+	header: (attribute) => {
+		let sortedBy = "words";
+		if (Session.get("sortByHashtags") == true) {
+			sortedBy = "hashtags"
+		}
+
+		let header = "";
+		if (attribute == "frequency") {
+			header = "Top " + sortedBy + " in descending order of popularity (" + attribute + ")";
+		}
+
+		if (attribute == "score" || attribute == "comparative") {
+			header = "Top " + sortedBy + " in descending order of sentiment (" + attribute + ")";
+		}
+
+		return header;
+	},
+
 	sentiment: (attribute, isPositive = true) => {
 		// wordStats[attribute] is sorted descending list wrt attribute
 		let wordStats = Session.get("activeWordStats");

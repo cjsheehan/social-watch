@@ -31,12 +31,21 @@ Template.Chart.helpers({
 			});
 		}
 		
-		let chartElement = document.getElementById(attribute + "-" + type + "-chart");
 		Meteor.defer(function () {
-			Highcharts.chart(chartElement, {
+			Highcharts.chart(document.getElementById(attribute + "-" + type + "-chart"), {
 				chart: {
-					type: "bar"
+					type: "bar",
+					// Edit chart spacing
+					spacingBottom: 10,
+					spacingTop: 10,
+					spacingLeft: 10,
+					spacingRight: 10,
+
+					// Explicitly tell the width and height of a chart
+					width: 400,
+					height: null
 				},
+
 				title: {
 					text: "words vs " + type
 				},
@@ -80,6 +89,7 @@ Template.Chart.helpers({
 						return "<b>" + "\"" + this.point.category + "\" : " + "</b><br/>" + this.series.name + " Sentiment: " + Highcharts.numberFormat(this.point.y, decimalPlaces);
 					}
 				},
+				
 
 				series: [
 					{

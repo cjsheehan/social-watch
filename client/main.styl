@@ -68,7 +68,7 @@ html
     box-sizing: inherit
 
 body
-    background light-grey
+    background #e9e9e9
     padding: 70px 0 150px
 
 header
@@ -257,10 +257,7 @@ input, select, textarea
             &:hover, &.active
                 border-left 10px solid teal
 
-.word-cloud
-    padding 20px 
-	float left
-	margin auto 0
+
 
 p.tweet-location
     float right 
@@ -270,20 +267,6 @@ p.tweet-meta
     float left 
 
 
-.chart-sentiment {
-  margin: 2em 0;
-  shape-rendering: crispEdges;
-}
-
-.chart rect {
-  fill: steelblue;
-}
-
-.chart text {
-  fill: white;
-  font: 10px sans-serif;
-  text-anchor: end;
-}
 
 .tweet
     display inline-block
@@ -330,9 +313,6 @@ td, th
     text-align center
     padding 0.3em
 
-.sentiment-results
-    @extend .word-cloud
-
 .sentiment
 	font-size: 1em
 
@@ -348,36 +328,62 @@ td, th
 	@extend .sentiment
 	font-size 200%
 
+.stats-results
+    margin-top 1040px
 
+.stats-word-cloud, .stats-result
+    padding 20px 
+    margin 10px
+
+.stats-result
+    shadow-level(1)
+    h2
+        text-align center
+
+.stats-table
+    padding 20px
+    margin-left 240px
+
+
+table
+    padding 8px 
+    margin 8px 
+    background #fff
+
+.twitter-analysis
+    width 1200px
+
+.twitter-stream
+    float left
 
 .tweet-list-container
     padding 20px 
     margin-bottom 20px 
+    margin-left 20px 
     shadow-level(2)   
     width 460px
-    float right
+    float left
     label
         display block
         margin-bottom 10px 
     textarea, input
         width 100% 
 	overflow-y scroll
+    background #d3d3d3
 
 
-.twitter-analysis
-	display flex
-	flex-direction row
-	width 90%
-    background #FFF
-    padding 20px 
-    margin-bottom 20px 
-    shadow-level(2)   
-    label
-        display block
-        margin-bottom 10px 
-    textarea, input
-        width 100% 
-	
+.twitter-chart
+    float left
+    margin 20px
+    width 440px
+
+#twitter-results
+    width 1080px
+    padding 20px
+    float left
+
+
+
 @keyframes card
     0%
         transform translate3d(0, 0, 0)

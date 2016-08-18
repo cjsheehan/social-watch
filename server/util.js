@@ -3,7 +3,7 @@ import { formatTweet } from "./twitter/tweet";
 import { insertTweet } from "./twitter/db";
 import { ArgumentException, DuplicateDocException } from "/lib/exceptions";
 
-
+const moment = require("moment");
 
 export function getTestTweets() {
     let jsonTweet = Assets.getText("tweet_stream.json");
@@ -21,7 +21,7 @@ export function populateDb(tweets) {
         let formatted = formatTweet(tweet, "object");
         console.log(formatted);
         try {
-            insertTweet(formatted, Tweets); 
+            insertTweet(formatted, Tweets);
         } catch (error) {
             if (error instanceof DuplicateDocException) {
                 console.log("populateDb error: " + error.message);
@@ -30,6 +30,13 @@ export function populateDb(tweets) {
     }
 }
 
+export function sortByDate(tweets) {
+    return tweets.sort(function (a, b) {
+        let aDate = moment(a.createdAt, "dd MMM DD HH:mm:ss ZZ YYYY", "en").format("MMM DD, HH:mm");
+        let bDate = moment(b.createdAt, "dd MMM DD HH:mm:ss ZZ YYYY", "en").format("MMM DD, HH:mm");
+        return new Date(bDate) - new Date(aDate);
+    });
+}
 
 
 export function outputTweets(tweets, formatAs) {
@@ -39,10 +46,10 @@ export function outputTweets(tweets, formatAs) {
 
     for (let i = 0; i < tweets.length; i++) {
         let formatted = formatTweet(tweets[i], formatAs);
-        if (formatAs === "json") {
+        if (formatAs == "json") {
             try {
                 let fs = Npm.require("fs");
-                fs.appendFile("../../../../../../../tweet_stream_formatted.json", JSON.stringify(formatted), function (err) {
+                fs.appendFile("../../../../../../../tweet_search_formatted.json", JSON.stringify(formatted), function (err) {
                     if (err) {
                         return console.log(err);
                     }

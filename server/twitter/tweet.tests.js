@@ -124,11 +124,11 @@ describe("tweet", function () {
 		}
 
 		let formatted = formatTweet(tweet, "db");
-		
+
 		chai.assert.equal(formatted.userName, "Ryan");
 		chai.assert.equal(formatted.text, "This is a test tweet");
 		chai.assert.deepEqual(formatted.hashTags, ["ht1", "ht2"]);
-		chai.assert.equal(formatted.createdAt, "Fri Jul 29 18:25:21 +0000 2016");
+		chai.assert.equal(formatted.createdAt, "Fri Jul 29 2016 19:25:21 GMT+0100");
 		chai.assert.deepEqual(formatted.location, [-4.241751, 55.858302]);
 		chai.assert.equal(formatted.idStr, "759092464431067140");
 
@@ -192,10 +192,10 @@ describe("tweet", function () {
 	})
 
 	it("extract created_at data", function () {
-		let expected = "Mon Jul 25 16:52:01 +0000 2016";
+		let expected = "Fri Jul 29 2016 19:25:21 GMT+0100";
 
 		let tweet = {
-			"created_at": expected
+			"created_at": "Fri Jul 29 18: 25:21 +0000 2016"
 		};
 
 		chai.assert.equal(expected, getCreatedAt(tweet));
@@ -241,7 +241,7 @@ describe("tweet", function () {
 		chai.assert.equal(expected.length, actual.length);
 		for (var i = 0; i < expected.length; i++) {
 			chai.assert.equal(expected[i], actual[i]);
-			
+
 		}
 	})
 

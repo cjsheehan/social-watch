@@ -1,7 +1,8 @@
 import { ArgumentException } from "/lib/exceptions";
 import { formatTweet } from "./tweet";
 import { insertTweet } from "./db";
-import { Tweets } from "/collections/Tweets";
+import { Tweets, SearchResults } from "/collections/Tweets";
+import { glasgow_bbox, uk_bbox } from "./location";
 
 const options = {
 	consumer_key: Meteor.settings.private.twitter.consumer_key,
@@ -40,4 +41,37 @@ export function streamTwitter(loc) {
 	} catch (error) {
 		console.log("Twitter.streamAsync error: ", error);
 	}
+}
+
+export function searchTwitter(searchQuery, until, isNewSearch) {
+	console.log("searchTwitter server", searchQuery, until, isNewSearch);
+	let client = new Twitter(options);
+	params = {
+		q: searchQuery,
+		language: "en",
+		locations: glasgow_bbox.toString(),
+		until: until,
+		result_type: "popular",
+	};
+
+	if (isNewSearch) {
+		SearchResults.remove({});
+	}
+
+	Twitter.getAsync(client, "search/tweets", params, function (error, tweets, response) {
+		if (error) {
+			throw error;
+		}
+
+		let formatted = tweets.statuses.map(function(tweet) {
+			return formatTweet(tweet, "db");
+		});
+
+		// console.log("formatted", JSON.stringify(formatted));
+		
+
+		formatted.forEach(function(tweet) {
+			SearchResults.insert(tweet);
+		});
+	});
 }

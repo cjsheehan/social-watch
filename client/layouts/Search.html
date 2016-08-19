@@ -7,5 +7,15 @@
 				<input type="submit" value="search" class="btn">
 			</form>
 		</div>
+
+		<section class="twitter-search">
+			{{#if Template.subscriptionsReady}} 
+				{{#each searchResults}} 
+					<p>{{text}}</p>
+				{{/each}} 
+			{{else}}
+				<p>Loading...</p>
+			{{/if}}
+		</section>
 	</main>
 </template>

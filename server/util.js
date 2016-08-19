@@ -30,14 +30,6 @@ export function populateDb(tweets) {
     }
 }
 
-export function sortByDate(tweets) {
-    return tweets.sort(function (a, b) {
-        let aDate = moment(a.createdAt, "dd MMM DD HH:mm:ss ZZ YYYY", "en").format("MMM DD, HH:mm");
-        let bDate = moment(b.createdAt, "dd MMM DD HH:mm:ss ZZ YYYY", "en").format("MMM DD, HH:mm");
-        return new Date(bDate) - new Date(aDate);
-    });
-}
-
 
 export function outputTweets(tweets, formatAs) {
     if (tweets == null) {

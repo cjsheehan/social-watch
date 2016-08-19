@@ -131,7 +131,7 @@ export function getLocation(data) {
 		try {
 			location = centerOf(bbox);
 		} catch (error) {
-			location = null;
+			location = [];
 		}
 	}
 	return location;

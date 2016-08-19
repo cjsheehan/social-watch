@@ -1,6 +1,7 @@
 import { Mongo } from "meteor/mongo";
 
 export const Tweets = new Mongo.Collection("tweets");
+export const SearchResults = new Mongo.Collection("searchResults");
 
 TweetSchema = new SimpleSchema({
   userName: {
@@ -16,7 +17,7 @@ TweetSchema = new SimpleSchema({
     label: "Location",
     decimal: true,
     maxCount: 2,
-    minCount: 2
+    minCount: 0
   },
   text: {
     type: String,
@@ -41,4 +42,4 @@ TweetSchema = new SimpleSchema({
 });
 
 Tweets.attachSchema(TweetSchema);
-
+SearchResults.attachSchema(TweetSchema);

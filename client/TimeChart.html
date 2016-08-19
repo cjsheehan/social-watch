@@ -2,10 +2,11 @@
 	<div class="time-stats">
 		<h2 class="stats-heading">Time Domain</h2>
 		<div id="time-chart" class="twitter-chart">{{chart}}</div>
-		<select id="select-word">
-		{{#each word in topWords}}
-			<option value="{{word}}">{{word}}</option>
-		{{/each}}
+		<select id="word-select">
+			<option disabled="disabled" selected="selected">Please Select</option>
+			{{#each word in topWords}}
+				<option value="{{word}}">{{word}}</option>
+			{{/each}}
  		</select>
 	</div>
 </template>

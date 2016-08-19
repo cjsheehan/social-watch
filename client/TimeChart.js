@@ -3,7 +3,7 @@ const Highcharts = require("highcharts/highstock");
 const moment = require("moment");
 
 Template.TimeChart.onCreated(function () {
-	this.topWords = new ReactiveVar(["the", "pulldown", "test"]);
+	Session.set("selectedWord", "");
 });
 
 Template.TimeChart.helpers({
@@ -23,7 +23,9 @@ Template.TimeChart.helpers({
 
 		if (timeBins == null) { return; }
 
-		let word = this.selectedWord;
+		let word = Session.get("selectedWord");
+		console.log("word", word);
+
 
 		for (var i = 0; i < timeBins.length; i++) {
 			var bin = timeBins[i];
@@ -79,7 +81,7 @@ Template.TimeChart.helpers({
 				},
 
 				plotOptions: {
-					bar: {
+					column: {
 						grouping: false
 					}
 				},
@@ -103,5 +105,13 @@ Template.TimeChart.helpers({
 				]
 			});
 		});
+	}
+});
+
+
+Template.TimeChart.events({
+	"change #word-select": function (event, template) {
+		let word = $(event.currentTarget).val();
+		Session.set("selectedWord", word);
 	}
 });

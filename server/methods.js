@@ -1,9 +1,13 @@
-import { searchTwitter } from "./twitter/twitter";
+import { searchTwitter, clearSearch } from "./twitter/twitter";
 
 Meteor.methods({
-	"searchTwitter": function (searchQuery, until, isNewSearch) {
+	"searchTwitter": function (searchQuery, until, maxId, isNewSearch) {
 		if (searchQuery != null && searchQuery != "") {
-			searchTwitter(searchQuery, until, isNewSearch);
+			searchTwitter(searchQuery, until, maxId,isNewSearch);
 		}
+	},
+
+	"clearSearch": function () {
+		clearSearch();
 	}
 })

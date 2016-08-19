@@ -2,7 +2,7 @@ import { ArgumentException } from "/lib/exceptions";
 import { Tweet } from "/lib/Tweet";
 import { ENTITIES, USER, HASH_TAGS, TEXT, NAME, CREATED_AT, TW_CREATED_AT, ID_STR, COORDS, PLACE, TYPE, POLYGON, LOCATION, POINT, BBOX} from "/lib/constants";
 
-import { round } from "/lib/util";
+import { round, formatDate } from "/lib/util";
 
 import { COORD_PRECISION } from "/lib/constants";
 
@@ -90,7 +90,7 @@ export function getCreatedAt(data) {
 	}
 	
 	if (data[CREATED_AT]) {
-		return data[CREATED_AT];
+		return formatDate(data[CREATED_AT]);
 	} else {
 		return "";
 	}

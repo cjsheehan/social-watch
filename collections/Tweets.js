@@ -24,7 +24,7 @@ TweetSchema = new SimpleSchema({
     label: "Text"
   },
   createdAt: {
-    type: String,
+    type: Date,
     label: "Created At"
   },
   insertedAt: {

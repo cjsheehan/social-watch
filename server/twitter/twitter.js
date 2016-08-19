@@ -11,6 +11,11 @@ const options = {
 	access_token_secret: Meteor.settings.private.twitter.access_secret
 }
 
+export function clearSearch() {
+	console.log("clear called");
+	SearchResults.remove({});
+}
+
 export function streamTwitter(loc) {
 
 	if (loc == null) {
@@ -43,7 +48,7 @@ export function streamTwitter(loc) {
 	}
 }
 
-export function searchTwitter(searchQuery, until, isNewSearch) {
+export function searchTwitter(searchQuery, until, maxId, isNewSearch) {
 	console.log("searchTwitter server", searchQuery, until, isNewSearch);
 	let client = new Twitter(options);
 	params = {
@@ -51,7 +56,9 @@ export function searchTwitter(searchQuery, until, isNewSearch) {
 		language: "en",
 		locations: glasgow_bbox.toString(),
 		until: until,
-		result_type: "popular",
+		max_id: maxId,
+		result_type: "mixed",
+		count: 100
 	};
 
 	if (isNewSearch) {
@@ -67,11 +74,8 @@ export function searchTwitter(searchQuery, until, isNewSearch) {
 			return formatTweet(tweet, "db");
 		});
 
-		// console.log("formatted", JSON.stringify(formatted));
-		
-
 		formatted.forEach(function(tweet) {
-			SearchResults.insert(tweet);
+			insertTweet(tweet, SearchResults);
 		});
 	});
 }

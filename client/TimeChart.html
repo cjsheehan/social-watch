@@ -1,0 +1,11 @@
+<template name="TimeChart">
+	<div class="time-stats">
+		<h2 class="stats-heading">Time Domain</h2>
+		<div id="time-chart" class="twitter-chart">{{chart}}</div>
+		<select id="select-word">
+		{{#each word in topWords}}
+			<option value="{{word}}">{{word}}</option>
+		{{/each}}
+ 		</select>
+	</div>
+</template>

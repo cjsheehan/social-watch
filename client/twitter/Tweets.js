@@ -7,6 +7,8 @@ import { tweetStats, timeStats } from "/lib/modules/twitterStats"
 import { WordCloud } from "wordcloud";
 /* eslint-enable no-unused-vars*/
 
+import { MAX_SENTIMENT_ROWS } from "../lib/constants";
+
 const wordcloud = require("wordcloud");
 
 const serverOnly = false;
@@ -53,9 +55,22 @@ Template.Tweets.helpers({
 			const instance = Template.instance();
 			let tweets = Tweets.find({}, { sort: { insertedAt: -1 }, limit: MAX_RECORDS, reactive: Session.get("reactive")}).fetch();
 			
+			// cache data model
 			let sortBy = Session.get("sortByHashtags");
+
 			this.wordStats = tweetStats(tweets, sortBy);
 			Session.set("activeWordStats", this.wordStats);
+
+			this.timeStats = timeStats(tweets, sortBy);
+			Session.set("activeTimeStats", this.timeStats);
+
+			// cache most popular words to allow external 
+			// select controls to be populated
+			let words = this.wordStats.frequency.splice(0, MAX_SENTIMENT_ROWS);
+			let topFreqWords = words.map((word) => {
+				return word[0];
+			})
+			Session.set("topActiveWords", topFreqWords);
 
 			// optimise render performance
 			let cloudSource = [];
@@ -65,6 +80,7 @@ Template.Tweets.helpers({
 				cloudSource = wordStats.frequency;
 			}
 
+			// scale cloud weight as function of top word frequency
 			if (cloudSource[0][1] < 10) {
 				cloudOptions.weightFactor = 10;
 			}
@@ -75,8 +91,11 @@ Template.Tweets.helpers({
 			} else {
 				cloudOptions.weightFactor = 1;
 			}
+
 			cloudOptions.list = cloudSource;
 			wordcloud(instance.canvas, cloudOptions);
+
+			// only provide subset for viweing twitter stream
 			let subset = [];
 			let len = tweets.length;
 			for (var i = 0; i < ACTIVE_TWEETS && i < len; i++) {

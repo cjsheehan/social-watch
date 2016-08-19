@@ -30,6 +30,19 @@ export function populateDb(tweets) {
     }
 }
 
+export function writeToFile(data, filename) {
+    try {
+        let fs = Npm.require("fs");
+        fs.appendFile("../../../../../../../" + filename, JSON.stringify(formatted), function (err) {
+            if (err) {
+                return console.log(err);
+            }
+        });
+    } catch (error) {
+        return console.log(error);
+    }
+}
+
 
 export function outputTweets(tweets, formatAs) {
     if (tweets == null) {

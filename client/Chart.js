@@ -11,6 +11,11 @@ Template.Chart.helpers({
 		let decimalPlaces = 0;
 		let visibility = true;
 
+		let sortedBy = "words";
+		if(Session.get("sortByHashtags")) {
+			sortedBy = "hashtags";
+		}
+
 		if (wordStats == null) { return; }
 
 		if (type == "comparative") {
@@ -47,10 +52,10 @@ Template.Chart.helpers({
 				},
 
 				title: {
-					text: "words vs " + type
+					text: sortedBy + " vs " + type
 				},
 				subtitle: {
-					text: "words sorted by descending " + attribute
+					text: sortedBy + " sorted by descending " + attribute
 				},
 				xAxis: [{
 						categories: categories,

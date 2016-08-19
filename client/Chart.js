@@ -48,7 +48,8 @@ Template.Chart.helpers({
 
 					// Explicitly tell the width and height of a chart
 					width: 400,
-					height: null
+					height: null,
+					zoomType: "xy"
 				},
 
 				title: {
@@ -92,16 +93,15 @@ Template.Chart.helpers({
 				tooltip: {
 					formatter: function () {
 						return "<b>" + "\"" + this.point.category + "\" : " + "</b><br/>" + this.series.name + " Sentiment: " + Highcharts.numberFormat(this.point.y, decimalPlaces);
-					}
+					},
 				},
 				
 
 				series: [
 					{
-						name: "Negative",
-						data: negSeries,
-						color: "#cc0000",
-						visible: visibility
+						name: "Overall",
+						data: sumSeries,
+						zIndex: 2
 					},
 					{
 						name: "Positive",
@@ -110,9 +110,11 @@ Template.Chart.helpers({
 						visible: visibility
 					},
 					{
-						name: "Overall",
-						data: sumSeries
-					},
+						name: "Negative",
+						data: negSeries,
+						color: "#cc0000",
+						visible: visibility
+					}
 				]
 			});
 		});

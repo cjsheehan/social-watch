@@ -3,7 +3,7 @@ const Highcharts = require("highcharts/highstock");
 const moment = require("moment");
 
 Template.TimeChart.onCreated(function () {
-	Session.set("selectedWord", "");
+	let words = Session.get("topActiveWords");
 });
 
 Template.TimeChart.helpers({
@@ -13,19 +13,16 @@ Template.TimeChart.helpers({
 	},
 
 	chart: () => {
-
 		let timeBins = Session.get("activeTimeStats");
 		let categories = [];
 		let posSeries = [];
 		let negSeries = [];
 		let sumSeries = [];
-		let decimalPlaces = 0;
+		let freqSeries = [];
 
 		if (timeBins == null) { return; }
 
 		let word = Session.get("selectedWord");
-		console.log("word", word);
-
 
 		for (var i = 0; i < timeBins.length; i++) {
 			var bin = timeBins[i];
@@ -35,10 +32,12 @@ Template.TimeChart.helpers({
 				posSeries.push(bin.stats.words[word].sentiment.positive.score);
 				negSeries.push(bin.stats.words[word].sentiment.negative.score)
 				sumSeries.push(bin.stats.words[word].sentiment.score);
+				freqSeries.push(bin.stats.words[word].numTweets);
 			} else {
 				posSeries.push(0);
 				negSeries.push(0);
 				sumSeries.push(0);
+				freqSeries.push(0);
 			}
 		}
 
@@ -54,7 +53,8 @@ Template.TimeChart.helpers({
 
 					// Explicitly tell the width and height of a chart
 					width: 900,
-					height: null
+					height: null,
+					zoomType: "xy"
 				},
 
 				title: {
@@ -62,6 +62,7 @@ Template.TimeChart.helpers({
 				},
 
 				xAxis: {
+					type: "datetime",
 					categories: categories,
 					reversed: true,
 					labels: {
@@ -69,7 +70,11 @@ Template.TimeChart.helpers({
 					}
 				},
 
-				yAxis: {
+				tooltip: {
+					shared: true
+				},
+
+				yAxis: [{ // Primary yAxis
 					title: {
 						text: "score (sentiment)"
 					},
@@ -78,7 +83,21 @@ Template.TimeChart.helpers({
 							return this.value;
 						}
 					}
-				},
+				}, {
+					title: {
+						text: "\"" + word + "\"" + " Occurences",
+						style: {
+							color: "#191919"
+						}
+					},
+					labels: {
+						format: "\"{value}",
+						style: {
+							color: "#191919"
+						}
+					},
+					opposite: true
+				}],
 
 				plotOptions: {
 					column: {
@@ -86,12 +105,18 @@ Template.TimeChart.helpers({
 					}
 				},
 
-
 				series: [
 					{
-						name: "Negative",
-						data: negSeries,
-						color: "#cc0000",
+						name: "Occurence",
+						data: freqSeries,
+						type: "spline",
+						zIndex: 3,
+						color: "#191919",
+					},
+					{
+						name: "Overall",
+						data: sumSeries,
+						zIndex: 2
 					},
 					{
 						name: "Positive",
@@ -99,9 +124,11 @@ Template.TimeChart.helpers({
 						color: "#00ce00",
 					},
 					{
-						name: "Overall",
-						data: sumSeries
+						name: "Negative",
+						data: negSeries,
+						color: "#cc0000",
 					},
+
 				]
 			});
 		});

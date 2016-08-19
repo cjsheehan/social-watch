@@ -3,6 +3,7 @@ import { formatTweet } from "./tweet";
 import { insertTweet } from "./db";
 import { Tweets, SearchResults } from "/collections/Tweets";
 import { glasgow_bbox, uk_bbox } from "./location";
+import { sortByDate } from "/lib/util";
 
 const options = {
 	consumer_key: Meteor.settings.private.twitter.consumer_key,
@@ -48,34 +49,44 @@ export function streamTwitter(loc) {
 	}
 }
 
-export function searchTwitter(searchQuery, until, maxId, isNewSearch) {
-	console.log("searchTwitter server", searchQuery, until, isNewSearch);
+export function searchTwitter(searchQuery) {
+	console.log("searchTwitter server", searchQuery);
+	clearSearch();
 	let client = new Twitter(options);
-	params = {
+	let params = {
 		q: searchQuery,
 		language: "en",
 		locations: glasgow_bbox.toString(),
-		until: until,
-		max_id: maxId,
-		result_type: "mixed",
-		count: 100
+		max_id: "",
+		result_type: "popular",
+		count: 15
 	};
 
-	if (isNewSearch) {
-		SearchResults.remove({});
-	}
 
-	Twitter.getAsync(client, "search/tweets", params, function (error, tweets, response) {
-		if (error) {
-			throw error;
-		}
+	// for (var i = 0; i < 5; i++) {
+	// 	Twitter.getAsync(client, "search/tweets", params, function (error, tweets, response) {
+	// 		if (error) {
+	// 			throw error;
+	// 		}
 
-		let formatted = tweets.statuses.map(function(tweet) {
-			return formatTweet(tweet, "db");
-		});
+	// 		let formatted = tweets.statuses.map(function (tweet) {
+	// 			return formatTweet(tweet, "db");
+	// 		});
 
-		formatted.forEach(function(tweet) {
-			insertTweet(tweet, SearchResults);
-		});
-	});
+	// 		formatted.forEach(function (tweet) {
+	// 			insertTweet(tweet, SearchResults);
+	// 		});
+
+	// 		let sorted = sortByDate(formatted);
+	// 		sorted.map(function(tweet) {
+	// 			console.log("tweet date", tweet.createdAt);
+				
+	// 		})
+	// 		// params.maxId = sorted[sorted.length - 1];
+	// 		params.maxId = sorted[Math.floor((sorted.length - 1) / 2)].idStr;
+	// 		console.log("maxId", params.maxId, i);
+	// 	});
+		
+	// }
+
 }

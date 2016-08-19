@@ -2,7 +2,7 @@ import { Tweets } from "/collections/Tweets";
 import { ReactiveVar } from "meteor/reactive-var";
 import { randomInt } from "/lib/util";
 import { testTweets } from "./testTweets";
-import { tweetStats } from "/lib/modules/twitterStats"
+import { tweetStats, timeStats } from "/lib/modules/twitterStats"
 /* eslint-disable no-unused-vars*/
 import { WordCloud } from "wordcloud";
 /* eslint-enable no-unused-vars*/
@@ -20,6 +20,7 @@ const weights = {
 const MAX_THRESHOLD = 50;
 const ACTIVE_TWEETS = 10;
 const MAX_RECORDS = 500;
+const MAX_TO_CLOUD = 100;
 
 
 const cloudOptions = {
@@ -39,6 +40,7 @@ Template.Tweets.onCreated(function () {
 	this.counter = new ReactiveVar(0);
 	this.testTweets = testTweets;
 	this.wordStats = {};
+	this.timeStats = {};
 	var self = this;
 	self.autorun(function () {
 		self.subscribe("tweets");
@@ -51,10 +53,18 @@ Template.Tweets.helpers({
 			const instance = Template.instance();
 			let tweets = Tweets.find({}, { sort: { insertedAt: -1 }, limit: MAX_RECORDS, reactive: Session.get("reactive")}).fetch();
 			
-			this.wordStats = tweetStats(tweets, Session.get("sortByHashtags"));
+			let sortBy = Session.get("sortByHashtags");
+			this.wordStats = tweetStats(tweets, sortBy);
 			Session.set("activeWordStats", this.wordStats);
 
-			let cloudSource = wordStats.frequency;
+			// optimise render performance
+			let cloudSource = [];
+			if(wordStats.frequency.length > MAX_TO_CLOUD) {
+				cloudSource = wordStats.frequency.slice(0, MAX_TO_CLOUD);
+			} else {
+				cloudSource = wordStats.frequency;
+			}
+
 			if (cloudSource[0][1] < 10) {
 				cloudOptions.weightFactor = 10;
 			}

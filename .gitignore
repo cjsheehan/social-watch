@@ -3,3 +3,4 @@ settings.json
 notes/
 .vscode
 private/tweet_stream.json
+private/timeBins.json

@@ -6,6 +6,7 @@ import { tweetStats, timeStats } from "/lib/modules/twitterStats"
 /* eslint-disable no-unused-vars*/
 import { WordCloud } from "wordcloud";
 /* eslint-enable no-unused-vars*/
+import { MAX_RECORDS } from "/lib/constants";
 
 import { MAX_SENTIMENT_ROWS } from "../lib/constants";
 
@@ -21,7 +22,6 @@ const weights = {
 
 const MAX_THRESHOLD = 50;
 const ACTIVE_TWEETS = 10;
-const MAX_RECORDS = 500;
 const MAX_TO_CLOUD = 100;
 
 
@@ -64,9 +64,11 @@ Template.Tweets.helpers({
 			this.timeStats = timeStats(tweets, sortBy);
 			Session.set("activeTimeStats", this.timeStats);
 
+			// console.log("wordstats\n", JSON.stringify(this.wordStats), "\n\ntimeStats\n", JSON.stringify(this.timeStats));
+
 			// cache most popular words to allow external 
 			// select controls to be populated
-			let words = this.wordStats.frequency.splice(0, MAX_SENTIMENT_ROWS);
+			let words = this.wordStats.frequency.slice(0, MAX_SENTIMENT_ROWS);
 			let topFreqWords = words.map((word) => {
 				return word[0];
 			})

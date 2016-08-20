@@ -3,10 +3,16 @@
 		<h2 class="stats-heading">Time Domain</h2>
 		<div id="time-chart" class="twitter-chart">{{chart}}</div>
 		<select id="word-select">
-			<option disabled="disabled" selected="selected">Please Select</option>
+			<option disabled="disabled" selected="selected" value="select">Select Word</option>
 			{{#each word in topWords}}
 				<option value="{{word}}">{{word}}</option>
 			{{/each}}
  		</select>
+		<select id="stat-type-select">
+				<option disabled="disabled" selected="selected">Select List</option>
+				<option value="frequency">frequency</option>
+				<option value="score">score</option>
+				<option value="comparative">comparative</option>
+		</select>
 	</div>
 </template>

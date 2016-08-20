@@ -1,18 +1,29 @@
+import { TOP_FREQ_WORDS, TOP_SCORE_WORDS, TOP_COMP_WORDS } from "./lib/constants";
+
 const Highcharts = require("highcharts/highstock");
 
 const moment = require("moment");
 
-Template.TimeChart.onCreated(function () {
-	let words = Session.get("topActiveWords");
-});
-
 Template.TimeChart.helpers({
 
 	topWords: () => {
-		return Session.get("topActiveWords");
+		let type = Session.get("selectedStatType");
+		let topWords = [];
+		if (type == "score") {
+			topWords = Session.get([TOP_SCORE_WORDS]);
+		} else if (type == "comparative") {
+			topWords = Session.get([TOP_COMP_WORDS]);
+		} else {
+			topWords = Session.get([TOP_FREQ_WORDS]);
+		}
+		return topWords;
 	},
 
 	chart: () => {
+		let sortedBy = "words";
+		if (Session.get("sortByHashtags")) {
+			sortedBy = "hashtags";
+		}
 		let timeBins = Session.get("activeTimeStats");
 		let categories = [];
 		let posSeries = [];
@@ -23,21 +34,31 @@ Template.TimeChart.helpers({
 		if (timeBins == null) { return; }
 
 		let word = Session.get("selectedWord");
+		let type = Session.get("selectedStatType");
 
 		for (var i = 0; i < timeBins.length; i++) {
 			var bin = timeBins[i];
 			let time = moment(bin.end).format("HH:mm").toString();
 			categories.push(time);
-			if (bin.stats.words[word]) {
-				posSeries.push(bin.stats.words[word].sentiment.positive.score);
-				negSeries.push(bin.stats.words[word].sentiment.negative.score)
-				sumSeries.push(bin.stats.words[word].sentiment.score);
-				freqSeries.push(bin.stats.words[word].numTweets);
-			} else {
+
+			// init series with correct data wrt to selectedStatType
+			if (!bin.stats.words[word]) {
 				posSeries.push(0);
 				negSeries.push(0);
 				sumSeries.push(0);
 				freqSeries.push(0);
+			} else {
+				if (type == "comparative") {
+						posSeries.push(bin.stats.words[word].sentiment.positive.comparative);
+						negSeries.push(bin.stats.words[word].sentiment.negative.comparative)
+						sumSeries.push(bin.stats.words[word].sentiment.comparative);
+						freqSeries.push(bin.stats.words[word].numTweets);
+				} else {
+						posSeries.push(bin.stats.words[word].sentiment.positive.score);
+						negSeries.push(bin.stats.words[word].sentiment.negative.score)
+						sumSeries.push(bin.stats.words[word].sentiment.score);
+						freqSeries.push(bin.stats.words[word].numTweets);
+				}
 			}
 		}
 
@@ -60,6 +81,9 @@ Template.TimeChart.helpers({
 				title: {
 					text: "\"" + word + "\" score vs time"
 				},
+				subtitle: {
+					text: sortedBy + " selected from top " + type + " list" 
+				},
 
 				xAxis: {
 					type: "datetime",
@@ -70,34 +94,36 @@ Template.TimeChart.helpers({
 					}
 				},
 
-				tooltip: {
-					shared: true
-				},
+				// tooltip: {
+				// 	shared: true
+				// },
 
-				yAxis: [{ // Primary yAxis
-					title: {
-						text: "score (sentiment)"
-					},
-					labels: {
-						formatter: function () {
-							return this.value;
+				yAxis: [
+					{ // Primary yAxis
+						title: {
+							text: "score (sentiment)"
+						},
+						labels: {
+							formatter: function () {
+								return this.value;
+							}
 						}
-					}
-				}, {
-					title: {
-						text: "\"" + word + "\"" + " Occurences",
-						style: {
-							color: "#191919"
-						}
-					},
-					labels: {
-						format: "\"{value}",
-						style: {
-							color: "#191919"
-						}
-					},
-					opposite: true
-				}],
+					}, 
+					{
+						title: {
+							text: "\"" + word + "\"" + " (x occured)",
+							style: {
+								color: "#191919"
+							}
+						},
+						labels: {
+							formatter: function () {
+								return this.value;
+							},
+							step: 1
+						},
+						opposite: true
+					}],
 
 				plotOptions: {
 					column: {
@@ -107,11 +133,12 @@ Template.TimeChart.helpers({
 
 				series: [
 					{
-						name: "Occurence",
+						name: "x Occured",
 						data: freqSeries,
 						type: "spline",
 						zIndex: 3,
 						color: "#191919",
+						yAxis: 1,
 					},
 					{
 						name: "Overall",
@@ -140,5 +167,10 @@ Template.TimeChart.events({
 	"change #word-select": function (event, template) {
 		let word = $(event.currentTarget).val();
 		Session.set("selectedWord", word);
+	},
+	"change #stat-type-select": function (event, template) {
+		let type = $(event.currentTarget).val();
+		Session.set("selectedStatType", type);
+		$("#word-select")[0].selectedIndex = 0;
 	}
 });

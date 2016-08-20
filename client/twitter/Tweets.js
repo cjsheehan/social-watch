@@ -7,6 +7,7 @@ import { tweetStats, timeStats } from "/lib/modules/twitterStats"
 import { WordCloud } from "wordcloud";
 /* eslint-enable no-unused-vars*/
 import { MAX_RECORDS } from "/lib/constants";
+import { TOP_FREQ_WORDS, TOP_SCORE_WORDS, TOP_COMP_WORDS } from "../lib/constants";
 
 import { MAX_SENTIMENT_ROWS } from "../lib/constants";
 
@@ -64,15 +65,25 @@ Template.Tweets.helpers({
 			this.timeStats = timeStats(tweets, sortBy);
 			Session.set("activeTimeStats", this.timeStats);
 
-			// console.log("wordstats\n", JSON.stringify(this.wordStats), "\n\ntimeStats\n", JSON.stringify(this.timeStats));
-
 			// cache most popular words to allow external 
 			// select controls to be populated
-			let words = this.wordStats.frequency.slice(0, MAX_SENTIMENT_ROWS);
-			let topFreqWords = words.map((word) => {
+			let freqWords = this.wordStats.frequency.slice(0, MAX_SENTIMENT_ROWS);
+			let topFreqWords = freqWords.map((word) => {
 				return word[0];
 			})
-			Session.set("topActiveWords", topFreqWords);
+			Session.set([TOP_FREQ_WORDS], topFreqWords);
+
+			let scoreWords = this.wordStats.score.slice(0, MAX_SENTIMENT_ROWS);
+			let topScoreWords = scoreWords.map((word) => {
+				return word[0];
+			})
+			Session.set([TOP_SCORE_WORDS], topScoreWords);
+
+			let comparativeWords = this.wordStats.comparative.slice(0, MAX_SENTIMENT_ROWS);
+			let topComparativeWords = comparativeWords.map((word) => {
+				return word[0];
+			})
+			Session.set([TOP_COMP_WORDS], topComparativeWords);
 
 			// optimise render performance
 			let cloudSource = [];

@@ -13,11 +13,9 @@ Meteor.startup(() => {
 });
 
 if (STREAM_ON) {
-	streamTwitter(glasgow_bbox);
+	streamTwitter(uk_bbox);
 }
 
-let tweets = searchTwitter("olympics", glasgow_bbox)
-// console.log("tweets ret", JSON.stringify(tweets));
  
 	
 

@@ -39,7 +39,7 @@ Template.Tweets.onRendered(function () {
 });
 
 Template.Tweets.onCreated(function () {
-	Session.set("sortByHashtags", false);
+	Session.set("sortByHashtags", true);
 	this.counter = new ReactiveVar(0);
 	this.testTweets = testTweets;
 	this.wordStats = {};

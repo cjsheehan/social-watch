@@ -30,6 +30,7 @@ Template.TimeChart.helpers({
 		let negSeries = [];
 		let sumSeries = [];
 		let freqSeries = [];
+		let numTweetsSeries = [];
 
 		if (timeBins == null) { return; }
 
@@ -42,6 +43,7 @@ Template.TimeChart.helpers({
 			categories.push(time);
 
 			// init series with correct data wrt to selectedStatType
+			numTweetsSeries.push(bin.stats.numTweets);
 			if (!bin.stats.words[word]) {
 				posSeries.push(0);
 				negSeries.push(0);
@@ -49,15 +51,15 @@ Template.TimeChart.helpers({
 				freqSeries.push(0);
 			} else {
 				if (type == "comparative") {
-						posSeries.push(bin.stats.words[word].sentiment.positive.comparative);
-						negSeries.push(bin.stats.words[word].sentiment.negative.comparative)
-						sumSeries.push(bin.stats.words[word].sentiment.comparative);
-						freqSeries.push(bin.stats.words[word].numTweets);
+					posSeries.push(bin.stats.words[word].sentiment.positive.comparative);
+					negSeries.push(bin.stats.words[word].sentiment.negative.comparative)
+					sumSeries.push(bin.stats.words[word].sentiment.comparative);
+					freqSeries.push(bin.stats.words[word].numTweets);
 				} else {
-						posSeries.push(bin.stats.words[word].sentiment.positive.score);
-						negSeries.push(bin.stats.words[word].sentiment.negative.score)
-						sumSeries.push(bin.stats.words[word].sentiment.score);
-						freqSeries.push(bin.stats.words[word].numTweets);
+					posSeries.push(bin.stats.words[word].sentiment.positive.score);
+					negSeries.push(bin.stats.words[word].sentiment.negative.score)
+					sumSeries.push(bin.stats.words[word].sentiment.score);
+					freqSeries.push(bin.stats.words[word].numTweets);
 				}
 			}
 		}
@@ -82,7 +84,7 @@ Template.TimeChart.helpers({
 					text: "\"" + word + "\" score vs time"
 				},
 				subtitle: {
-					text: sortedBy + " selected from top " + type + " list" 
+					text: sortedBy + " selected from top " + type + " list"
 				},
 
 				xAxis: {
@@ -90,7 +92,8 @@ Template.TimeChart.helpers({
 					categories: categories,
 					reversed: true,
 					labels: {
-						step: 1
+						step: 1,
+						rotation: -45,
 					}
 				},
 
@@ -108,7 +111,7 @@ Template.TimeChart.helpers({
 								return this.value;
 							}
 						}
-					}, 
+					},
 					{
 						title: {
 							text: "\"" + word + "\"" + " (x occured)",
@@ -123,7 +126,29 @@ Template.TimeChart.helpers({
 							step: 1
 						},
 						opposite: true
-					}],
+					}, {
+						title: {
+							text: "Total tweets",
+							style: {
+								color: "#aa8cc5"
+							}
+						},
+						labels: {
+							formatter: function () {
+								return this.value;
+							},
+							step: 1,
+							style: {
+								color: "#aa8cc5"
+							}
+						},
+						opposite: true
+					}
+				],
+
+				tooltip: {
+					shared: true
+				},
 
 				plotOptions: {
 					column: {
@@ -132,6 +157,14 @@ Template.TimeChart.helpers({
 				},
 
 				series: [
+					{
+						name: "total tweets",
+						data: numTweetsSeries,
+						type: "spline",
+						zIndex: 3,
+						yAxis: 2,
+						color: "#aa8cc5"
+					},
 					{
 						name: "x Occured",
 						data: freqSeries,

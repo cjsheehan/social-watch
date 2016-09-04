@@ -1,6 +1,7 @@
 <template name="Tweets">
 	<section class="tweet-list-container">
-		<button>Add to Db</button>
+		<button id="add-button">Add to Db</button>
+		<button id="show-button">Hide</button>
 		<p>Added {{counter}} test tweets to the local minimongo db</p>
 			{{#if Template.subscriptionsReady}} 
 				{{#each tweets}} 

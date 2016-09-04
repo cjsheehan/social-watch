@@ -6,6 +6,10 @@ Template.Tweet.helpers({
 		return moment(createdAt, "dd MMM DD HH:mm:ss ZZ YYYY", "en").format("MMM DD, HH:mm");
 	},
 
+	showSentiment: () => {
+		return Session.get("showSentiment");
+	},
+
 	formatLocation: (location, places) => {
 		return location.map((coord) => { 
 			return coord.toFixed(places) + " "; 

@@ -1,7 +1,7 @@
 <template name="Tweet">
 	<article class="tweet">
 		<div class="tweet-container">
-			{{> TweetSentiment text=text}}
+			{{#if showSentiment}} {{> TweetSentiment text=text}} {{/if}}
 			<div class="tweet-content">
 				<p>{{text}}</p>
 			</div>

@@ -16,9 +16,9 @@ const wordcloud = require("wordcloud");
 const serverOnly = false;
 
 const weights = {
-	min : 1,
-	med : 3,
-	max : 5
+	min: 1,
+	med: 3,
+	max: 5
 };
 
 const MAX_THRESHOLD = 50;
@@ -40,6 +40,7 @@ Template.Tweets.onRendered(function () {
 
 Template.Tweets.onCreated(function () {
 	Session.set("sortByHashtags", true);
+	Session.set("showSentiment", true);
 	this.counter = new ReactiveVar(0);
 	this.testTweets = testTweets;
 	this.wordStats = {};
@@ -54,8 +55,8 @@ Template.Tweets.helpers({
 	tweets: () => {
 		if (!serverOnly) {
 			const instance = Template.instance();
-			let tweets = Tweets.find({}, { sort: { insertedAt: -1 }, limit: MAX_RECORDS, reactive: Session.get("reactive")}).fetch();
-			
+			let tweets = Tweets.find({}, { sort: { insertedAt: -1 }, limit: MAX_RECORDS, reactive: Session.get("reactive") }).fetch();
+
 			// cache data model
 			let sortBy = Session.get("sortByHashtags");
 
@@ -87,7 +88,7 @@ Template.Tweets.helpers({
 
 			// optimise render performance
 			let cloudSource = [];
-			if(wordStats.frequency.length > MAX_TO_CLOUD) {
+			if (wordStats.frequency.length > MAX_TO_CLOUD) {
 				cloudSource = wordStats.frequency.slice(0, MAX_TO_CLOUD);
 			} else {
 				cloudSource = wordStats.frequency;
@@ -126,10 +127,21 @@ Template.Tweets.helpers({
 });
 
 Template.Tweets.events({
-	"click button"(event, instance) {
+	"click #add-button"(event, instance) {
 		let testTweet = instance.testTweets[randomInt(0, instance.testTweets.length)];
 		testTweet.idStr = instance.counter.get();
 		Tweets.insert(testTweet);
 		instance.counter.set(instance.counter.get() + 1);
+	},
+
+	"click #show-button"(event, instance) {
+		let show = Session.get("showSentiment");
+		if (!show) {
+			Session.set("showSentiment", true);
+			$(event.target).text("hide");
+		} else {
+			Session.set("showSentiment", false);
+			$(event.target).text("show");
+		}
 	},
 });
